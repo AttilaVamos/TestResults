@@ -1,0 +1,69 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "CentOS_Linux_7",
+            "Hardware": "CPU/Cores: 16, RAM: 30 GB",
+            "IPAddress": "10.20.0.182 (OBT-AWS01)"
+        },
+        "BuildSet": {
+            "Branch": "master",
+            "BranchDate": "Fri Jun 27 13:47:51 2025 +0100",
+            "BranchSHA": "77D49ADE",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {},
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "thor": {
+                        "Total": "3",
+                        "Pass": "3",
+                        "Fail": "0",
+                        "Result": "PASSED"
+                    },
+                    "roxie": {
+                        "Total": "5",
+                        "Pass": "5",
+                        "Fail": "0",
+                        "Result": "PASSED"
+                    }
+                },
+                "Performance": {
+                    "Result": "FAILED",
+                    "thor": {
+                        "Total": "319",
+                        "Pass": "317",
+                        "Fail": "2",
+                        "Result": "FAILED"
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "thor": {
+                    "02bm_sortlarge": {
+                        "TestId": 81,
+                        "Wuid": "W20250701-102336",
+                        "Problem": "Exception",
+                        "Code": "5756",
+                        "Msg": "System error: 5756: Graph graph1[1], WORKER #3 [10:20:0:182:20140]: Watchdog has lost connectivity with Thor worker 3 [10:20:0:182:20140] (Process terminated or node down?)"
+                    },
+                    "02cd_multisort16": {
+                        "TestId": 85,
+                        "Wuid": "W20250701-102612",
+                        "Problem": "Exception",
+                        "Code": "5734",
+                        "Msg": "System error: 5734: Graph graph1[1], sort[17]: Graph graph1[1], sort[17]: CSortMaster::ConnectSlaves: Could not connect to 10:20:0:182:20119, Master exception - caused by (5734, Graph graph1[1], sort[17]: CSortMaster::ConnectSlaves: Could not connect to 10:20:0:182:20119)"
+                    }
+                }
+            }
+        ]
+    }
+}

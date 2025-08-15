@@ -1,0 +1,291 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Rocky_Linux_8_9",
+            "Hardware": "CPU/Cores: 8, RAM: 15 GB",
+            "IPAddress": "10.22.254.98 (OBT-AWS04)"
+        },
+        "BuildSet": {
+            "Branch": "candidate-9.10.x",
+            "BranchDate": "Fri Jul 25 15:45:51 2025 +0100",
+            "BranchSHA": "e70f153543b87ee70b6358ca2be6eec9aa5457fd",
+            "BuildType": "Debug",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS, WASMEMBED",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl",
+            "Regression": "embedded, 3rdparty, python2, wasmembed*"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "PASSED",
+                    "CMake": {
+                        "Formatted": "10 sec (00:00:10)",
+                        "RawSec": "10"
+                    },
+                    "Build": {
+                        "Formatted": "577 sec (00:09:37)",
+                        "RawSec": "577"
+                    },
+                    "Package": {
+                        "Formatted": "209 sec (00:03:29)",
+                        "RawSec": "209"
+                    },
+                    "Altogether": {
+                        "Formatted": "796 sec (00:13:16)",
+                        "RawSec": "796"
+                    }
+                }
+            },
+            {
+                "Install": {
+                    "Elaps": "No data"
+                }
+            },
+            {
+                "Unittests": {
+                    "Result": "PASSED",
+                    "Elaps": {
+                        "Formatted": "7765 sec (02:09:25)",
+                        "RawSec": "7765"
+                    },
+                    "Total": 412,
+                    "Pass": 412,
+                    "Fail": 0,
+                    "Error": 0,
+                    "Timeout": 0
+                }
+            },
+            {
+                "Wutooltests": {
+                    "Result": "PASSED",
+                    "Elaps": {
+                        "Formatted": "2 sec (00:00:02)",
+                        "RawSec": "2"
+                    },
+                    "Total": 19,
+                    "Pass": 19,
+                    "Fail": 0,
+                    "Error": 0,
+                    "Timeout": 0
+                }
+            },
+            {
+                "MLtests": {
+                    "Result": "PASSED",
+                    "DBSCAN": {
+                        "Elaps": {
+                            "Formatted": "14 sec  (00:00:14)",
+                            "RawSec": "14"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GLM": {
+                        "Elaps": {
+                            "Formatted": "79 sec  (00:01:19)",
+                            "RawSec": "79"
+                        },
+                        "Total": 7,
+                        "Pass": 7,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GNN": {
+                        "Elaps": {
+                            "Formatted": "70 sec  (00:01:10)",
+                            "RawSec": "70"
+                        },
+                        "Total": 4,
+                        "Pass": 4,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "KMeans": {
+                        "Elaps": {
+                            "Formatted": "5 sec  (00:00:05)",
+                            "RawSec": "5"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "LearningTrees": {
+                        "Elaps": {
+                            "Formatted": "738 sec  (00:12:18)",
+                            "RawSec": "738"
+                        },
+                        "Total": 3,
+                        "Pass": 3,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "PBblas": {
+                        "Elaps": {
+                            "Formatted": "17 sec  (00:00:17)",
+                            "RawSec": "17"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "SupportVectorMachines": {
+                        "Elaps": {
+                            "Formatted": "16 sec  (00:00:16)",
+                            "RawSec": "16"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "TextVectors": {
+                        "Elaps": {
+                            "Formatted": "13 sec  (00:00:13)",
+                            "RawSec": "13"
+                        },
+                        "Total": 5,
+                        "Pass": 5,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "hthor": {
+                        "Elaps": {
+                            "Formatted": "183 sec  (00:03:03)",
+                            "RawSec": "183"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "thor": {
+                        "Elaps": {
+                            "Formatted": "88 sec  (00:01:28)",
+                            "RawSec": "88"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "roxie": {
+                        "Elaps": {
+                            "Formatted": "149 sec  (00:02:29)",
+                            "RawSec": "149"
+                        },
+                        "Total": 24,
+                        "Pass": 24,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Regress": {
+                    "Result": "FAILED",
+                    "Hthor": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "1067 sec  (00:17:47)",
+                            "RawSec": "1067"
+                        },
+                        "Total": 1036,
+                        "Pass": 1036,
+                        "Fail": 0
+                    },
+                    "Thor": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "2683 sec  (00:44:43)",
+                            "RawSec": "2683"
+                        },
+                        "Total": 917,
+                        "Pass": 911,
+                        "Fail": 6
+                    },
+                    "Roxie": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "1255 sec  (00:20:55)",
+                            "RawSec": "1255"
+                        },
+                        "Total": 1128,
+                        "Pass": 1128,
+                        "Fail": 0
+                    }
+                }
+            },
+            {
+                "Uninstall": {
+                    "Elaps": "No data"
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "thor": {
+                    "distmerge": {
+                        "TestId": 225,
+                        "Wuid": "W20250727-201540-2",
+                        "Problem": "Exception",
+                        "Code": "9999",
+                        "Msg": "System error: 9999: WORKER #4 [10:22:254:98:20160]: Internal Error &apos;Unknown mapping kind: 4&apos; in queryStatistic() at jstats:h(600)"
+                    },
+                    "filecompcopy": {
+                        "TestId": 263,
+                        "Wuid": "W20250727-201612",
+                        "Problem": "Exception",
+                        "Code": "9999",
+                        "Msg": "System error: 9999: WORKER #2 [10:22:254:98:20120]: Internal Error &apos;Unknown mapping kind: 4&apos; in queryStatistic() at jstats:h(600)"
+                    },
+                    "full_test": {
+                        "TestId": 279,
+                        "Wuid": "W20250727-201629-3",
+                        "Problem": "Exception",
+                        "Code": "9999",
+                        "Msg": "System error: 9999: WORKER #1 [10:22:254:98:20100]: Internal Error &apos;Unknown mapping kind: 4&apos; in queryStatistic() at jstats:h(600)"
+                    },
+                    "keydiff1": {
+                        "TestId": 435,
+                        "Wuid": "W20250727-202044",
+                        "Problem": "Exception",
+                        "Code": "9999",
+                        "Msg": "System error: 9999: WORKER #1 [10:22:254:98:20100]: Internal Error &apos;Unknown mapping kind: 4&apos; in queryStatistic() at jstats:h(600)"
+                    },
+                    "stepping7g(multiPart=false)": {
+                        "TestId": 754,
+                        "Wuid": "W20250727-203416-3",
+                        "Problem": "Exception",
+                        "Code": "9999",
+                        "Msg": "System error: 9999: WORKER #3 [10:22:254:98:20140]: Internal Error &apos;Unknown mapping kind: 4&apos; in queryStatistic() at jstats:h(600)"
+                    },
+                    "loopthor2": {
+                        "TestId": 496,
+                        "Wuid": "W20250727-202807-1",
+                        "Problem": "Aborted ",
+                        "Code": "-2",
+                        "Msg": " reason: Timeout "
+                    }
+                }
+            }
+        ]
+    }
+}

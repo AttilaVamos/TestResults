@@ -1,0 +1,83 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Ubuntu_22_04_5_LTS",
+            "Hardware": "CPU/Cores: 8, RAM: 23 GB",
+            "IPAddress": "127.0.1.1 (OBT-BM01)"
+        },
+        "BuildSet": {
+            "Branch": "master",
+            "BranchDate": "Fri Jun 27 13:47:51 2025 +0100",
+            "BranchSHA": "77D49ADE",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {},
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "thor": {
+                        "Total": "3",
+                        "Pass": "3",
+                        "Fail": "0",
+                        "Result": "PASSED"
+                    },
+                    "roxie": {
+                        "Total": "5",
+                        "Pass": "5",
+                        "Fail": "0",
+                        "Result": "PASSED"
+                    }
+                },
+                "Performance": {
+                    "Result": "FAILED",
+                    "thor": {
+                        "Total": "319",
+                        "Pass": "315",
+                        "Fail": "4",
+                        "Result": "FAILED"
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "thor": {
+                    "02bl_sortvariable": {
+                        "TestId": 80,
+                        "Wuid": "W20250630-115719",
+                        "Problem": "Exception",
+                        "Code": "4",
+                        "Msg": "System error: 4: WORKER #4 [192:168:1:59:20160]: 4, Unexpected process termination (ep:192:168:1:59:20160) : CSlavemsgHandler::threadmain"
+                    },
+                    "02bm_sortlarge": {
+                        "TestId": 81,
+                        "Wuid": "W20250630-115802",
+                        "Problem": "Exception",
+                        "Code": "4",
+                        "Msg": "System error: 4: WORKER #1 [192:168:1:59:20100]: 4, Unexpected process termination (ep:192:168:1:59:20100) : CSlavemsgHandler::threadmain"
+                    },
+                    "02cd_multisort16": {
+                        "TestId": 85,
+                        "Wuid": "W20250630-120228",
+                        "Problem": "Exception",
+                        "Code": "5734",
+                        "Msg": "System error: 5734: Graph graph1[1], sort[17]: Graph graph1[1], sort[17]: CSortMaster::ConnectSlaves: Could not connect to 192:168:1:59:20159, Master exception - caused by (5734, Graph graph1[1], sort[17]: CSortMaster::ConnectSlaves: Could not connect to 192:168:1:59:20159)"
+                    },
+                    "11bc_smartjoin_lo_lo2": {
+                        "TestId": 205,
+                        "Wuid": "W20250630-143028",
+                        "Problem": "Exception",
+                        "Code": "5836",
+                        "Msg": "System error: 5836: 5836, 5836, WORKER #2 [192:168:1:59:20120]: [5836: Row leaks detected]  : Error in jobDone : CJobManager::executeGraph"
+                    }
+                }
+            }
+        ]
+    }
+}

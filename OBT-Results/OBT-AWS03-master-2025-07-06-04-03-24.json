@@ -1,0 +1,54 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "CentOS_Stream_8",
+            "Hardware": "CPU/Cores: 4, RAM: 7 GB",
+            "IPAddress": "10.22.254.152 (OBT-AWS03)"
+        },
+        "BuildSet": {
+            "Branch": "master",
+            "BranchDate": "Thu Jul 3 16:54:18 2025 +0100",
+            "BranchSHA": "f8600bb43840873da46bd830f58a121859e331d8",
+            "BuildType": "Debug",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS, WASMEMBED",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "FAILED",
+                    "CMake": {
+                        "Formatted": "5 sec (00:00:05)",
+                        "RawSec": "5"
+                    },
+                    "Build": {
+                        "Formatted": "0 sec (00:00:00)",
+                        "RawSec": "0"
+                    },
+                    "Package": {
+                        "Formatted": "0 sec (00:00:00)",
+                        "RawSec": "0"
+                    },
+                    "Altogether": {
+                        "Formatted": "5 sec (00:00:05)",
+                        "RawSec": "5"
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "Build": "CMake Error at cmake_modules/commonSetup.cmake:771 (message):<br>\n"
+            }
+        ]
+    }
+}

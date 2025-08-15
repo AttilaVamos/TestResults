@@ -1,0 +1,267 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem" : "Ubuntu_22_04_5_LTS",
+            "Hardware": "CPU/Cores: 8, RAM: 16 GB",
+            "IPAddress": "192.168.1.54"
+        },
+         "Remote" : {
+            "System" : "AKS",
+            "VmSize" : "Standard_D16s_v4",
+            "Hardware": "CPU/Cores: 16, RAM: 64 GB",
+            "HthorConfig": {
+                "Replicas": "3",
+                "MaxActive": "4",
+                "UseChildProcesses" : "true",
+                "AllowedPipePrograms" : "*"
+            },
+            "ThorConfig":{
+                "NumWorkers": "2",
+                "MaxJobs": "4",
+                "MaxGraph" : "2",
+                "MultiJobLinger" : "true",
+                "LingerPeriod" : "200",
+                "AllowedPipePrograms" : "*"
+            },
+            "RoxieWorkunitConfig": {
+                "Replicas": "1",
+                "MaxActive":"20",
+                "UseChildProcesses" : "true",
+                "AllowedPipePrograms" : "*"
+            }
+        },
+        "BuildSet": {
+            "Branch": "community_9.14.6-1 Gold",
+            "BranchDate": "N/A",
+            "BranchSHA": "N/A",
+            "BuildType": "Release",
+            "Target": "K8s"
+        },
+        "Exclusion": {
+            "Build": "N/A",
+            "Documentation": "N/A",
+            "Unittest": "N/A",
+            "MLtest": "N/A",
+            "Regression": "--ef pipefail.ecl -e embedded-r,embedded-js,3rdpartyservice,mongodb,spray,proxy"
+        },
+        "Tasks": [
+            {
+                "UpdateHelmRepo": {
+                    "Result" : "Done",
+                    "Elaps": {
+                        "Formatted": "4 sec (00:00:04)",
+                        "RawSec": "4"
+                    }
+                }
+            },
+            {
+                "UpgradeTerraform": {
+                    "Result" : "Done",
+                    "Version" : "Terraform v1.12.2",
+                    "Elaps": {
+                        "Formatted": "12 sec (00:00:12)",
+                        "RawSec": "12"
+                    }
+                }
+            },
+            {
+                "CreateVirtualNetwork": {
+                    "Result" : "Done (retCode: 0)",
+                    "NumberOfResources" : 11,
+                    "Elaps": {
+                        "Formatted": "99 sec (00:01:39)",
+                        "RawSec": "99"
+                    }
+                }
+            },
+            {
+                "CreateStorage": {
+                    "Result" : "Done (retCode: 0)",
+                    "NumberOfResources" : 17,
+                    "Elaps": {
+                        "Formatted": "107 sec (00:01:47)",
+                        "RawSec": "107"
+                    }
+                }
+            },
+            {
+                "CreateAKS": {
+                    "Result" : "Done",
+                    "NumberOfResources" : 20,
+                    "Elaps": {
+                        "Formatted": "642 sec (00:10:42)",
+                        "RawSec": "642"
+                    }
+                }
+            },
+            {
+                "ECLWatchAnnotation": {
+                    "Result": "Done",
+                    "Elaps": {
+                        "Formatted": "66 sec (00:01:06)",
+                        "RawSec": "66"
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "hthor": {
+                        "Elaps": {
+                            "Formatted": "0 sec (00:00:00)",
+                            "RawSec": "0"
+                        },
+                        "Total": 0,
+                        "Pass": 0,
+                        "Fail": 0,
+                        "Result": "N/A"
+                    },
+                    "thor": {
+                        "Elaps": {
+                            "Formatted": "74 sec (00:01:14)",
+                            "RawSec": "74"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "roxie": {
+                        "Elaps": {
+                            "Formatted": "118 sec (00:01:58)",
+                            "RawSec": "118"
+                        },
+                        "Total": 24,
+                        "Pass": 24,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "PublishQueries": {
+                    "Result" : "Done",
+                    "Total" : 0,
+                    "Elaps": {
+                        "Formatted": "0 sec (00:00:00)",
+                        "RawSec": "0"
+                    }
+                }
+            },
+            {
+                "Regress": {
+                    "Result": "FAILED",
+                    "Hthor": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "74 sec (00:01:14)",
+                            "RawSec": "74"
+                        },
+                        "Total": 19,
+                        "Pass": 18,
+                        "Fail": 1
+                    },
+                    "Thor": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "69 sec (00:01:09)",
+                            "RawSec": "69"
+                        },
+                        "Total":  17,
+                        "Pass": 15,
+                        "Fail": 2
+                    },
+                    "Roxie": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "140 sec (00:02:20)",
+                            "RawSec": "140"
+                        },
+                        "Total":  32,
+                        "Pass": 30,
+                        "Fail": 2
+                    }
+                }
+            },
+            {
+                "CollectTimings": {
+                    "Result" : "Done",
+                    "Elaps": {
+                        "Formatted": "37 sec (00:00:37).",
+                        "RawSec": "37"
+                    }
+                }
+            },
+            {
+                "CollectPODLogs": {
+                    "Result" : "Done",
+                    "Elaps": {
+                        "Formatted": "350 sec (00:05:50).",
+                        "RawSec": "350"
+                    }
+                }
+            },
+            {
+                "DestroyAKS": {
+                    "Result" : "Done (retCode: 0)",
+                    "NumberOfResources" : 20,
+                    "Elaps": {
+                        "Formatted": "640 sec (00:10:40)",
+                        "RawSec": "640"
+                    }
+                }
+            },
+            {
+                "DestroyStorage": {
+                    "Result" : "Done (retCode: 0)",
+                    "NumberOfResources" : 17,
+                    "Elaps": {
+                        "Formatted": "168 sec (00:02:48)",
+                        "RawSec": "168"
+                    }
+                }
+            },
+            {
+                "DestroyVirtualNetwork": {
+                    "Result" : "Done (retCode: 0)",
+                    "NumberOfResources" : 11,
+                    "Elaps": {
+                        "Formatted": "268 sec (00:04:28)",
+                        "RawSec": "268"
+                    }
+                }
+            },
+            {
+                "RunLogProcessor": {
+                   "Result": "Done",
+                    "Elaps": {
+                        "Formatted": "0 sec (00:00:00).",
+                        "RawSec": "0"
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            
+            
+            
+            {
+            "HthorRegress" : [
+                "[Failure]   3. Fail cryptoplugin_pke_lfn.ecl - W20250801-161528 (6 sec)"
+                ]
+            },
+            {
+            "ThorRegress" : [
+                "[Failure]   2. Fail cryptoplugin_pke_lfn.ecl - W20250801-161633 (9 sec)",
+                "[Failure]   3. Fail external.ecl - W20250801-161644 (6 sec)"
+            ]
+        },
+            {
+            "RoxieRegress" : [
+                "[Failure]   2. Fail cryptoplugin_pke_lfn.ecl - W20250801-161743 (7 sec)",
+                "[Failure]   3. Fail external.ecl - W20250801-161752 (7 sec)"
+            ]
+        }
+        ]
+    }
+}

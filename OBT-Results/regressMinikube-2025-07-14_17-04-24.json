@@ -1,0 +1,250 @@
+{
+  "OBTResult": {
+    "Env": {
+      "BuildSystem": "CentOS_Linux_7",
+      "Hardware": "vCPU: 8, RAM: 16 GB",
+      "IPAddress": "10.20.0.45"
+    },
+    "Remote": {
+      "System": "Minikube",
+      "Hardware": "CPU/Cores: 16, RAM: 64 GB",
+      "HthorConfig": {
+        "Replicas": "3",
+        "MaxActive": "4",
+        "UseChildProcesses": "true",
+        "AllowedPipePrograms": "*"
+      },
+      "ThorConfig": {
+        "NumWorkers": "2",
+        "MaxJobs": "4",
+        "MaxGraph": "2",
+        "MultiJobLinger": "true",
+        "LingerPeriod": "200",
+        "AllowedPipePrograms": "*"
+      },
+      "RoxieWorkunitConfig": {
+        "Replicas": "1",
+        "MaxActive": "20",
+        "UseChildProcesses": "true",
+        "AllowedPipePrograms": "*"
+      }
+    },
+    "BuildSet": {
+      "Branch": "community_9.14.2-rc1",
+      "BranchDate": "N/A",
+      "BranchSHA": "N/A",
+      "BuildType": "Release",
+      "Target": "K8s"
+    },
+    "Exclusion": {
+      "Build": "N/A",
+      "Documentation": "N/A",
+      "Unittest": "N/A",
+      "MLtest": "N/A",
+      "Regression": "--ef pipefail.ecl -e embedded-r,embedded-js,3rdpartyservice,mongodb,spray,proxy"
+    },
+    "Tasks": [
+      {
+        "UpdateHelmRepo": {
+          "Result": "Done",
+          "Elaps": {
+            "Formatted": "0 sec 0 sec (00:00:00)",
+            "RawSec": "0"
+          }
+        }
+      },
+      {
+        "CheckLocalPlatform": {
+          "Result": "Done",
+          "Version": "",
+          "Elaps": {
+            "Formatted": "38 sec 38 sec (00:00:38)",
+            "RawSec": "38"
+          }
+        }
+      },
+      {
+        "StartMinikube": {
+          "Result": "Done",
+          "Elaps": {
+            "Formatted": "28 sec 28 sec (00:00:28)",
+            "RawSec": "28"
+          }
+        }
+      },
+      {
+        "DeployHPCC": {
+          "Result": "Done",
+          "Elaps": {
+            "Formatted": "2 sec 2 sec (00:00:02)",
+            "RawSec": "2"
+          }
+        }
+      },
+      {
+        "WaitForPODs": {
+          "Result": "Done",
+          "NumberOfPODs": 54,
+          "Elaps": {
+            "Formatted": "221 sec 221 sec (00:03:41)",
+            "RawSec": "221"
+          }
+        }
+      },
+      {
+        "ECLWatchAnnotation": {
+          "Result": "",
+          "Elaps": {
+            "Formatted": "39 sec 39 sec (00:00:39)",
+            "RawSec": "39"
+          }
+        }
+      },
+      {
+        "Setup": {
+          "Result": "PASSED",
+          "hthor": {
+            "Elaps": {
+              "Formatted": "0 sec (00:00:00)",
+              "RawSec": "0"
+            },
+            "Total": 0,
+            "Pass": 0,
+            "Fail": 0,
+            "Result": "N/A"
+          },
+          "thor": {
+            "Elaps": {
+              "Formatted": "89 sec (00:01:29)",
+              "RawSec": "89"
+            },
+            "Total": 9,
+            "Pass": 9,
+            "Fail": 0,
+            "Result": "PASSED"
+          },
+          "roxie": {
+            "Elaps": {
+              "Formatted": "87 sec (00:01:27)",
+              "RawSec": "87"
+            },
+            "Total": 24,
+            "Pass": 24,
+            "Fail": 0,
+            "Result": "PASSED"
+          }
+        }
+      },
+      {
+        " PublishQueries": {
+          "Result": "Done",
+          "Total": 0,
+          "Elaps": {
+            "Formatted": "0 sec 0 sec (00:00:00)",
+            "RawSec": "0"
+          }
+        }
+      },
+      {
+        "Regress": {
+          "Result": "FAILED",
+          "Hthor": {
+            "Result": "FAILED",
+            "Elaps": {
+              "Formatted": "1915 sec (00:31:55)",
+              "RawSec": "1915"
+            },
+            "Total": 1077,
+            "Pass": 1076,
+            "Fail": 1
+          },
+          "Thor": {
+            "Result": "FAILED",
+            "Elaps": {
+              "Formatted": "1941 sec (00:32:21)",
+              "RawSec": "1941"
+            },
+            "Total": 955,
+            "Pass": 953,
+            "Fail": 2
+          },
+          "Roxie": {
+            "Result": "FAILED",
+            "Elaps": {
+              "Formatted": "2860 sec (00:47:40)",
+              "RawSec": "2860"
+            },
+            "Total": 1148,
+            "Pass": 1145,
+            "Fail": 3
+          }
+        }
+      },
+      {
+        "CollectTimings": {
+          "Result": "Done",
+          "Elaps": {
+            "Formatted": "23 sec 23 sec (00:00:23).",
+            "RawSec": "23"
+          }
+        }
+      },
+      {
+        "CollectPODLogs": {
+          "Result": "Done",
+          "Elaps": {
+            "Formatted": "22 sec 22 sec (00:00:22).",
+            "RawSec": "22"
+          }
+        }
+      },
+      {
+        "UninstallPODs": {
+          "Result": "Done",
+          "Elaps": {
+            "Formatted": "102 sec 102 sec (00:01:42)",
+            "RawSec": "102"
+          }
+        }
+      },
+      {
+        "StopMinikube": {
+          "Result": "Done",
+          "Elaps": {
+            "Formatted": "6 sec 6 sec (00:00:06).",
+            "RawSec": "6"
+          }
+        }
+      },
+      {
+        "RunLogProcessor": {
+          "Result": "Done",
+          "Elaps": {
+            "Formatted": "0 sec 0 sec (00:00:00).",
+            "RawSec": "0"
+          }
+        }
+      }
+    ],
+    "Errors": [
+      {
+        "HthorRegress": [
+          "[Failure] 140. Fail cryptoplugin_pke_lfn.ecl - W20250714-171652 (1 sec)"
+        ]
+      },
+      {
+        "ThorRegress": [
+          "[Failure] 137. Fail cryptoplugin_pke_lfn.ecl - W20250714-174815 (2 sec)",
+          "[Failure] 258. Fail external.ecl - W20250714-175032 (2 sec)"
+        ]
+      },
+      {
+        "RoxieRegress": [
+          "[Failure] 151. Fail cryptoplugin_pke_lfn.ecl - W20250714-182354 (3 sec)",
+          "[Failure] 285. Fail external.ecl - W20250714-182743 (3 sec)",
+          "[Failure] 287. Fail externalplane.ecl - W20250714-182746 (3 sec)"
+        ]
+      }
+    ]
+  }
+}

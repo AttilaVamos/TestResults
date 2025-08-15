@@ -1,0 +1,250 @@
+{
+  "OBTResult": {
+    "Env": {
+      "BuildSystem": "CentOS_Linux_7",
+      "Hardware": "vCPU: 8, RAM: 16 GB",
+      "IPAddress": "10.20.0.45"
+    },
+    "Remote": {
+      "System": "Minikube",
+      "Hardware": "CPU/Cores: 16, RAM: 64 GB",
+      "HthorConfig": {
+        "Replicas": "3",
+        "MaxActive": "4",
+        "UseChildProcesses": "true",
+        "AllowedPipePrograms": "*"
+      },
+      "ThorConfig": {
+        "NumWorkers": "2",
+        "MaxJobs": "4",
+        "MaxGraph": "2",
+        "MultiJobLinger": "true",
+        "LingerPeriod": "200",
+        "AllowedPipePrograms": "*"
+      },
+      "RoxieWorkunitConfig": {
+        "Replicas": "1",
+        "MaxActive": "20",
+        "UseChildProcesses": "true",
+        "AllowedPipePrograms": "*"
+      }
+    },
+    "BuildSet": {
+      "Branch": "community_9.14.0-rc3",
+      "BranchDate": "N/A",
+      "BranchSHA": "N/A",
+      "BuildType": "Release",
+      "Target": "K8s"
+    },
+    "Exclusion": {
+      "Build": "N/A",
+      "Documentation": "N/A",
+      "Unittest": "N/A",
+      "MLtest": "N/A",
+      "Regression": "--ef pipefail.ecl -e embedded-r,embedded-js,3rdpartyservice,mongodb,spray,proxy"
+    },
+    "Tasks": [
+      {
+        "UpdateHelmRepo": {
+          "Result": "Done",
+          "Elaps": {
+            "Formatted": "0 sec 0 sec (00:00:00)",
+            "RawSec": "0"
+          }
+        }
+      },
+      {
+        "CheckLocalPlatform": {
+          "Result": "Done",
+          "Version": "",
+          "Elaps": {
+            "Formatted": "38 sec 38 sec (00:00:38)",
+            "RawSec": "38"
+          }
+        }
+      },
+      {
+        "StartMinikube": {
+          "Result": "Done",
+          "Elaps": {
+            "Formatted": "30 sec 30 sec (00:00:30)",
+            "RawSec": "30"
+          }
+        }
+      },
+      {
+        "DeployHPCC": {
+          "Result": "Done",
+          "Elaps": {
+            "Formatted": "1 sec 1 sec (00:00:01)",
+            "RawSec": "1"
+          }
+        }
+      },
+      {
+        "WaitForPODs": {
+          "Result": "Done",
+          "NumberOfPODs": 54,
+          "Elaps": {
+            "Formatted": "141 sec 141 sec (00:02:21)",
+            "RawSec": "141"
+          }
+        }
+      },
+      {
+        "ECLWatchAnnotation": {
+          "Result": "",
+          "Elaps": {
+            "Formatted": "38 sec 38 sec (00:00:38)",
+            "RawSec": "38"
+          }
+        }
+      },
+      {
+        "Setup": {
+          "Result": "PASSED",
+          "hthor": {
+            "Elaps": {
+              "Formatted": "0 sec (00:00:00)",
+              "RawSec": "0"
+            },
+            "Total": 0,
+            "Pass": 0,
+            "Fail": 0,
+            "Result": "N/A"
+          },
+          "thor": {
+            "Elaps": {
+              "Formatted": "103 sec (00:01:43)",
+              "RawSec": "103"
+            },
+            "Total": 9,
+            "Pass": 9,
+            "Fail": 0,
+            "Result": "PASSED"
+          },
+          "roxie": {
+            "Elaps": {
+              "Formatted": "77 sec (00:01:17)",
+              "RawSec": "77"
+            },
+            "Total": 24,
+            "Pass": 24,
+            "Fail": 0,
+            "Result": "PASSED"
+          }
+        }
+      },
+      {
+        " PublishQueries": {
+          "Result": "Done",
+          "Total": 0,
+          "Elaps": {
+            "Formatted": "0 sec 0 sec (00:00:00)",
+            "RawSec": "0"
+          }
+        }
+      },
+      {
+        "Regress": {
+          "Result": "FAILED",
+          "Hthor": {
+            "Result": "FAILED",
+            "Elaps": {
+              "Formatted": "1930 sec (00:32:10)",
+              "RawSec": "1930"
+            },
+            "Total": 1076,
+            "Pass": 1075,
+            "Fail": 1
+          },
+          "Thor": {
+            "Result": "FAILED",
+            "Elaps": {
+              "Formatted": "2006 sec (00:33:26)",
+              "RawSec": "2006"
+            },
+            "Total": 954,
+            "Pass": 952,
+            "Fail": 2
+          },
+          "Roxie": {
+            "Result": "FAILED",
+            "Elaps": {
+              "Formatted": "2859 sec (00:47:39)",
+              "RawSec": "2859"
+            },
+            "Total": 1147,
+            "Pass": 1144,
+            "Fail": 3
+          }
+        }
+      },
+      {
+        "CollectTimings": {
+          "Result": "Done",
+          "Elaps": {
+            "Formatted": "24 sec 24 sec (00:00:24).",
+            "RawSec": "24"
+          }
+        }
+      },
+      {
+        "CollectPODLogs": {
+          "Result": "Done",
+          "Elaps": {
+            "Formatted": "22 sec 22 sec (00:00:22).",
+            "RawSec": "22"
+          }
+        }
+      },
+      {
+        "UninstallPODs": {
+          "Result": "Done",
+          "Elaps": {
+            "Formatted": "102 sec 102 sec (00:01:42)",
+            "RawSec": "102"
+          }
+        }
+      },
+      {
+        "StopMinikube": {
+          "Result": "Done",
+          "Elaps": {
+            "Formatted": "6 sec 6 sec (00:00:06).",
+            "RawSec": "6"
+          }
+        }
+      },
+      {
+        "RunLogProcessor": {
+          "Result": "Done",
+          "Elaps": {
+            "Formatted": "0 sec 0 sec (00:00:00).",
+            "RawSec": "0"
+          }
+        }
+      }
+    ],
+    "Errors": [
+      {
+        "HthorRegress": [
+          "[Failure] 140. Fail cryptoplugin_pke_lfn.ecl - W20250702-170335 (1 sec)"
+        ]
+      },
+      {
+        "ThorRegress": [
+          "[Failure] 137. Fail cryptoplugin_pke_lfn.ecl - W20250702-173515-1 (2 sec)",
+          "[Failure] 258. Fail external.ecl - W20250702-173739 (2 sec)"
+        ]
+      },
+      {
+        "RoxieRegress": [
+          "[Failure] 151. Fail cryptoplugin_pke_lfn.ecl - W20250702-181130 (3 sec)",
+          "[Failure] 285. Fail external.ecl - W20250702-181517 (3 sec)",
+          "[Failure] 287. Fail externalplane.ecl - W20250702-181521-2 (3 sec)"
+        ]
+      }
+    ]
+  }
+}

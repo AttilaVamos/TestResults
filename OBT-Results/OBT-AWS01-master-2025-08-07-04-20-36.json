@@ -1,0 +1,62 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "CentOS_Linux_7",
+            "Hardware": "CPU/Cores: 16, RAM: 30 GB",
+            "IPAddress": "10.20.0.182 (OBT-AWS01)"
+        },
+        "BuildSet": {
+            "Branch": "master",
+            "BranchDate": "Wed Aug 6 16:37:55 2025 +0100",
+            "BranchSHA": "28860116",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {},
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "thor": {
+                        "Total": "3",
+                        "Pass": "3",
+                        "Fail": "0",
+                        "Result": "PASSED"
+                    },
+                    "roxie": {
+                        "Total": "5",
+                        "Pass": "5",
+                        "Fail": "0",
+                        "Result": "PASSED"
+                    }
+                },
+                "Performance": {
+                    "Result": "FAILED",
+                    "thor": {
+                        "Total": "320",
+                        "Pass": "319",
+                        "Fail": "1",
+                        "Result": "FAILED"
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "thor": {
+                    "16aa_bigsuper": {
+                        "TestId": 315,
+                        "Wuid": "W20250807-121537",
+                        "Problem": "Exception",
+                        "Code": "4294967295",
+                        "Msg": "System error: -1: cAddSubFileAction: sub file perform::thorlcr::simple_sub2 not found"
+                    }
+                }
+            }
+        ]
+    }
+}

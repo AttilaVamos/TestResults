@@ -1,0 +1,62 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Ubuntu_22_04_5_LTS",
+            "Hardware": "CPU/Cores: 8, RAM: 23 GB",
+            "IPAddress": "127.0.1.1 (OBT-BM01)"
+        },
+        "BuildSet": {
+            "Branch": "master",
+            "BranchDate": "Tue Aug 12 08:35:19 2025 +0100",
+            "BranchSHA": "C57D898C",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {},
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "thor": {
+                        "Total": "3",
+                        "Pass": "3",
+                        "Fail": "0",
+                        "Result": "PASSED"
+                    },
+                    "roxie": {
+                        "Total": "5",
+                        "Pass": "5",
+                        "Fail": "0",
+                        "Result": "PASSED"
+                    }
+                },
+                "Performance": {
+                    "Result": "FAILED",
+                    "thor": {
+                        "Total": "320",
+                        "Pass": "319",
+                        "Fail": "1",
+                        "Result": "FAILED"
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "thor": {
+                    "04ab_join1u": {
+                        "TestId": 113,
+                        "Wuid": "W20250812-111519",
+                        "Problem": "Exception",
+                        "Code": "5836",
+                        "Msg": "System error: 5836: 5836, 5836, WORKER #3 [192:168:1:59:20180]: [5836: Row leaks detected]  : Error in jobDone : CJobManager::executeGraph"
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Rocky_Linux_8_9",
+            "Hardware": "CPU/Cores: 8, RAM: 15 GB",
+            "IPAddress": "10.22.254.98 (OBT-AWS04)"
+        },
+        "BuildSet": {
+            "Branch": "candidate-9.10.x",
+            "BranchDate": "Thu Jun 12 17:00:47 2025 +0100",
+            "BranchSHA": "8448735c0031bce31240c0a29518764bdb2fd9cb",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS, WASMEMBED",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "FAILED",
+                    "CMake": {
+                        "Formatted": "11 sec (00:00:11)",
+                        "RawSec": "11"
+                    },
+                    "Build": {
+                        "Formatted": "7 sec (00:00:07)",
+                        "RawSec": "7"
+                    },
+                    "Package": {
+                        "Formatted": "42 sec (00:00:42)",
+                        "RawSec": "42"
+                    },
+                    "Altogether": {
+                        "Formatted": "60 sec (00:01:00)",
+                        "RawSec": "60"
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "Build": "make[2]: *** [esp/src/CMakeFiles/eclwatch_fetchdeps.dir/build.make:73: esp/src/lib/package-lock.json] Error 1<br>\nmake[1]: *** [CMakeFiles/Makefile2:11679: esp/src/CMakeFiles/eclwatch_fetchdeps.dir/all] Error 2<br>\nnpm error code MODULE_NOT_FOUND<br>\nnpm error Cannot find module 'json-parse-even-better-errors'<br>\nnpm error Require stack:<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/node_modules/read-package-json-fast/lib/index.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/node_modules/@npmcli/map-workspaces/lib/index.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/index.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/index.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/node_modules/libnpmfund/lib/index.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/lib/utils/reify-output.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/lib/utils/reify-finish.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/lib/commands/ci.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/lib/npm.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/lib/cli/entry.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/lib/cli.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/bin/npm-cli.js<br>\nnpm error A complete log of this run can be found in: /home/rocky/.npm/_logs/2025-06-17T04_22_46_346Z-debug-0.log<br>\nmake[2]: *** [docs/portal-js/CMakeFiles/portaljs_fetchdeps.dir/build.make:73: docs/portal-js/node_modules/.package-lock.json] Error 1<br>\nmake[1]: *** [CMakeFiles/Makefile2:16765: docs/portal-js/CMakeFiles/portaljs_fetchdeps.dir/all] Error 2<br>\nmake: *** [Makefile:166: all] Error 2<br>\nnpm error code MODULE_NOT_FOUND<br>\nnpm error Cannot find module 'json-parse-even-better-errors'<br>\nnpm error Require stack:<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/node_modules/read-package-json-fast/lib/index.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/node_modules/@npmcli/map-workspaces/lib/index.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/index.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/index.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/node_modules/libnpmfund/lib/index.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/lib/utils/reify-output.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/lib/utils/reify-finish.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/lib/commands/ci.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/lib/npm.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/lib/cli/entry.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/lib/cli.js<br>\nnpm error - /home/rocky/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/npm/bin/npm-cli.js<br>\nnpm error A complete log of this run can be found in: /home/rocky/.npm/_logs/2025-06-17T04_22_52_064Z-debug-0.log<br>\nmake[2]: *** [docs/portal-js/CMakeFiles/portaljs_fetchdeps.dir/build.make:73: docs/portal-js/node_modules/.package-lock.json] Error 1<br>\nmake[1]: *** [CMakeFiles/Makefile2:16765: docs/portal-js/CMakeFiles/portaljs_fetchdeps.dir/all] Error 2<br>\nmake[2]: *** [esp/src/CMakeFiles/eclwatch_fetchdeps.dir/build.make:73: esp/src/lib/package-lock.json] Error 1<br>\nmake[1]: *** [CMakeFiles/Makefile2:11679: esp/src/CMakeFiles/eclwatch_fetchdeps.dir/all] Error 2<br>\nmake: *** [Makefile:166: all] Error 2<br>\n"
+            }
+        ]
+    }
+}

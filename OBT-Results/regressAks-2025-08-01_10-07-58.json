@@ -1,0 +1,253 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem" : "Ubuntu_22_04_5_LTS",
+            "Hardware": "CPU/Cores: 8, RAM: 16 GB",
+            "IPAddress": "192.168.1.54"
+        },
+         "Remote" : {
+            "System" : "AKS",
+            "VmSize" : "Standard_D16s_v4",
+            "Hardware": "CPU/Cores: 16, RAM: 64 GB",
+            "HthorConfig": {
+                "Replicas": "3",
+                "MaxActive": "4",
+                "UseChildProcesses" : "true",
+                "AllowedPipePrograms" : "*"
+            },
+            "ThorConfig":{
+                "NumWorkers": "2",
+                "MaxJobs": "4",
+                "MaxGraph" : "2",
+                "MultiJobLinger" : "true",
+                "LingerPeriod" : "200",
+                "AllowedPipePrograms" : "*"
+            },
+            "RoxieWorkunitConfig": {
+                "Replicas": "1",
+                "MaxActive":"20",
+                "UseChildProcesses" : "true",
+                "AllowedPipePrograms" : "*"
+            }
+        },
+        "BuildSet": {
+            "Branch": "community_9.14.6-1 Gold",
+            "BranchDate": "N/A",
+            "BranchSHA": "N/A",
+            "BuildType": "Release",
+            "Target": "K8s"
+        },
+        "Exclusion": {
+            "Build": "N/A",
+            "Documentation": "N/A",
+            "Unittest": "N/A",
+            "MLtest": "N/A",
+            "Regression": "--ef pipefail.ecl -e embedded-r,embedded-js,3rdpartyservice,mongodb,spray,proxy"
+        },
+        "Tasks": [
+            {
+                "UpdateHelmRepo": {
+                    "Result" : "Done",
+                    "Elaps": {
+                        "Formatted": "7 sec (00:00:07)",
+                        "RawSec": "7"
+                    }
+                }
+            },
+            {
+                "UpgradeTerraform": {
+                    "Result" : "Done",
+                    "Version" : "Terraform v1.12.2",
+                    "Elaps": {
+                        "Formatted": "51 sec (00:00:51)",
+                        "RawSec": "51"
+                    }
+                }
+            },
+            {
+                "CreateVirtualNetwork": {
+                    "Result" : "Done (retCode: 0)",
+                    "NumberOfResources" : 11,
+                    "Elaps": {
+                        "Formatted": "315 sec (00:05:15)",
+                        "RawSec": "315"
+                    }
+                }
+            },
+            {
+                "CreateStorage": {
+                    "Result" : "Done (retCode: 0)",
+                    "NumberOfResources" : 17,
+                    "Elaps": {
+                        "Formatted": "204 sec (00:03:24)",
+                        "RawSec": "204"
+                    }
+                }
+            },
+            {
+                "CreateAKS": {
+                    "Result" : "Failed",
+                    "NumberOfResources" : 0,
+                    "Elaps": {
+                        "Formatted": "607 sec (00:10:07)",
+                        "RawSec": "607"
+                    }
+                }
+            },
+            {
+                "ECLWatchAnnotation": {
+                    "Result": "Skipped based on error in deploy AKS.",
+                    "Elaps": {
+                        "Formatted": "",
+                        "RawSec": ""
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "Skipped based on error in deploy AKS.",
+                    "hthor": {
+                        "Elaps": {
+                            "Formatted": "0 sec (00:00:00)",
+                            "RawSec": "0"
+                        },
+                        "Total": 0,
+                        "Pass": 0,
+                        "Fail": 0,
+                        "Result": "N/A"
+                    },
+                    "thor": {
+                        "Elaps": {
+                            "Formatted": "",
+                            "RawSec": ""
+                        },
+                        "Total": 0,
+                        "Pass": 0,
+                        "Fail": 0,
+                        "Result": ""
+                    },
+                    "roxie": {
+                        "Elaps": {
+                            "Formatted": "",
+                            "RawSec": ""
+                        },
+                        "Total": 0,
+                        "Pass": 0,
+                        "Fail": 0,
+                        "Result": ""
+                    }
+                }
+            },
+            {
+                "PublishQueries": {
+                    "Result" : "Skipped based on error in deploy AKS.",
+                    "Total" : 0,
+                    "Elaps": {
+                        "Formatted": "",
+                        "RawSec": ""
+                    }
+                }
+            },
+            {
+                "Regress": {
+                    "Result": "Skipped based on error in deploy AKS.",
+                    "Hthor": {
+                        "Result": "",
+                        "Elaps": {
+                            "Formatted": "",
+                            "RawSec": ""
+                        },
+                        "Total": 0,
+                        "Pass": 0,
+                        "Fail": 0
+                    },
+                    "Thor": {
+                        "Result": "",
+                        "Elaps": {
+                            "Formatted": "",
+                            "RawSec": ""
+                        },
+                        "Total":  0,
+                        "Pass": 0,
+                        "Fail": 0
+                    },
+                    "Roxie": {
+                        "Result": "",
+                        "Elaps": {
+                            "Formatted": "",
+                            "RawSec": ""
+                        },
+                        "Total":  0,
+                        "Pass": 0,
+                        "Fail": 0
+                    }
+                }
+            },
+            {
+                "CollectTimings": {
+                    "Result" : "",
+                    "Elaps": {
+                        "Formatted": "",
+                        "RawSec": ""
+                    }
+                }
+            },
+            {
+                "CollectPODLogs": {
+                    "Result" : "Done",
+                    "Elaps": {
+                        "Formatted": "18 sec (00:00:18).",
+                        "RawSec": "18"
+                    }
+                }
+            },
+            {
+                "DestroyAKS": {
+                    "Result" : "Done (retCode: 0)",
+                    "NumberOfResources" : 17,
+                    "Elaps": {
+                        "Formatted": "395 sec (00:06:35)",
+                        "RawSec": "395"
+                    }
+                }
+            },
+            {
+                "DestroyStorage": {
+                    "Result" : "Done (retCode: 0)",
+                    "NumberOfResources" : 17,
+                    "Elaps": {
+                        "Formatted": "170 sec (00:02:50)",
+                        "RawSec": "170"
+                    }
+                }
+            },
+            {
+                "DestroyVirtualNetwork": {
+                    "Result" : "Done (retCode: 0)",
+                    "NumberOfResources" : 11,
+                    "Elaps": {
+                        "Formatted": "205 sec (00:03:25)",
+                        "RawSec": "205"
+                    }
+                }
+            },
+            {
+                "RunLogProcessor": {
+                   "Result": "Done",
+                    "Elaps": {
+                        "Formatted": "0 sec (00:00:00).",
+                        "RawSec": "0"
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            
+            
+            
+            
+            
+            
+        ]
+    }
+}

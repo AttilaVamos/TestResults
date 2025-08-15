@@ -1,0 +1,336 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem" : "Ubuntu_22_04_5_LTS",
+            "Hardware": "CPU/Cores: 8, RAM: 16 GB",
+            "IPAddress": "192.168.1.54"
+        },
+         "Remote" : {
+            "System" : "AKS",
+            "VmSize" : "Standard_D16s_v4",
+            "Hardware": "CPU/Cores: 16, RAM: 64 GB",
+            "HthorConfig": {
+                "Replicas": "3",
+                "MaxActive": "4",
+                "UseChildProcesses" : "true",
+                "AllowedPipePrograms" : "*"
+            },
+            "ThorConfig":{
+                "NumWorkers": "2",
+                "MaxJobs": "4",
+                "MaxGraph" : "2",
+                "MultiJobLinger" : "true",
+                "LingerPeriod" : "200",
+                "AllowedPipePrograms" : "*"
+            },
+            "RoxieWorkunitConfig": {
+                "Replicas": "1",
+                "MaxActive":"20",
+                "UseChildProcesses" : "true",
+                "AllowedPipePrograms" : "*"
+            }
+        },
+        "BuildSet": {
+            "Branch": "community_9.14.2-1 Gold",
+            "BranchDate": "N/A",
+            "BranchSHA": "N/A",
+            "BuildType": "Release",
+            "Target": "K8s"
+        },
+        "Exclusion": {
+            "Build": "N/A",
+            "Documentation": "N/A",
+            "Unittest": "N/A",
+            "MLtest": "N/A",
+            "Regression": "--ef pipefail.ecl -e embedded-r,embedded-js,3rdpartyservice,mongodb,spray,proxy"
+        },
+        "Tasks": [
+            {
+                "UpdateHelmRepo": {
+                    "Result" : "Done",
+                    "Elaps": {
+                        "Formatted": "12 sec (00:00:12)",
+                        "RawSec": "12"
+                    }
+                }
+            },
+            {
+                "UpgradeTerraform": {
+                    "Result" : "Done",
+                    "Version" : "Terraform v1.12.2",
+                    "Elaps": {
+                        "Formatted": "42 sec (00:00:42)",
+                        "RawSec": "42"
+                    }
+                }
+            },
+            {
+                "CreateVirtualNetwork": {
+                    "Result" : "Done (retCode: 0)",
+                    "NumberOfResources" : 11,
+                    "Elaps": {
+                        "Formatted": "126 sec (00:02:06)",
+                        "RawSec": "126"
+                    }
+                }
+            },
+            {
+                "CreateStorage": {
+                    "Result" : "Done (retCode: 0)",
+                    "NumberOfResources" : 17,
+                    "Elaps": {
+                        "Formatted": "264 sec (00:04:24)",
+                        "RawSec": "264"
+                    }
+                }
+            },
+            {
+                "CreateAKS": {
+                    "Result" : "Done",
+                    "NumberOfResources" : 20,
+                    "Elaps": {
+                        "Formatted": "526 sec (00:08:46)",
+                        "RawSec": "526"
+                    }
+                }
+            },
+            {
+                "ECLWatchAnnotation": {
+                    "Result": "Done",
+                    "Elaps": {
+                        "Formatted": "66 sec (00:01:06)",
+                        "RawSec": "66"
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "hthor": {
+                        "Elaps": {
+                            "Formatted": "0 sec (00:00:00)",
+                            "RawSec": "0"
+                        },
+                        "Total": 0,
+                        "Pass": 0,
+                        "Fail": 0,
+                        "Result": "N/A"
+                    },
+                    "thor": {
+                        "Elaps": {
+                            "Formatted": "78 sec (00:01:18)",
+                            "RawSec": "78"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "roxie": {
+                        "Elaps": {
+                            "Formatted": "115 sec (00:01:55)",
+                            "RawSec": "115"
+                        },
+                        "Total": 24,
+                        "Pass": 24,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "PublishQueries": {
+                    "Result" : "Done",
+                    "Total" : 0,
+                    "Elaps": {
+                        "Formatted": "0 sec (00:00:00)",
+                        "RawSec": "0"
+                    }
+                }
+            },
+            {
+                "Regress": {
+                    "Result": "FAILED",
+                    "Hthor": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "4334 sec (01:12:14)",
+                            "RawSec": "4334"
+                        },
+                        "Total": 1077,
+                        "Pass": 1076,
+                        "Fail": 1
+                    },
+                    "Thor": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "3775 sec (01:02:55)",
+                            "RawSec": "3775"
+                        },
+                        "Total":  955,
+                        "Pass": 953,
+                        "Fail": 2
+                    },
+                    "Roxie": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "5126 sec (01:25:26)",
+                            "RawSec": "5126"
+                        },
+                        "Total":  1148,
+                        "Pass": 1077,
+                        "Fail": 71
+                    }
+                }
+            },
+            {
+                "CollectTimings": {
+                    "Result" : "Done",
+                    "Elaps": {
+                        "Formatted": "1055 sec (00:17:35).",
+                        "RawSec": "1055"
+                    }
+                }
+            },
+            {
+                "CollectPODLogs": {
+                    "Result" : "Done",
+                    "Elaps": {
+                        "Formatted": "355 sec (00:05:55).",
+                        "RawSec": "355"
+                    }
+                }
+            },
+            {
+                "DestroyAKS": {
+                    "Result" : "Done (retCode: 0)",
+                    "NumberOfResources" : 20,
+                    "Elaps": {
+                        "Formatted": "612 sec (00:10:12)",
+                        "RawSec": "612"
+                    }
+                }
+            },
+            {
+                "DestroyStorage": {
+                    "Result" : "Done (retCode: 0)",
+                    "NumberOfResources" : 17,
+                    "Elaps": {
+                        "Formatted": "148 sec (00:02:28)",
+                        "RawSec": "148"
+                    }
+                }
+            },
+            {
+                "DestroyVirtualNetwork": {
+                    "Result" : "Done (retCode: 0)",
+                    "NumberOfResources" : 11,
+                    "Elaps": {
+                        "Formatted": "174 sec (00:02:54)",
+                        "RawSec": "174"
+                    }
+                }
+            },
+            {
+                "RunLogProcessor": {
+                   "Result": "Done",
+                    "Elaps": {
+                        "Formatted": "1 sec (00:00:01).",
+                        "RawSec": "1"
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            
+            
+            
+            {
+            "HthorRegress" : [
+                "[Failure] 140. Fail cryptoplugin_pke_lfn.ecl - W20250718-121054 (6 sec)"
+                ]
+            },
+            {
+            "ThorRegress" : [
+                "[Failure] 137. Fail cryptoplugin_pke_lfn.ecl - W20250718-132010 (6 sec)",
+                "[Failure] 258. Fail external.ecl - W20250718-132639 (7 sec)"
+            ]
+        },
+            {
+            "RoxieRegress" : [
+                "[Failure]  36. Fail aggsqx1.ecl ( version: multiPart=false ) - W20250718-141836 (8 sec)",
+                "[Failure]  37. Fail aggsqx1b.ecl ( version: multiPart=false ) - W20250718-141843 (7 sec)",
+                "[Failure]  38. Fail aggsqx2.ecl ( version: multiPart=false ) - W20250718-141847 (8 sec)",
+                "[Failure]  39. Fail aggsqx3.ecl ( version: multiPart=false ) - W20250718-141851 (9 sec)",
+                "[Failure]  40. Fail aggsqx3err.ecl ( version: multiPart=false ) - W20250718-141855 (8 sec)",
+                "[Failure]  41. Fail aggsqx4.ecl ( version: multiPart=false ) - W20250718-141902 (8 sec)",
+                "[Failure] 151. Fail cryptoplugin_pke_lfn.ecl - W20250718-142733-2 (7 sec)",
+                "[Failure] 285. Fail external.ecl - W20250718-143606 (7 sec)",
+                "[Failure] 287. Fail externalplane.ecl - W20250718-143615 (7 sec)",
+                "[Failure] 389. Fail indexmerge.ecl ( version: multiPart=false ) - W20250718-144312 (7 sec)",
+                "[Failure] 575. Fail mergechild.ecl ( version: multiPart=false ) - W20250718-145640 (7 sec)",
+                "[Failure] 672. Fail pullindex2.ecl ( version: multiPart=false ) - W20250718-150316 (7 sec)",
+                "[Failure] 733. Fail rewrite.ecl - W20250718-150721 (8 sec)",
+                "[Failure] 833. Fail sqagg.ecl ( version: multiPart=false ) - W20250718-151459 (11 sec)",
+                "[Failure] 835. Fail sqagg2.ecl ( version: multiPart=false ) - W20250718-151511 (8 sec)",
+                "[Failure] 840. Fail sqaggseq.ecl ( version: multiPart=false ) - W20250718-151531 (12 sec)",
+                "[Failure] 843. Fail sqcond.ecl ( version: multiPart=false ) - W20250718-151547 (8 sec)",
+                "[Failure] 844. Fail sqcond3.ecl ( version: multiPart=false ) - W20250718-151553 (8 sec)",
+                "[Failure] 846. Fail sqfilt.ecl ( version: multiPart=false ) - W20250718-151602 (8 sec)",
+                "[Failure] 848. Fail sqfilt.ecl ( version: multiPart=false, useSequential=true ) - W20250718-151611 (8 sec)",
+                "[Failure] 849. Fail sqfilt.ecl ( version: multiPart=false, useSequential=true, useNoFold=true ) - W20250718-151612 (8 sec)",
+                "[Failure] 851. Fail sqfilt2.ecl ( version: multiPart=false ) - W20250718-151622-4 (8 sec)",
+                "[Failure] 850. Fail sqfilt.ecl ( version: multiPart=false, useSequential=true, useNoFold=true, optRemoteRead=true ) - W20250718-151622 (9 sec)",
+                "[Failure] 852. Fail sqfilt3.ecl ( version: multiPart=false ) - W20250718-151632 (8 sec)",
+                "[Failure] 853. Fail sqfilt4.ecl ( version: multiPart=false ) - W20250718-151632-2 (8 sec)",
+                "[Failure] 854. Fail sqfilt_an.ecl ( version: multiPart=false ) - W20250718-151641-5 (9 sec)",
+                "[Failure] 857. Fail sqgragg.ecl ( version: multiPart=false ) - W20250718-151650 (7 sec)",
+                "[Failure] 858. Fail sqgroup.ecl ( version: multiPart=false ) - W20250718-151659 (8 sec)",
+                "[Failure] 865. Fail sqif.ecl ( version: multiPart=false ) - W20250718-151723-1 (7 sec)",
+                "[Failure] 866. Fail sqnormds1.ecl ( version: multiPart=false ) - W20250718-151731 (8 sec)",
+                "[Failure] 867. Fail sqnormds1_an.ecl ( version: multiPart=false ) - W20250718-151732 (8 sec)",
+                "[Failure] 873. Fail sqshare2.ecl ( version: multiPart=false ) - W20250718-151757-5 (9 sec)",
+                "[Failure] 872. Fail sqshare.ecl ( version: multiPart=false ) - W20250718-151757 (10 sec)",
+                "[Failure] 874. Fail sqsimple.ecl ( version: multiPart=false ) - W20250718-151808 (8 sec)",
+                "[Failure] 876. Fail sqsimple2.ecl ( version: multiPart=false ) - W20250718-151817-2 (8 sec)",
+                "[Failure] 885. Fail steplimit1.ecl ( version: multiPart=false ) - W20250718-151850 (7 sec)",
+                "[Failure] 887. Fail steplimit2.ecl ( version: multiPart=false ) - W20250718-151858 (7 sec)",
+                "[Failure] 907. Fail stepping7.ecl ( version: multiPart=false ) - W20250718-152018 (7 sec)",
+                "[Failure] 909. Fail stepping7a.ecl ( version: multiPart=false ) - W20250718-152026 (7 sec)",
+                "[Failure] 911. Fail stepping7b.ecl ( version: multiPart=false ) - W20250718-152035 (7 sec)",
+                "[Failure] 913. Fail stepping7c.ecl ( version: multiPart=false ) - W20250718-152043 (7 sec)",
+                "[Failure] 915. Fail stepping7d.ecl ( version: multiPart=false ) - W20250718-152052 (7 sec)",
+                "[Failure] 917. Fail stepping7e.ecl ( version: multiPart=false ) - W20250718-152100-3 (7 sec)",
+                "[Failure] 919. Fail stepping7f.ecl ( version: multiPart=false ) - W20250718-152108-2 (8 sec)",
+                "[Failure] 921. Fail stepping7g.ecl ( version: multiPart=false ) - W20250718-152118-4 (7 sec)",
+                "[Failure] 923. Fail stepping7h.ecl ( version: multiPart=false ) - W20250718-152126 (7 sec)",
+                "[Failure] 925. Fail stepping8.ecl ( version: multiPart=false ) - W20250718-152135 (7 sec)",
+                "[Failure] 927. Fail stepping8a.ecl ( version: multiPart=false ) - W20250718-152143 (8 sec)",
+                "[Failure] 929. Fail stepping8b.ecl ( version: multiPart=false ) - W20250718-152152 (8 sec)",
+                "[Failure] 931. Fail stepping9a.ecl ( version: multiPart=false ) - W20250718-152201-5 (7 sec)",
+                "[Failure] 933. Fail stepping9b.ecl ( version: multiPart=false ) - W20250718-152210 (8 sec)",
+                "[Failure] 942. Fail stresstext.ecl ( version: multiPart=false ) - W20250718-152243 (10 sec)",
+                "[Failure] 944. Fail stresstext.ecl ( version: multiPart=false, variant='default' ) - W20250718-152254 (11 sec)",
+                "[Failure] 946. Fail stresstext.ecl ( version: multiPart=false, variant='inplace_row' ) - W20250718-152307 (10 sec)",
+                "[Failure] 945. Fail stresstext.ecl ( version: multiPart=false, variant='inplace' ) - W20250718-152307-1 (11 sec)",
+                "[Failure] 947. Fail stresstext.ecl ( version: multiPart=false, variant='inplace_lzw' ) - W20250718-152320 (11 sec)",
+                "[Failure] 948. Fail stresstext.ecl ( version: multiPart=false, variant='inplace_lz4hc' ) - W20250718-152320-1 (11 sec)",
+                "[Failure] 950. Fail stresstext_if.ecl ( version: multiPart=false ) - W20250718-152333-1 (7 sec)",
+                "[Failure] 949. Fail stresstext.ecl ( version: multiPart=false, variant='inplace_zstd' ) - W20250718-152333 (11 sec)",
+                "[Failure] 1003. Fail textsearch4.ecl ( version: multiPart=false ) - W20250718-153045 (15 sec)",
+                "[Failure] 1053. Fail verifytextindex.ecl ( version: multiPart=false, variant='default' ) - W20250718-153430 (7 sec)",
+                "[Failure] 1054. Fail verifytextindex.ecl ( version: multiPart=false, variant='inplace' ) - W20250718-153435 (7 sec)",
+                "[Failure] 1055. Fail verifytextindex.ecl ( version: multiPart=false, variant='inplace_row' ) - W20250718-153438 (7 sec)",
+                "[Failure] 1056. Fail verifytextindex.ecl ( version: multiPart=false, variant='inplace_lzw' ) - W20250718-153444 (7 sec)",
+                "[Failure] 1057. Fail verifytextindex.ecl ( version: multiPart=false, variant='inplace_lz4hc' ) - W20250718-153447 (7 sec)",
+                "[Failure] 1104. Fail workflow_9a.ecl ( version: parallel=false ) - W20250718-153802 (8 sec)",
+                "[Failure] 1105. Fail workflow_9a.ecl ( version: parallel=true ) - W20250718-153803 (9 sec)",
+                "[Failure] 1106. Fail workflow_9b.ecl ( version: parallel=false ) - W20250718-153812 (9 sec)",
+                "[Failure] 1107. Fail workflow_9b.ecl ( version: parallel=true ) - W20250718-153812-4 (10 sec)",
+                "[Failure] 1108. Fail workflow_9c.ecl ( version: parallel=false ) - W20250718-153823-1 (47 sec)",
+                "[Failure] 1109. Fail workflow_9c.ecl ( version: parallel=true ) - W20250718-153823 (48 sec)"
+            ]
+        }
+        ]
+    }
+}

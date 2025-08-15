@@ -1,0 +1,277 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "CentOS_Linux_7",
+            "Hardware": "CPU/Cores: 16, RAM: 30 GB",
+            "IPAddress": "10.20.0.45 (OBT-AWS02)"
+        },
+        "BuildSet": {
+            "Branch": "candidate-9.6.x",
+            "BranchDate": "Thu Jun 12 17:02:11 2025 +0100",
+            "BranchSHA": "a10eca5d06b6b51ef88d44d8b8872cd58750390e",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest, RWLockStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl",
+            "Regression": "embedded-r, embedded-js, 3rdpartyservice, mongodb, python2"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "PASSED",
+                    "CMake": {
+                        "Formatted": "13 sec (00:00:13)",
+                        "RawSec": "13"
+                    },
+                    "Build": {
+                        "Formatted": "714 sec (00:11:54)",
+                        "RawSec": "714"
+                    },
+                    "Package": {
+                        "Formatted": "446 sec (00:07:26)",
+                        "RawSec": "446"
+                    },
+                    "Altogether": {
+                        "Formatted": "1173 sec (00:19:33)",
+                        "RawSec": "1173"
+                    }
+                }
+            },
+            {
+                "Install": {
+                    "Elaps": "No data"
+                }
+            },
+            {
+                "Unittests": {
+                    "Result": "FAILED",
+                    "Elaps": {
+                        "Formatted": "1482 sec (00:24:42)",
+                        "RawSec": "1482"
+                    },
+                    "Total": 329,
+                    "Pass": 316,
+                    "Fail": 9,
+                    "Error": 4,
+                    "Timeout": 0
+                }
+            },
+            {
+                "Wutooltests": {
+                    "Result": "PASSED",
+                    "Elaps": {
+                        "Formatted": "1 sec (00:00:01)",
+                        "RawSec": "1"
+                    },
+                    "Total": 19,
+                    "Pass": 19,
+                    "Fail": 0,
+                    "Error": 0,
+                    "Timeout": 0
+                }
+            },
+            {
+                "MLtests": {
+                    "Result": "PASSED",
+                    "DBSCAN": {
+                        "Elaps": {
+                            "Formatted": "12 sec  (00:00:12)",
+                            "RawSec": "12"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GLM": {
+                        "Elaps": {
+                            "Formatted": "91 sec  (00:01:31)",
+                            "RawSec": "91"
+                        },
+                        "Total": 7,
+                        "Pass": 7,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GNN": {
+                        "Elaps": {
+                            "Formatted": "77 sec  (00:01:17)",
+                            "RawSec": "77"
+                        },
+                        "Total": 4,
+                        "Pass": 4,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "KMeans": {
+                        "Elaps": {
+                            "Formatted": "5 sec  (00:00:05)",
+                            "RawSec": "5"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "LearningTrees": {
+                        "Elaps": {
+                            "Formatted": "148 sec  (00:02:28)",
+                            "RawSec": "148"
+                        },
+                        "Total": 3,
+                        "Pass": 3,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "PBblas": {
+                        "Elaps": {
+                            "Formatted": "20 sec  (00:00:20)",
+                            "RawSec": "20"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "SupportVectorMachines": {
+                        "Elaps": {
+                            "Formatted": "16 sec  (00:00:16)",
+                            "RawSec": "16"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "TextVectors": {
+                        "Elaps": {
+                            "Formatted": "14 sec  (00:00:14)",
+                            "RawSec": "14"
+                        },
+                        "Total": 5,
+                        "Pass": 5,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "hthor": {
+                        "Elaps": {
+                            "Formatted": "40 sec  (00:00:40)",
+                            "RawSec": "40"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "thor": {
+                        "Elaps": {
+                            "Formatted": "20 sec  (00:00:20)",
+                            "RawSec": "20"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "roxie": {
+                        "Elaps": {
+                            "Formatted": "41 sec  (00:00:41)",
+                            "RawSec": "41"
+                        },
+                        "Total": 24,
+                        "Pass": 24,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Regress": {
+                    "Result": "PASSED",
+                    "Hthor": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "437 sec  (00:07:17)",
+                            "RawSec": "437"
+                        },
+                        "Total": 1043,
+                        "Pass": 1043,
+                        "Fail": 0
+                    },
+                    "Thor": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "776 sec  (00:12:56)",
+                            "RawSec": "776"
+                        },
+                        "Total": 933,
+                        "Pass": 933,
+                        "Fail": 0
+                    },
+                    "Roxie": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "594 sec  (00:09:54)",
+                            "RawSec": "594"
+                        },
+                        "Total": 1148,
+                        "Pass": 1148,
+                        "Fail": 0
+                    }
+                }
+            },
+            {
+                "Uninstall": {
+                    "Elaps": "No data"
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "Unittests": [
+                    "Run:  1   Failures: 0   Errors: 1",
+                    "1) test: JlibCompressionTestsStress::test (E)",
+                    "uncaught exception of unknown type",
+                    "Run:  2   Failures: 0   Errors: 1",
+                    "1) test: JlibFileIOTestTiming::testIOLarge (E)",
+                    "uncaught exception of unknown type",
+                    "Run:  2   Failures: 0   Errors: 1",
+                    "1) test: JlibFileTest::testCompressed (E)",
+                    "uncaught exception of unknown type",
+                    "Run:  1   Failures: 0   Errors: 1",
+                    "1) test: JlibIOTest::test (E)",
+                    "uncaught exception of unknown type",
+                    "Run:  5   Failures: 4   Errors: 0",
+                    "1) test: JLibSecretsTest::setup (F) line: 4440 /home/centos/build/CE/platform/HPCC-Platform/testing/unittests/jlibtests.cpp",
+                    "- Expression: recursiveCreateDirectory(secretRoot.str())",
+                    "2) test: JLibSecretsTest::testUpdate1 (F) line: 4679 /home/centos/build/CE/platform/HPCC-Platform/testing/unittests/jlibtests.cpp",
+                    "- Expression: recursiveCreateDirectory(filename.str())",
+                    "3) test: JLibSecretsTest::testUpdate2 (F) line: 4679 /home/centos/build/CE/platform/HPCC-Platform/testing/unittests/jlibtests.cpp",
+                    "- Expression: recursiveCreateDirectory(filename.str())",
+                    "4) test: JLibSecretsTest::testBackgroundUpdate (F) line: 4582 /home/centos/build/CE/platform/HPCC-Platform/testing/unittests/jlibtests.cpp",
+                    "- Expression: secret4->isStale()",
+                    "Run:  7   Failures: 5   Errors: 0",
+                    "1) test: JlibStreamStressTest::testSimpleStream (F) line: 451 /home/centos/build/CE/platform/HPCC-Platform/testing/unittests/jstreamtests.cpp",
+                    "- testSimple(none, Seq_40PW, 1048576, 1048576) failed: CFile::open testfile, No space left on device",
+                    "2) test: JlibStreamStressTest::testEvenSequentialStream (F) line: 451 /home/centos/build/CE/platform/HPCC-Platform/testing/unittests/jstreamtests.cpp",
+                    "- testEvenSequential(none, Seq_40PW, 1048576, 1048576) failed: CFile::open testfile, No space left on device",
+                    "3) test: JlibStreamStressTest::testParallelStream (F) line: 451 /home/centos/build/CE/platform/HPCC-Platform/testing/unittests/jstreamtests.cpp",
+                    "- testParallel(none, Seq_40PW, 1048576, 1048576) failed: CFile::open testfile, No space left on device",
+                    "4) test: JlibStreamStresretcode:0"
+                ]
+            }
+        ]
+    }
+}

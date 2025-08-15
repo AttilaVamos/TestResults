@@ -1,0 +1,97 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Ubuntu_22_04_5_LTS",
+            "Hardware": "CPU/Cores: 8, RAM: 23 GB",
+            "IPAddress": "127.0.1.1 (OBT-BM01)"
+        },
+        "BuildSet": {
+            "Branch": "master",
+            "BranchDate": "Mon Jun 23 16:22:40 2025 +0100",
+            "BranchSHA": "FDF92FEA",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {},
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "thor": {
+                        "Total": "3",
+                        "Pass": "3",
+                        "Fail": "0",
+                        "Result": "PASSED"
+                    },
+                    "roxie": {
+                        "Total": "5",
+                        "Pass": "5",
+                        "Fail": "0",
+                        "Result": "PASSED"
+                    }
+                },
+                "Performance": {
+                    "Result": "FAILED",
+                    "thor": {
+                        "Total": "319",
+                        "Pass": "313",
+                        "Fail": "6",
+                        "Result": "FAILED"
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "thor": {
+                    "02bl_sortvariable": {
+                        "TestId": 80,
+                        "Wuid": "W20250624-115214",
+                        "Problem": "Aborted ",
+                        "Code": "-2",
+                        "Msg": " reason: Timeout and retry count exhausted! "
+                    },
+                    "02bm_sortlarge": {
+                        "TestId": 81,
+                        "Wuid": "W20250624-115345",
+                        "Problem": "Aborted ",
+                        "Code": "-2",
+                        "Msg": " reason: Timeout and retry count exhausted! "
+                    },
+                    "04ac_join1p": {
+                        "TestId": 114,
+                        "Wuid": "W20250624-122101",
+                        "Problem": "Aborted ",
+                        "Code": "-2",
+                        "Msg": " reason: Timeout and retry count exhausted! "
+                    },
+                    "07ca_keyedjoinlimit_no": {
+                        "TestId": 174,
+                        "Wuid": "W20250624-132523",
+                        "Problem": "Aborted ",
+                        "Code": "-2",
+                        "Msg": " reason: Timeout and retry count exhausted! "
+                    },
+                    "07cb_keyedjoinlimit_no2": {
+                        "TestId": 175,
+                        "Wuid": "W20250624-132718",
+                        "Problem": "Aborted ",
+                        "Code": "-2",
+                        "Msg": " reason: Timeout and retry count exhausted! "
+                    },
+                    "02cd_multisort16": {
+                        "TestId": 85,
+                        "Wuid": "W20250624-115650",
+                        "Problem": "Exception",
+                        "Code": "5734",
+                        "Msg": "System error: 5734: Graph graph1[1], sort[17]: Graph graph1[1], sort[17]: CSortMaster::ConnectSlaves: Could not connect to 192:168:1:59:20139, Master exception - caused by (5734, Graph graph1[1], sort[17]: CSortMaster::ConnectSlaves: Could not connect to 192:168:1:59:20139)"
+                    }
+                }
+            }
+        ]
+    }
+}

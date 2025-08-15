@@ -1,0 +1,289 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Rocky_Linux_8_9",
+            "Hardware": "CPU/Cores: 8, RAM: 15 GB",
+            "IPAddress": "10.22.254.98 (OBT-AWS04)"
+        },
+        "BuildSet": {
+            "Branch": "candidate-9.12.x",
+            "BranchDate": "Fri Jun 13 15:28:50 2025 +0100",
+            "BranchSHA": "659fdfab2d45cd24ba816fc485cb70530c73e048",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS, WASMEMBED",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl",
+            "Regression": "embedded, 3rdparty, python2, wasmembed*"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "PASSED",
+                    "CMake": {
+                        "Formatted": "12 sec (00:00:12)",
+                        "RawSec": "12"
+                    },
+                    "Build": {
+                        "Formatted": "842 sec (00:14:02)",
+                        "RawSec": "842"
+                    },
+                    "Package": {
+                        "Formatted": "235 sec (00:03:55)",
+                        "RawSec": "235"
+                    },
+                    "Altogether": {
+                        "Formatted": "1089 sec (00:18:09)",
+                        "RawSec": "1089"
+                    }
+                }
+            },
+            {
+                "Install": {
+                    "Elaps": "No data"
+                }
+            },
+            {
+                "Unittests": {
+                    "Result": "FAILED",
+                    "Elaps": {
+                        "Formatted": "1633 sec (00:27:13)",
+                        "RawSec": "1633"
+                    },
+                    "Total": 433,
+                    "Pass": 416,
+                    "Fail": 9,
+                    "Error": 8,
+                    "Timeout": 0
+                }
+            },
+            {
+                "Wutooltests": {
+                    "Result": "PASSED",
+                    "Elaps": {
+                        "Formatted": "0 sec (00:00:00)",
+                        "RawSec": "0"
+                    },
+                    "Total": 19,
+                    "Pass": 19,
+                    "Fail": 0,
+                    "Error": 0,
+                    "Timeout": 0
+                }
+            },
+            {
+                "MLtests": {
+                    "Result": "PASSED",
+                    "DBSCAN": {
+                        "Elaps": {
+                            "Formatted": "10 sec  (00:00:10)",
+                            "RawSec": "10"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GLM": {
+                        "Elaps": {
+                            "Formatted": "50 sec  (00:00:50)",
+                            "RawSec": "50"
+                        },
+                        "Total": 7,
+                        "Pass": 7,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GNN": {
+                        "Elaps": {
+                            "Formatted": "68 sec  (00:01:08)",
+                            "RawSec": "68"
+                        },
+                        "Total": 4,
+                        "Pass": 4,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "KMeans": {
+                        "Elaps": {
+                            "Formatted": "4 sec  (00:00:04)",
+                            "RawSec": "4"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "LearningTrees": {
+                        "Elaps": {
+                            "Formatted": "170 sec  (00:02:50)",
+                            "RawSec": "170"
+                        },
+                        "Total": 3,
+                        "Pass": 3,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "PBblas": {
+                        "Elaps": {
+                            "Formatted": "12 sec  (00:00:12)",
+                            "RawSec": "12"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "SupportVectorMachines": {
+                        "Elaps": {
+                            "Formatted": "14 sec  (00:00:14)",
+                            "RawSec": "14"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "TextVectors": {
+                        "Elaps": {
+                            "Formatted": "10 sec  (00:00:10)",
+                            "RawSec": "10"
+                        },
+                        "Total": 5,
+                        "Pass": 5,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "hthor": {
+                        "Elaps": {
+                            "Formatted": "37 sec  (00:00:37)",
+                            "RawSec": "37"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "thor": {
+                        "Elaps": {
+                            "Formatted": "23 sec  (00:00:23)",
+                            "RawSec": "23"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "roxie": {
+                        "Elaps": {
+                            "Formatted": "38 sec  (00:00:38)",
+                            "RawSec": "38"
+                        },
+                        "Total": 24,
+                        "Pass": 24,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Regress": {
+                    "Result": "PASSED",
+                    "Hthor": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "486 sec  (00:08:06)",
+                            "RawSec": "486"
+                        },
+                        "Total": 1036,
+                        "Pass": 1036,
+                        "Fail": 0
+                    },
+                    "Thor": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "942 sec  (00:15:42)",
+                            "RawSec": "942"
+                        },
+                        "Total": 919,
+                        "Pass": 919,
+                        "Fail": 0
+                    },
+                    "Roxie": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "620 sec  (00:10:20)",
+                            "RawSec": "620"
+                        },
+                        "Total": 1128,
+                        "Pass": 1128,
+                        "Fail": 0
+                    }
+                }
+            },
+            {
+                "Uninstall": {
+                    "Elaps": "No data"
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "Unittests": [
+                    "Run:  2   Failures: 0   Errors: 1",
+                    "1) test: JlibFileIOTestTiming::testIOLarge (E)",
+                    "uncaught exception of unknown type",
+                    "Run:  3   Failures: 0   Errors: 2",
+                    "1) test: JlibFileTest::testCompressed (E)",
+                    "uncaught exception of unknown type",
+                    "2) test: JlibFileTest::testAppendCompressed (E)",
+                    "uncaught exception of unknown type",
+                    "Run:  1   Failures: 0   Errors: 1",
+                    "1) test: JlibIOTest::test (E)",
+                    "uncaught exception of unknown type",
+                    "Run:  5   Failures: 4   Errors: 0",
+                    "1) test: JLibSecretsTest::setup (F) line: 4991 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jlibtests.cpp",
+                    "- Expression: recursiveCreateDirectory(secretRoot.str())",
+                    "2) test: JLibSecretsTest::testUpdate1 (F) line: 5230 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jlibtests.cpp",
+                    "- Expression: recursiveCreateDirectory(filename.str())",
+                    "3) test: JLibSecretsTest::testUpdate2 (F) line: 5230 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jlibtests.cpp",
+                    "- Expression: recursiveCreateDirectory(filename.str())",
+                    "4) test: JLibSecretsTest::testBackgroundUpdate (F) line: 5133 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jlibtests.cpp",
+                    "- Expression: secret4->isStale()",
+                    "Run:  8   Failures: 5   Errors: 0",
+                    "1) test: JlibStreamStressTest::testSimpleStream (F) line: 451 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jstreamtests.cpp",
+                    "- testSimple(none, Seq_40PW, 1048576, 1048576) failed: CFile::open testfile, No space left on device",
+                    "2) test: JlibStreamStressTest::testEvenSequentialStream (F) line: 451 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jstreamtests.cpp",
+                    "- testEvenSequential(none, Seq_40PW, 1048576, 1048576) failed: CFile::open testfile, No space left on device",
+                    "3) test: JlibStreamStressTest::testParallelStream (F) line: 451 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jstreamtests.cpp",
+                    "- testParallel(none, Seq_40PW, 1048576, 1048576) failed: CFile::open testfile, No space left on device",
+                    "4) test: JlibStreamStressTest::testThreadedWriteStream (F) line: 451 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jstreamtests.cpp",
+                    "- testThreadedWriteStream(none, Seq_40PW, 1048576, 1048576) failed: CFile::open testfile, No space left on device",
+                    "5) test: JlibStreamStressTest::testPathologicalRows (F) line: 451 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jstreamtests.cpp",
+                    "- testSimple(none, Large_C50000, 1048576, 1048576) failed: CFile::open testfile, No space left on device",
+                    "Run:  4   Failures: 0   Errors: 4",
+                    "1) test: LoggingIdFilterTests::testGroupFilter (E)",
+                    "uncaught exception of unknown type",
+                    "2) test: LoggingIdFilterTests::testHasService (E)",
+                    "uncaught exception of unknown type",
+                    "3) test: LoggingIdFilterTests::testGetTransactionSeed (E)",
+                    "uncaught exception of unknown type",
+                    "4) test: LoggingIdFilterTests::testGetTransactionId (E)",
+                    "uncaught exception of unknown type"
+                ]
+            }
+        ]
+    }
+}

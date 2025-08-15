@@ -1,0 +1,569 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Rocky_Linux_8_9",
+            "Hardware": "CPU/Cores: 8, RAM: 15 GB",
+            "IPAddress": "10.22.254.98 (OBT-AWS04)"
+        },
+        "BuildSet": {
+            "Branch": "master",
+            "BranchDate": "Fri Aug 8 13:48:45 2025 +0100",
+            "BranchSHA": "dbea6fea863c163f71b178b502e15d5e5ea4b550",
+            "BuildType": "Debug",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS, WASMEMBED",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl",
+            "Regression": "embedded, 3rdparty, python2, wasmembed*"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "PASSED",
+                    "CMake": {
+                        "Formatted": "10 sec (00:00:10)",
+                        "RawSec": "10"
+                    },
+                    "Build": {
+                        "Formatted": "573 sec (00:09:33)",
+                        "RawSec": "573"
+                    },
+                    "Package": {
+                        "Formatted": "209 sec (00:03:29)",
+                        "RawSec": "209"
+                    },
+                    "Altogether": {
+                        "Formatted": "792 sec (00:13:12)",
+                        "RawSec": "792"
+                    }
+                }
+            },
+            {
+                "Install": {
+                    "Elaps": "No data"
+                }
+            },
+            {
+                "Unittests": {
+                    "Result": "FAILED",
+                    "Elaps": {
+                        "Formatted": "7103 sec (01:58:23)",
+                        "RawSec": "7103"
+                    },
+                    "Total": 483,
+                    "Pass": 479,
+                    "Fail": 0,
+                    "Error": 3,
+                    "Timeout": 1
+                }
+            },
+            {
+                "Wutooltests": {
+                    "Result": "PASSED",
+                    "Elaps": {
+                        "Formatted": "1 sec (00:00:01)",
+                        "RawSec": "1"
+                    },
+                    "Total": 19,
+                    "Pass": 19,
+                    "Fail": 0,
+                    "Error": 0,
+                    "Timeout": 0
+                }
+            },
+            {
+                "MLtests": {
+                    "Result": "PASSED",
+                    "DBSCAN": {
+                        "Elaps": {
+                            "Formatted": "13 sec  (00:00:13)",
+                            "RawSec": "13"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GLM": {
+                        "Elaps": {
+                            "Formatted": "77 sec  (00:01:17)",
+                            "RawSec": "77"
+                        },
+                        "Total": 7,
+                        "Pass": 7,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GNN": {
+                        "Elaps": {
+                            "Formatted": "70 sec  (00:01:10)",
+                            "RawSec": "70"
+                        },
+                        "Total": 4,
+                        "Pass": 4,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "KMeans": {
+                        "Elaps": {
+                            "Formatted": "5 sec  (00:00:05)",
+                            "RawSec": "5"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "LearningTrees": {
+                        "Elaps": {
+                            "Formatted": "758 sec  (00:12:38)",
+                            "RawSec": "758"
+                        },
+                        "Total": 3,
+                        "Pass": 3,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "PBblas": {
+                        "Elaps": {
+                            "Formatted": "17 sec  (00:00:17)",
+                            "RawSec": "17"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "SupportVectorMachines": {
+                        "Elaps": {
+                            "Formatted": "16 sec  (00:00:16)",
+                            "RawSec": "16"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "TextVectors": {
+                        "Elaps": {
+                            "Formatted": "12 sec  (00:00:12)",
+                            "RawSec": "12"
+                        },
+                        "Total": 5,
+                        "Pass": 5,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "hthor": {
+                        "Elaps": {
+                            "Formatted": "219 sec  (00:03:39)",
+                            "RawSec": "219"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "thor": {
+                        "Elaps": {
+                            "Formatted": "89 sec  (00:01:29)",
+                            "RawSec": "89"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "roxie": {
+                        "Elaps": {
+                            "Formatted": "157 sec  (00:02:37)",
+                            "RawSec": "157"
+                        },
+                        "Total": 24,
+                        "Pass": 24,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Regress": {
+                    "Result": "FAILED",
+                    "Hthor": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "1146 sec  (00:19:06)",
+                            "RawSec": "1146"
+                        },
+                        "Total": 1036,
+                        "Pass": 1036,
+                        "Fail": 0
+                    },
+                    "Thor": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "2216 sec  (00:36:56)",
+                            "RawSec": "2216"
+                        },
+                        "Total": 919,
+                        "Pass": 914,
+                        "Fail": 5
+                    },
+                    "Roxie": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "1269 sec  (00:21:09)",
+                            "RawSec": "1269"
+                        },
+                        "Total": 1128,
+                        "Pass": 1128,
+                        "Fail": 0
+                    }
+                }
+            },
+            {
+                "Uninstall": {
+                    "Elaps": "No data"
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "Unittests": [
+                    "Run: 1 Failures: 0 Errors: 0 Timeout: 1",
+                    "JlibStreamStressTest run timeout and killed",
+                    "Run:  3   Failures: 0   Errors: 3",
+                    "1) test: PTreeSerializationDeserializationTest::testRoundTripForRootOnlyPTree (E)",
+                    "uncaught exception of unknown type",
+                    "2) test: PTreeSerializationDeserializationTest::testRoundTripForCompatibilityConfigPropertyTree (E)",
+                    "uncaught exception of unknown type",
+                    "3) test: PTreeSerializationDeserializationTest::testRoundTripForBinaryDataCompressionTestPTree (E)",
+                    "uncaught exception of unknown type",
+                    "Backtrace of ./core_unittests.447711",
+                    "[New LWP 447711]",
+                    "[New LWP 447718]",
+                    "[New LWP 447719]",
+                    "[New LWP 447720]",
+                    "[New LWP 447723]",
+                    "[New LWP 447721]",
+                    "[New LWP 447722]",
+                    "[New LWP 447724]",
+                    "BFD: warning: /opt/HPCCSystems/lib/libicudata.so.74: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0010001",
+                    "BFD: warning: /opt/HPCCSystems/lib/libicudata.so.74: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0010002",
+                    "[Thread debugging using libthread_db enabled]",
+                    "Using host libthread_db library \"/lib64/libthread_db.so.1\".",
+                    "Core was generated by `/opt/HPCCSystems/bin/unittests -a -e JlibStreamStressTest'.",
+                    "Program terminated with signal SIGILL, Illegal instruction.",
+                    "#0  0x00000000006f3bd7 in JlibStreamStressTest::check (testName=0x8d647d \"testVarStringPeek\", offset=0, data=0x0, delta=0) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jstreamtests.cpp:933",
+                    "933\t            char c = data[j];",
+                    "[Current thread is 1 (Thread 0x7f06816a53c0 (LWP 447711))]",
+                    "warning: File \"/opt/HPCCSystems/lib/libjlib.so-gdb.py\" auto-loading has been declined by your `auto-load safe-path' set to \"$debugdir:$datadir/auto-load\".",
+                    "To enable execution of this file add",
+                    "add-auto-load-safe-path /opt/HPCCSystems/lib/libjlib.so-gdb.py",
+                    "line to your configuration file \"/home/rocky/.gdbinit\".",
+                    "To completely disable this security protection add",
+                    "set auto-load safe-path /",
+                    "line to your configuration file \"/home/rocky/.gdbinit\".",
+                    "For more information about this security protection see the",
+                    "\"Auto-loading safe path\" section in the GDB manual.  E.g., run from the shell:",
+                    "info \"(gdb)Auto-loading safe path\"",
+                    "Backtrace for all threads",
+                    "==========================",
+                    "Thread 8 (Thread 0x7f061fdf4700 (LWP 447724)):",
+                    "#0  0x00007f0684e1045c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007f067e0cb79b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007f0684e0a1ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007f068330ce73 in clone () from /lib64/libc.so.6",
+                    "Thread 7 (Thread 0x7f0629df6700 (LWP 447722)):",
+                    "#0  0x00007f0684e1045c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007f067e0cb79b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007f0684e0a1ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007f068330ce73 in clone () from /lib64/libc.so.6",
+                    "Thread 6 (Thread 0x7f062edf7700 (LWP 447721)):",
+                    "#0  0x00007f0684e1045c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007f067e0cb79b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007f0684e0a1ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007f068330ce73 in clone () from /lib64/libc.so.6",
+                    "Thread 5 (Thread 0x7f0624df5700 (LWP 447723)):",
+                    "#0  0x00007f0684e1045c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007f067e0cb79b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007f0684e0a1ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007f068330ce73 in clone () from /lib64/libc.so.6",
+                    "Thread 4 (Thread 0x7f0633df8700 (LWP 447720)):",
+                    "#0  0x00007f0684e1045c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007f067e0cb79b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007f0684e0a1ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007f068330ce73 in clone () from /lib64/libc.so.6",
+                    "Thread 3 (Thread 0x7f0638df9700 (LWP 447719)):",
+                    "#0  0x00007f0684e1045c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007f067e0cb79b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007f0684e0a1ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007f068330ce73 in clone () from /lib64/libc.so.6",
+                    "Thread 2 (Thread 0x7f063ddfa700 (LWP 447718)):",
+                    "#0  0x00007f0684e1045c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007f067e0cb79b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007f0684e0a1ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007f068330ce73 in clone () from /lib64/libc.so.6",
+                    "Thread 1 (Thread 0x7f06816a53c0 (LWP 447711)):",
+                    "#0  0x00000000006f3bd7 in JlibStreamStressTest::check (testName=0x8d647d \"testVarStringPeek\", offset=0, data=0x0, delta=0) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jstreamtests.cpp:933",
+                    "#1  0x00000000006f434d in JlibStreamStressTest::testVarStringPeek (this=0x184b150, in=..., minLength=67108864) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jstreamtests.cpp:967",
+                    "#2  0x00000000006f5285 in JlibStreamStressTest::testVarStringBuffer (this=0x184b150) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jstreamtests.cpp:1040",
+                    "#3  0x00000000006f5a8b in JlibStreamStressTest::testVarStringHelpers (this=0x184b150) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jstreamtests.cpp:1112",
+                    "#4  0x00000000006fa70a in std::__invoke_impl<void, void (JlibStreamStressTest::*&)(), JlibStreamStressTest*&> (__f=@0x184af90: (void (JlibStreamStressTest::*)(JlibStreamStressTest * const)) 0x6f5a6a <JlibStreamStressTest::testVarStringHelpers()>, __t=@0x184afa0: 0x184b150) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/invoke.h:74",
+                    "#5  0x00000000006fa548 in std::__invoke<void (JlibStreamStressTest::*&)(), JlibStreamStressTest*&> (__fn=@0x184af90: (void (JlibStreamStressTest::*)(JlibStreamStressTest * const)) 0x6f5a6a <JlibStreamStressTest::testVarStringHelpers()>) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/invoke.h:96",
+                    "#6  0x00000000006fa41b in std::_Bind<void (JlibStreamStressTest::*(JlibStreamStressTest*))()>::__call<void, , 0ul>(std::tuple<>&&, std::_Index_tuple<0ul>) (this=0x184af90, __args=...) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/functional:495",
+                    "#7  0x00000000006fa221 in std::_Bind<void (JlibStreamStressTest::*(JlibStreamStressTest*))()>::operator()<, void>() (this=0x184af90) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/functional:580",
+                    "#8  0x00000000006fa083 in std::__invoke_impl<void, std::_Bind<void (JlibStreamStressTest::*(JlibStreamStressTest*))()>&>(std::__invoke_other, std::_Bind<void (JlibStreamStressTest::*(JlibStreamStressTest*))()>&) (__f=...) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/invoke.h:61",
+                    "#9  0x00000000006f9d3f in std::__invoke_r<void, std::_Bind<void (JlibStreamStressTest::*(JlibStreamStressTest*))()>&>(std::_Bind<void (JlibStreamStressTest::*(JlibStreamStressTest*))()>&) (__fn=...) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/invoke.h:111",
+                    "#10 0x00000000006f97fb in std::_Function_handler<void (), std::_Bind<void (JlibStreamStressTest::*(JlibStreamStressTest*))()> >::_M_invoke(std::_Any_data const&) (__functor=...) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/std_function.h:290",
+                    "#11 0x000000000051d41b in std::function<void ()>::operator()() const (this=0x184b120) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/std_function.h:591",
+                    "#12 0x00000000006fae1a in CppUnit::TestCaller<JlibStreamStressTest>::runTest (this=0x184b0e0) at /home/rocky/build/CE/platform/build/vcpkg_installed/x64-linux-dynamic/include/cppunit/TestCaller.h:175",
+                    "#13 0x00007f068ec95fa2 in CppUnit::TestCaseMethodFunctor::operator()() const () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#14 0x00007f068ec8bf0e in CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#15 0x00007f068ec93110 in CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#16 0x00007f068ec9d794 in CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#17 0x00007f068ec95c59 in CppUnit::TestCase::run(CppUnit::TestResult*) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#18 0x00007f068ec96233 in CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#19 0x00007f068ec962b7 in CppUnit::TestComposite::run(CppUnit::TestResult*) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#20 0x00007f068ec9d6f2 in CppUnit::TestResult::runTest(CppUnit::Test*) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#21 0x00007f068ec9ff9d in CppUnit::TestRunner::run(CppUnit::TestResult&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#22 0x00007f068eca1ff2 in CppUnit::TextTestRunner::run(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#23 0x0000000000512d97 in main (argc=4, argv=0x7ffd50babd68) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/unittests.cpp:280",
+                    "Registers:",
+                    "==========================",
+                    "rax            0x0                 0",
+                    "rbx            0x184afa0           25472928",
+                    "rcx            0x0                 0",
+                    "rdx            0x0                 0",
+                    "rsi            0x0                 0",
+                    "rdi            0x8d647d            9266301",
+                    "rbp            0x7ffd50bab340      0x7ffd50bab340",
+                    "rsp            0x7ffd50bab1b0      0x7ffd50bab1b0",
+                    "r8             0x186fdd0           25624016",
+                    "r9             0x167e010           23584784",
+                    "r10            0xfffffffffffff1af  -3665",
+                    "r11            0x7f0687a1722f      139666022036015",
+                    "r12            0xffffffff          4294967295",
+                    "r13            0x186fe98           25624216",
+                    "r14            0x186fed0           25624272",
+                    "r15            0xffffffffffffffff  -1",
+                    "rip            0x6f3bd7            0x6f3bd7 <JlibStreamStressTest::check(char const*, unsigned long long, char const*, unsigned int)+82>",
+                    "eflags         0x10246             [ PF ZF IF RF ]",
+                    "cs             0x33                51",
+                    "ss             0x2b                43",
+                    "ds             0x0                 0",
+                    "es             0x0                 0",
+                    "fs             0x0                 0",
+                    "gs             0x0                 0",
+                    "k0             0x0                 0",
+                    "k1             0x0                 0",
+                    "k2             0x0                 0",
+                    "k3             0x0                 0",
+                    "k4             0x0                 0",
+                    "k5             0x0                 0",
+                    "k6             0x0                 0",
+                    "k7             0x0                 0",
+                    "Disas:",
+                    "==========================",
+                    "Dump of assembler code for function JlibStreamStressTest::check(char const*, unsigned long long, char const*, unsigned int):",
+                    "0x00000000006f3b85 <+0>:\tpush   %rbp",
+                    "0x00000000006f3b86 <+1>:\tmov    %rsp,%rbp",
+                    "0x00000000006f3b89 <+4>:\tpush   %rbx",
+                    "0x00000000006f3b8a <+5>:\tsub    $0x188,%rsp",
+                    "0x00000000006f3b91 <+12>:\tmov    %rdi,-0x178(%rbp)",
+                    "0x00000000006f3b98 <+19>:\tmov    %rsi,-0x180(%rbp)",
+                    "0x00000000006f3b9f <+26>:\tmov    %rdx,-0x188(%rbp)",
+                    "0x00000000006f3ba6 <+33>:\tmov    %ecx,-0x18c(%rbp)",
+                    "0x00000000006f3bac <+39>:\tmovl   $0x0,-0x14(%rbp)",
+                    "0x00000000006f3bb3 <+46>:\tmov    -0x14(%rbp),%edx",
+                    "0x00000000006f3bb6 <+49>:\tmov    -0x188(%rbp),%rax",
+                    "0x00000000006f3bbd <+56>:\tlea    (%rax,%rdx,1),%rcx",
+                    "0x00000000006f3bc1 <+60>:\tcmp    %rax,%rcx",
+                    "0x00000000006f3bc4 <+63>:\tjae    0x6f3bc8 <JlibStreamStressTest::check(char const*, unsigned long long, char const*, unsigned int)+67>",
+                    "0x00000000006f3bc6 <+65>:\tud2",
+                    "0x00000000006f3bc8 <+67>:\tmov    -0x188(%rbp),%rax",
+                    "0x00000000006f3bcf <+74>:\tadd    %rdx,%rax",
+                    "0x00000000006f3bd2 <+77>:\ttest   %rax,%rax",
+                    "0x00000000006f3bd5 <+80>:\tjne    0x6f3bd9 <JlibStreamStressTest::check(char const*, unsigned long long, char const*, unsigned int)+84>",
+                    "=> 0x00000000006f3bd7 <+82>:\tud2",
+                    "0x00000000006f3bd9 <+84>:\tmovzbl (%rax),%eax",
+                    "0x00000000006f3bdc <+87>:\tmov    %al,-0x15(%rbp)",
+                    "0x00000000006f3bdf <+90>:\tcmpb   $0x0,-0x15(%rbp)",
+                    "0x00000000006f3be3 <+94>:\tjne    0x6f3bed <JlibStreamStressTest::check(char const*, unsigned long long, char const*, unsigned int)+104>",
+                    "0x00000000006f3be5 <+96>:\tmov    -0x14(%rbp),%eax",
+                    "0x00000000006f3be8 <+99>:\tjmpq   0x6f3dce <JlibStreamStressTest::check(char const*, unsigned long long, char const*, unsigned int)+585>",
+                    "0x00000000006f3bed <+104>:\tmov    -0x14(%rbp),%edx",
+                    "0x00000000006f3bf0 <+107>:\tmov    -0x18c(%rbp),%eax",
+                    "0x00000000006f3bf6 <+113>:\tadd    %edx,%eax",
+                    "0x00000000006f3bf8 <+115>:\tand    $0x3f,%eax",
+                    "0x00000000006f3bfb <+118>:\tadd    $0x20,%eax",
+                    "0x00000000006f3bfe <+121>:\tcmp    %al,-0x15(%rbp)",
+                    "0x00000000006f3c01 <+124>:\tsetne  %al",
+                    "0x00000000006f3c04 <+127>:\tmovzbl %al,%eax",
+                    "0x00000000006f3c07 <+130>:\ttest   %rax,%rax",
+                    "0x00000000006f3c0a <+133>:\tsetne  %al",
+                    "0x00000000006f3c0d <+136>:\ttest   %al,%al",
+                    "0x00000000006f3c0f <+138>:\tje     0x6f3d2f <JlibStreamStressTest::check(char const*, unsigned long long, char const*, unsigned int)+426>",
+                    "0x00000000006f3c15 <+144>:\tmovsbl -0x15(%rbp),%edi",
+                    "0x00000000006f3c19 <+148>:\tmov    -0x14(%rbp),%edx",
+                    "0x00000000006f3c1c <+151>:\tmov    -0x18c(%rbp),%eax",
+                    "0x00000000006f3c22 <+157>:\tadd    %edx,%eax",
+                    "0x00000000006f3c24 <+159>:\tand    $0x3f,%eax",
+                    "0x00000000006f3c27 <+162>:\tadd    $0x20,%eax",
+                    "0x00000000006f3c2a <+165>:\tmovsbl %al,%ecx",
+                    "0x00000000006f3c2d <+168>:\tmov    -0x180(%rbp),%r8",
+                    "0x00000000006f3c34 <+175>:\tmov    -0x178(%rbp),%rdx",
+                    "0x00000000006f3c3b <+182>:\tlea    -0x170(%rbp),%rax",
+                    "0x00000000006f3c42 <+189>:\tsub    $0x8,%rsp",
+                    "0x00000000006f3c46 <+193>:\tmov    -0x14(%rbp),%esi",
+                    "0x00000000006f3c49 <+196>:\tpush   %rsi",
+                    "0x00000000006f3c4a <+197>:\tmov    %r8,%r9",
+                    "0x00000000006f3c4d <+200>:\tmov    %edi,%r8d",
+                    "0x00000000006f3c50 <+203>:\tlea    0x1e2781(%rip),%rsi        # 0x8d63d8",
+                    "0x00000000006f3c57 <+210>:\tmov    %rax,%rdi",
+                    "0x00000000006f3c5a <+213>:\tmov    $0x0,%eax",
+                    "0x00000000006f3c5f <+218>:\tcallq  0x510b70 <_ZN13VStringBufferC1EPKcz@plt>",
+                    "0x00000000006f3c64 <+223>:\tadd    $0x10,%rsp",
+                    "0x00000000006f3c68 <+227>:\tlea    -0xe1(%rbp),%rax",
+                    "0x00000000006f3c6f <+234>:\tmov    %rax,%rdi",
+                    "0x00000000006f3c72 <+237>:\tcallq  0x50f8e0 <_ZNSaIcEC1Ev@plt>",
+                    "0x00000000006f3c77 <+242>:\tlea    -0xe1(%rbp),%rdx",
+                    "0x00000000006f3c7e <+249>:\tlea    -0x110(%rbp),%rax",
+                    "0x00000000006f3c85 <+256>:\tlea    0x1e23a4(%rip),%rcx        # 0x8d6030",
+                    "0x00000000006f3c8c <+263>:\tmov    %rcx,%rsi",
+                    "0x00000000006f3c8f <+266>:\tmov    %rax,%rdi",
+                    "0x00000000006f3c92 <+269>:\tcallq  0x51d4fc <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)>",
+                    "0x00000000006f3c97 <+274>:\tlea    -0x110(%rbp),%rcx",
+                    "0x00000000006f3c9e <+281>:\tlea    -0x140(%rbp),%rax",
+                    "0x00000000006f3ca5 <+288>:\tmov    $0x3ab,%edx",
+                    "0x00000000006f3caa <+293>:\tmov    %rcx,%rsi",
+                    "0x00000000006f3cad <+296>:\tmov    %rax,%rdi",
+                    "0x00000000006f3cb0 <+299>:\tcallq  0x50fd70 <_ZN7CppUnit10SourceLineC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi@plt>",
+                    "0x00000000006f3cb5 <+304>:\tlea    -0x170(%rbp),%rax",
+                    "0x00000000006f3cbc <+311>:\tmov    %rax,%rdi",
+                    "0x00000000006f3cbf <+314>:\tcallq  0x51490c <StringBuffer::operator char const*() const>",
+                    "0x00000000006f3cc4 <+319>:\tmov    %rax,%rdx",
+                    "0x00000000006f3cc7 <+322>:\tlea    -0x60(%rbp),%rax",
+                    "0x00000000006f3ccb <+326>:\tmov    %rdx,%rsi",
+                    "0x00000000006f3cce <+329>:\tmov    %rax,%rdi",
+                    "0x00000000006f3cd1 <+332>:\tcallq  0x532f57 <CppUnit::message_to_string[abi:cxx11](char const*)>",
+                    "0x00000000006f3cd6 <+337>:\tlea    -0x16(%rbp),%rax",
+                    "0x00000000006f3cda <+341>:\tmov    %rax,%rdi",
+                    "0x00000000006f3cdd <+344>:\tcallq  0x50f8e0 <_ZNSaIcEC1Ev@plt>",
+                    "0x00000000006f3ce2 <+349>:\tlea    -0x16(%rbp),%rdx",
+                    "0x00000000006f3ce6 <+353>:\tlea    -0x40(%rbp),%rax",
+                    "0x00000000006f3cea <+357>:\tlea    0x1e25de(%rip),%rcx        # 0x8d62cf",
+                    "0x00000000006f3cf1 <+364>:\tmov    %rcx,%rsi",
+                    "0x00000000006f3cf4 <+367>:\tmov    %rax,%rdi",
+                    "0x00000000006f3cf7 <+370>:\tcallq  0x51d4fc <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)>",
+                    "0x00000000006f3cfc <+375>:\tlea    -0x60(%rbp),%rdx",
+                    "0x00000000006f3d00 <+379>:\tlea    -0x40(%rbp),%rcx",
+                    "0x00000000006f3d04 <+383>:\tlea    -0xe0(%rbp),%rax",
+                    "0x00000000006f3d0b <+390>:\tmov    %rcx,%rsi",
+                    "0x00000000006f3d0e <+393>:\tmov    %rax,%rdi",
+                    "0x00000000006f3d11 <+396>:\tcallq  0x510b20 <_ZN7CppUnit7MessageC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_@plt>",
+                    "0x00000000006f3d16 <+401>:\tlea    -0x140(%rbp),%rdx",
+                    "0x00000000006f3d1d <+408>:\tlea    -0xe0(%rbp),%rax",
+                    "0x00000000006f3d24 <+415>:\tmov    %rdx,%rsi",
+                    "0x00000000006f3d27 <+418>:\tmov    %rax,%rdi",
+                    "0x00000000006f3d2a <+421>:\tcallq  0x50f9d0 <_ZN7CppUnit8Asserter4failERKNS_7MessageERKNS_10SourceLineE@plt>",
+                    "0x00000000006f3d2f <+426>:\taddl   $0x1,-0x14(%rbp)",
+                    "0x00000000006f3d33 <+430>:\tjmpq   0x6f3bb3 <JlibStreamStressTest::check(char const*, unsigned long long, char const*, unsigned int)+46>",
+                    "0x00000000006f3d38 <+435>:\tmov    %rax,%rbx",
+                    "0x00000000006f3d3b <+438>:\tlea    -0xe0(%rbp),%rax",
+                    "0x00000000006f3d42 <+445>:\tmov    %rax,%rdi",
+                    "0x00000000006f3d45 <+448>:\tcallq  0x50f2f0 <_ZN7CppUnit7MessageD1Ev@plt>",
+                    "0x00000000006f3d4a <+453>:\tjmp    0x6f3d4f <JlibStreamStressTest::check(char const*, unsigned long long, char const*, unsigned int)+458>",
+                    "0x00000000006f3d4c <+455>:\tmov    %rax,%rbx",
+                    "0x00000000006f3d4f <+458>:\tlea    -0x40(%rbp),%rax",
+                    "0x00000000006f3d53 <+462>:\tmov    %rax,%rdi",
+                    "0x00000000006f3d56 <+465>:\tcallq  0x5101c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@plt>",
+                    "0x00000000006f3d5b <+470>:\tjmp    0x6f3d60 <JlibStreamStressTest::check(char const*, unsigned long long, char const*, unsigned int)+475>",
+                    "0x00000000006f3d5d <+472>:\tmov    %rax,%rbx",
+                    "0x00000000006f3d60 <+475>:\tlea    -0x16(%rbp),%rax",
+                    "0x00000000006f3d64 <+479>:\tmov    %rax,%rdi",
+                    "0x00000000006f3d67 <+482>:\tcallq  0x511bb0 <_ZNSaIcED1Ev@plt>",
+                    "0x00000000006f3d6c <+487>:\tlea    -0x60(%rbp),%rax",
+                    "0x00000000006f3d70 <+491>:\tmov    %rax,%rdi",
+                    "0x00000000006f3d73 <+494>:\tcallq  0x5101c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@plt>",
+                    "0x00000000006f3d78 <+499>:\tjmp    0x6f3d7d <JlibStreamStressTest::check(char const*, unsigned long long, char const*, unsigned int)+504>",
+                    "0x00000000006f3d7a <+501>:\tmov    %rax,%rbx",
+                    "0x00000000006f3d7d <+504>:\tlea    -0x140(%rbp),%rax",
+                    "0x00000000006f3d84 <+511>:\tmov    %rax,%rdi",
+                    "0x00000000006f3d87 <+514>:\tcallq  0x510790 <_ZN7CppUnit10SourceLineD1Ev@plt>",
+                    "0x00000000006f3d8c <+519>:\tjmp    0x6f3d91 <JlibStreamStressTest::check(char const*, unsigned long long, char const*, unsigned int)+524>",
+                    "0x00000000006f3d8e <+521>:\tmov    %rax,%rbx",
+                    "0x00000000006f3d91 <+524>:\tlea    -0x110(%rbp),%rax",
+                    "0x00000000006f3d98 <+531>:\tmov    %rax,%rdi",
+                    "0x00000000006f3d9b <+534>:\tcallq  0x5101c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@plt>",
+                    "0x00000000006f3da0 <+539>:\tjmp    0x6f3da5 <JlibStreamStressTest::check(char const*, unsigned long long, char const*, unsigned int)+544>",
+                    "0x00000000006f3da2 <+541>:\tmov    %rax,%rbx",
+                    "0x00000000006f3da5 <+544>:\tlea    -0xe1(%rbp),%rax",
+                    "0x00000000006f3dac <+551>:\tmov    %rax,%rdi",
+                    "0x00000000006f3daf <+554>:\tcallq  0x511bb0 <_ZNSaIcED1Ev@plt>",
+                    "0x00000000006f3db4 <+559>:\tlea    -0x170(%rbp),%rax",
+                    "0x00000000006f3dbb <+566>:\tmov    %rax,%rdi",
+                    "0x00000000006f3dbe <+569>:\tcallq  0x514e42 <VStringBuffer::~VStringBuffer()>",
+                    "0x00000000006f3dc3 <+574>:\tmov    %rbx,%rax",
+                    "0x00000000006f3dc6 <+577>:\tmov    %rax,%rdi",
+                    "0x00000000006f3dc9 <+580>:\tcallq  0x510a80 <_Unwind_Resume@plt>",
+                    "0x00000000006f3dce <+585>:\tmov    -0x8(%rbp),%rbx",
+                    "0x00000000006f3dd2 <+589>:\tleaveq",
+                    "0x00000000006f3dd3 <+590>:\tretq",
+                    "End of assembler dump."
+                ]
+            },
+            {
+                "thor": {
+                    "distmerge": {
+                        "TestId": 220,
+                        "Wuid": "W20250810-071731-1",
+                        "Problem": "Exception",
+                        "Code": "9999",
+                        "Msg": "System error: 9999: WORKER #1 [10:22:254:98:20100]: Internal Error &apos;Unknown mapping kind: 4&apos; in queryStatistic() at jstats:h(600)"
+                    },
+                    "filecompcopy": {
+                        "TestId": 258,
+                        "Wuid": "W20250810-071804",
+                        "Problem": "Exception",
+                        "Code": "9999",
+                        "Msg": "System error: 9999: WORKER #3 [10:22:254:98:20140]: Internal Error &apos;Unknown mapping kind: 4&apos; in queryStatistic() at jstats:h(600)"
+                    },
+                    "full_test": {
+                        "TestId": 274,
+                        "Wuid": "W20250810-071817-5",
+                        "Problem": "Exception",
+                        "Code": "9999",
+                        "Msg": "System error: 9999: WORKER #1 [10:22:254:98:20100]: Internal Error &apos;Unknown mapping kind: 4&apos; in queryStatistic() at jstats:h(600)"
+                    },
+                    "keydiff1": {
+                        "TestId": 430,
+                        "Wuid": "W20250810-072226-4",
+                        "Problem": "Exception",
+                        "Code": "9999",
+                        "Msg": "System error: 9999: WORKER #2 [10:22:254:98:20120]: Internal Error &apos;Unknown mapping kind: 4&apos; in queryStatistic() at jstats:h(600)"
+                    },
+                    "stepping7g(multiPart=true)": {
+                        "TestId": 756,
+                        "Wuid": "W20250810-072800",
+                        "Problem": "Exception",
+                        "Code": "9999",
+                        "Msg": "System error: 9999: WORKER #2 [10:22:254:98:20120]: Internal Error &apos;Unknown mapping kind: 4&apos; in queryStatistic() at jstats:h(600)"
+                    }
+                }
+            }
+        ]
+    }
+}
