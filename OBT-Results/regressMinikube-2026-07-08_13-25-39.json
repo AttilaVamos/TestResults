@@ -1,0 +1,238 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Ubuntu_22_04_5_LTS",
+            "Hardware": "CPU/Cores: 16, RAM: 30 GB",
+            "IPAddress": "10.20.0.190",
+            "HostPlatform" : "10.7.0-trunk0"
+        },
+        "Remote": {
+            "System": "Minikube",
+            "Hardware": "CPU/Cores: 8, RAM: 15 GB",
+            "HthorConfig": {
+                "Replicas": "3",
+                "MaxActive": "4",
+                "UseChildProcesses": "true",
+                "AllowedPipePrograms": "*"
+            },
+            "ThorConfig": {
+                "NumWorkers": "2",
+                "MaxJobs": "4",
+                "MaxGraph": "2",
+                "MultiJobLinger": "true",
+                "LingerPeriod": "200",
+                "AllowedPipePrograms": "*"
+            },
+            "RoxieWorkunitConfig": {
+                "Replicas": "1",
+                "MaxActive": "20",
+                "UseChildProcesses": "true",
+                "AllowedPipePrograms": "*"
+            }
+        },
+        "BuildSet": {
+            "Branch": "community_10.6.0-1 Gold",
+            "BranchDate": "N/A",
+            "BranchSHA": "N/A",
+            "BuildType": "Release",
+            "Target": "K8s"
+        },
+        "Exclusion": {
+            "Build": "N/A",
+            "Documentation": "N/A",
+            "Unittest": "N/A",
+            "MLtest": "N/A",
+            "Regression": "--ef pipefail.ecl -e embedded-r,embedded-js,3rdpartyservice,mongodb,spray,proxy"
+        },
+        "Tasks": [
+            {
+                "Preparation" : {
+                    "UpdateHelmRepo": {
+                        "Result": "Done",
+                        "Elaps": {
+                            "Formatted": "0 sec 0 sec (00:00:00)",
+                            "RawSec": "0"
+                        }
+                    },
+                    "CheckLocalPlatform": {
+                        "Result": "Done",
+                        "Version": "10.7.0-trunk0",
+                        "Elaps": {
+                            "Formatted": "0 sec 0 sec (00:00:00)",
+                            "RawSec": "0"
+                        }
+                    },
+                    "StartMinikube":{
+                        "Result": "Done",
+                        "Elaps": {
+                            "Formatted": "30 sec 30 sec (00:00:30)",
+                            "RawSec": "30"
+                        }
+                    },
+                    "DeployHPCC": {
+                        "Result": "Done",
+                        "Elaps": {
+                            "Formatted": "1 sec 1 sec (00:00:01)",
+                            "RawSec": "1"
+                        }
+                    },
+                    "WaitForPODs": {
+                        "Result": "Done",
+                        "NumberOfPODs": 55,
+                        "Elaps": {
+                            "Formatted": "101 sec 101 sec (00:01:41)",
+                            "RawSec": "101"
+                        }
+                    },
+                    "ECLWatchAnnotation": {
+                        "Result": "Done",
+                        "Elaps": {
+                            "Formatted": "38 sec 38 sec (00:00:38)",
+                            "RawSec": "38"
+                        }
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "hthor": {
+                        "Elaps": {
+                            "Formatted": "0 sec (00:00:00)",
+                            "RawSec": "0"
+                        },
+                        "Total": 0,
+                        "Pass": 0,
+                        "Fail": 0,
+                        "Result": "N/A"
+                    },
+                    "thor": {
+                        "Elaps": {
+                            "Formatted": "62 sec (00:01:02)",
+                            "RawSec": "62"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "roxie": {
+                        "Elaps": {
+                            "Formatted": "115 sec (00:01:55)",
+                            "RawSec": "115"
+                        },
+                        "Total": 24,
+                        "Pass": 24,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "PublishQueries": {
+                    "Result": "Done",
+                    "Total": 0,
+                    "Elaps": {
+                        "Formatted": "0 sec 0 sec (00:00:00)",
+                        "RawSec": "0"
+                    }
+                }
+            },
+            {
+                "Regress": {
+                    "Result": "FAILED",
+                    "Hthor": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "142 sec (00:02:22)",
+                            "RawSec": "142"
+                        },
+                        "Total": 15,
+                        "Pass": 14,
+                        "Fail": 1
+                    },
+                    "Thor": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "197 sec (00:03:17)",
+                            "RawSec": "197"
+                        },
+                        "Total": 14,
+                        "Pass": 13,
+                        "Fail": 1
+                    },
+                    "Roxie": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "220 sec (00:03:40)",
+                            "RawSec": "220"
+                        },
+                        "Total": 14,
+                        "Pass": 12,
+                        "Fail": 2
+                    }
+                }
+            },
+            {
+                "Clean-up" : {
+                    "CollectTimings": {
+                        "Result": "Done",
+                        "Elaps": {
+                            "Formatted": "2 sec 2 sec (00:00:02).",
+                            "RawSec": "2"
+                        }
+                    },
+                    "CollectPODLogs": {
+                        "Result": "Done",
+                        "Elaps": {
+                            "Formatted": "5 sec 5 sec (00:00:05).",
+                            "RawSec": "5"
+                        }
+                    },
+                    "UninstallPODs": {
+                        "Result": "Done",
+                        "Elaps": {
+                            "Formatted": "617 sec 617 sec (00:10:17)",
+                            "RawSec": "617"
+                        }
+                    },
+                    "StopMinikube": {
+                        "Result": "Done",
+                        "Elaps": {
+                            "Formatted": "11 sec 11 sec (00:00:11).",
+                            "RawSec": "11"
+                        }
+                    },
+                    "RunLogProcessor": {
+                        "Result": "Done",
+                        "Elaps": {
+                            "Formatted": "0 sec 0 sec (00:00:00).",
+                            "RawSec": "0"
+                        }
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            
+            
+            
+            {
+            "HthorRegress" : [
+                "[Failure]  15. Fail teststdlibrary.ecl ( version: tmod='DataPatterns' ) - W20260708-130232-3 (116 sec)"
+                ]
+            },
+            {
+            "ThorRegress" : [
+                "[Failure]  14. Fail teststdlibrary.ecl ( version: tmod='DataPatterns' ) - W20260708-130525 (141 sec)"
+            ]
+        },
+            {
+            "RoxieRegress" : [
+                "[Failure]   3. Fail genjoin3.ecl - W20260708-130755 (18 sec)",
+                "[Failure]  14. Fail teststdlibrary.ecl ( version: tmod='DataPatterns' ) - W20260708-130824-3 (182 sec)"
+            ]
+        }
+        ]
+    }
+}

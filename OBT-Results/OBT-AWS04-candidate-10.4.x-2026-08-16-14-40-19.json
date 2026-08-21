@@ -1,0 +1,489 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Rocky_Linux_8_10",
+            "Hardware": "CPU/Cores: 8, RAM: 14 GB",
+            "IPAddress": "10.22.254.98 (OBT-AWS04)"
+        },
+        "BuildSet": {
+            "Branch": "candidate-10.4.x",
+            "BranchDate": "Fri Aug 14 12:04:28 2026 +0100",
+            "BranchSHA": "3395640bb570ba9636741276d6e3d04a500bc6f7",
+            "BuildType": "Debug",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS, WASMEMBED, REMBED",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl",
+            "Regression": "embedded, 3rdparty, python2, wasmembed*"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "PASSED",
+                    "CMake": {
+                        "Formatted": "10 sec (00:00:10)",
+                        "RawSec": "10"
+                    },
+                    "Build": {
+                        "Formatted": "712 sec (00:11:52)",
+                        "RawSec": "712"
+                    },
+                    "Package": {
+                        "Formatted": "272 sec (00:04:32)",
+                        "RawSec": "272"
+                    },
+                    "Altogether": {
+                        "Formatted": "994 sec (00:16:34)",
+                        "RawSec": "994"
+                    }
+                }
+            },
+            {
+                "Install": {
+                    "Elaps": "No data"
+                }
+            },
+            {
+                "Unittests": {
+                    "Result": "FAILED",
+                    "Elaps": {
+                        "Formatted": "11645 sec (03:14:05)",
+                        "RawSec": "11645"
+                    },
+                    "Total": 787,
+                    "Pass": 782,
+                    "Fail": 4,
+                    "Error": 0,
+                    "Timeout": 1
+                }
+            },
+            {
+                "Wutooltests": {
+                    "Result": "PASSED",
+                    "Elaps": {
+                        "Formatted": "2 sec (00:00:02)",
+                        "RawSec": "2"
+                    },
+                    "Total": 19,
+                    "Pass": 19,
+                    "Fail": 0,
+                    "Error": 0,
+                    "Timeout": 0
+                }
+            },
+            {
+                "MLtests": {
+                    "Result": "PASSED",
+                    "DBSCAN": {
+                        "Elaps": {
+                            "Formatted": "14 sec  (00:00:14)",
+                            "RawSec": "14"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GLM": {
+                        "Elaps": {
+                            "Formatted": "79 sec  (00:01:19)",
+                            "RawSec": "79"
+                        },
+                        "Total": 7,
+                        "Pass": 7,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GNN": {
+                        "Elaps": {
+                            "Formatted": "71 sec  (00:01:11)",
+                            "RawSec": "71"
+                        },
+                        "Total": 4,
+                        "Pass": 4,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "KMeans": {
+                        "Elaps": {
+                            "Formatted": "5 sec  (00:00:05)",
+                            "RawSec": "5"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "LearningTrees": {
+                        "Elaps": {
+                            "Formatted": "728 sec  (00:12:08)",
+                            "RawSec": "728"
+                        },
+                        "Total": 3,
+                        "Pass": 3,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "PBblas": {
+                        "Elaps": {
+                            "Formatted": "17 sec  (00:00:17)",
+                            "RawSec": "17"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "SupportVectorMachines": {
+                        "Elaps": {
+                            "Formatted": "16 sec  (00:00:16)",
+                            "RawSec": "16"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "TextVectors": {
+                        "Elaps": {
+                            "Formatted": "14 sec  (00:00:14)",
+                            "RawSec": "14"
+                        },
+                        "Total": 5,
+                        "Pass": 5,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "Hthor": {
+                        "Elaps": {
+                            "Formatted": "346 sec  (00:05:46)",
+                            "RawSec": "346"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "Thor": {
+                        "Elaps": {
+                            "Formatted": "123 sec  (00:02:03)",
+                            "RawSec": "123"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "Roxie": {
+                        "Elaps": {
+                            "Formatted": "234 sec  (00:03:54)",
+                            "RawSec": "234"
+                        },
+                        "Total": 24,
+                        "Pass": 24,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Regress": {
+                    "Result": "FAILED",
+                    "Hthor": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "1673 sec  (00:27:53)",
+                            "RawSec": "1673"
+                        },
+                        "Total": 1131,
+                        "Pass": 1131,
+                        "Fail": 0
+                    },
+                    "Thor": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "2812 sec  (00:46:52)",
+                            "RawSec": "2812"
+                        },
+                        "Total": 997,
+                        "Pass": 996,
+                        "Fail": 1
+                    },
+                    "Roxie": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "2035 sec  (00:33:55)",
+                            "RawSec": "2035"
+                        },
+                        "Total": 1215,
+                        "Pass": 1215,
+                        "Fail": 0
+                    }
+                }
+            },
+            {
+                "Uninstall": {
+                    "Elaps": "No data"
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "Unittests": [
+                    "..Exception in cleanupTestFiles: Super File testfileupdate::supersuperfile doesn't exist in the file system",
+                    "Run:  7   Failures: 2   Errors: 0",
+                    "1) test: JlibCompressionStandardTest::testSingle (F) line: 129 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jlibtestcompress.cpp",
+                    "- Unexpected exception from second call to compressor->close()",
+                    "2) test: JlibCompressionStandardTest::testStandardCompression (F) line: 129 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jlibtestcompress.cpp",
+                    "- Unexpected exception from second call to compressor->close()",
+                    "Run:  2   Failures: 1   Errors: 0",
+                    "1) test: JlibCompressionTestsStress::test (F) line: 129 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jlibtestcompress.cpp",
+                    "- Unexpected exception from second call to compressor->close()",
+                    "Run:  4   Failures: 1   Errors: 0",
+                    "1) test: JlibCompressionTimingTest::testStandardCompression (F) line: 129 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jlibtestcompress.cpp",
+                    "- Unexpected exception from second call to compressor->close()",
+                    "Run: 1 Failures: 0 Errors: 0 Timeout: 1",
+                    "MultishotAcceptTests run timeout and killed",
+                    "Backtrace of ./core_unittests.360585",
+                    "[New LWP 360585]",
+                    "[New LWP 360603]",
+                    "[New LWP 360605]",
+                    "[New LWP 360604]",
+                    "[New LWP 360606]",
+                    "[New LWP 360628]",
+                    "[New LWP 360609]",
+                    "[New LWP 360607]",
+                    "[New LWP 360608]",
+                    "BFD: warning: /opt/HPCCSystems/lib/libicudata.so.78: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0010001",
+                    "BFD: warning: /opt/HPCCSystems/lib/libicudata.so.78: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0010002",
+                    "BFD: warning: /opt/HPCCSystems/lib/liburing.so.2: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0010001",
+                    "BFD: warning: /opt/HPCCSystems/lib/liburing.so.2: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0010002",
+                    "[Thread debugging using libthread_db enabled]",
+                    "Using host libthread_db library \"/lib64/libthread_db.so.1\".",
+                    "Core was generated by `/opt/HPCCSystems/bin/unittests -a -e MultishotAcceptTests'.",
+                    "Program terminated with signal SIGABRT, Aborted.",
+                    "#0  0x00007feab7e495af in raise () from /lib64/libc.so.6",
+                    "[Current thread is 1 (Thread 0x7feab4e37540 (LWP 360585))]",
+                    "warning: File \"/opt/HPCCSystems/lib/libjlib.so-gdb.py\" auto-loading has been declined by your `auto-load safe-path' set to \"$debugdir:$datadir/auto-load\".",
+                    "To enable execution of this file add",
+                    "add-auto-load-safe-path /opt/HPCCSystems/lib/libjlib.so-gdb.py",
+                    "line to your configuration file \"/home/rocky/.gdbinit\".",
+                    "To completely disable this security protection add",
+                    "set auto-load safe-path /",
+                    "line to your configuration file \"/home/rocky/.gdbinit\".",
+                    "For more information about this security protection see the",
+                    "\"Auto-loading safe path\" section in the GDB manual.  E.g., run from the shell:",
+                    "info \"(gdb)Auto-loading safe path\"",
+                    "Backtrace for all threads",
+                    "==========================",
+                    "Thread 9 (Thread 0x7fea5887f700 (LWP 360608)):",
+                    "#0  0x00007feab9949371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007feab1b5579b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007feab99431ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007feab7e34953 in clone () from /lib64/libc.so.6",
+                    "Thread 8 (Thread 0x7fea5d880700 (LWP 360607)):",
+                    "#0  0x00007feab9949371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007feab1b5579b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007feab99431ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007feab7e34953 in clone () from /lib64/libc.so.6",
+                    "Thread 7 (Thread 0x7fea5387e700 (LWP 360609)):",
+                    "#0  0x00007feab9949371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007feab1b5579b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007feab99431ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007feab7e34953 in clone () from /lib64/libc.so.6",
+                    "Thread 6 (Thread 0x7fea3bfff700 (LWP 360628)):",
+                    "#0  0x00007feab994bc62 in do_futex_wait () from /lib64/libpthread.so.0",
+                    "#1  0x00007feab994bd73 in __new_sem_wait_slow () from /lib64/libpthread.so.0",
+                    "#2  0x00007feabb5b3aea in Semaphore::wait (this=0x7fea3c001270, timeout=1000) at /home/rocky/build/CE/platform/HPCC-Platform/system/jlib/jsem.cpp:88",
+                    "#3  0x00007feabb5da966 in CSocketEpollThread::run (this=0x7fea3c001170) at /home/rocky/build/CE/platform/HPCC-Platform/system/jlib/jsocket.cpp:5792",
+                    "#4  0x00007feabb63c12c in Thread::begin (this=0x7fea3c001170) at /home/rocky/build/CE/platform/HPCC-Platform/system/jlib/jthread.cpp:317",
+                    "#5  0x00007feabb63ba7d in Thread::_threadmain (v=0x7fea3c001170) at /home/rocky/build/CE/platform/HPCC-Platform/system/jlib/jthread.cpp:183",
+                    "#6  0x00007feab99431ca in start_thread () from /lib64/libpthread.so.0",
+                    "#7  0x00007feab7e34953 in clone () from /lib64/libc.so.6",
+                    "Thread 5 (Thread 0x7fea62881700 (LWP 360606)):",
+                    "#0  0x00007feab9949371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007feab1b5579b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007feab99431ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007feab7e34953 in clone () from /lib64/libc.so.6",
+                    "Thread 4 (Thread 0x7fea6c883700 (LWP 360604)):",
+                    "#0  0x00007feab9949371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007feab1b5579b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007feab99431ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007feab7e34953 in clone () from /lib64/libc.so.6",
+                    "Thread 3 (Thread 0x7fea67882700 (LWP 360605)):",
+                    "#0  0x00007feab9949371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007feab1b5579b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007feab99431ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007feab7e34953 in clone () from /lib64/libc.so.6",
+                    "Thread 2 (Thread 0x7fea71884700 (LWP 360603)):",
+                    "#0  0x00007feab9949371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007feab1b5579b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007feab99431ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007feab7e34953 in clone () from /lib64/libc.so.6",
+                    "Thread 1 (Thread 0x7feab4e37540 (LWP 360585)):",
+                    "#0  0x00007feab7e495af in raise () from /lib64/libc.so.6",
+                    "#1  0x00007feab7e1cee5 in abort () from /lib64/libc.so.6",
+                    "#2  0x00007feab7e1cdb9 in __assert_fail_base.cold.0 () from /lib64/libc.so.6",
+                    "#3  0x00007feab7e41f06 in __assert_fail () from /lib64/libc.so.6",
+                    "#4  0x0000000000522b5c in CriticalSection::~CriticalSection (this=0x1404bf0, __in_chrg=<optimized out>) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/./../../system/jlib/jmutex.hpp:334",
+                    "#5  0x00007feabe4b350c in CReadSelectHandler::~CReadSelectHandler (this=0x1404bc0, __in_chrg=<optimized out>) at /home/rocky/build/CE/platform/HPCC-Platform/system/security/securesocket/socketutils.cpp:324",
+                    "#6  0x00007feabe4b4ae6 in CSocketConnectionListener::~CSocketConnectionListener (this=0x1404bc0, __in_chrg=<optimized out>) at /home/rocky/build/CE/platform/HPCC-Platform/system/security/securesocket/socketutils.cpp:466",
+                    "#7  0x0000000000876c9a in TestConnectionListener::~TestConnectionListener (this=0x1404bc0, __in_chrg=<optimized out>) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/multishotaccepttests.cpp:43",
+                    "#8  0x0000000000876cca in TestConnectionListener::~TestConnectionListener (this=0x1404bc0, __in_chrg=<optimized out>) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/multishotaccepttests.cpp:43",
+                    "#9  0x00007feabb3f49f9 in CInterfaceOf<CEmptyClass>::Release (this=0x1404c60) at /home/rocky/build/CE/platform/HPCC-Platform/system/jlib/jiface.hpp:156",
+                    "#10 0x00007feabb3f4853 in CInterface::Release (this=0x1404c60) at /home/rocky/build/CE/platform/HPCC-Platform/system/jlib/jiface.cpp:33",
+                    "#11 0x00000000005233f1 in Thread::Release (this=0x1404c60) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/./../../system/jlib/jthread.hpp:133",
+                    "#12 0x00000000008732df in Release<TestConnectionListener> (ptr=0x1404bc0) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/./../../system/jlib/jscm.hpp:48",
+                    "#13 0x000000000087242e in Shared<TestConnectionListener>::~Shared (this=0x7ffe78e166f0, __in_chrg=<optimized out>) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/./../../system/jlib/jscm.hpp:65",
+                    "#14 0x000000000086912a in Owned<TestConnectionListener>::~Owned (this=0x7ffe78e166f0, __in_chrg=<optimized out>) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/./../../system/jlib/jscm.hpp:115",
+                    "#15 0x00000000008696b5 in MultishotAcceptTests::testBasicMultishotAccept (this=0x13d66f0) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/multishotaccepttests.cpp:281",
+                    "#16 0x00000000008767c8 in std::__invoke_impl<void, void (MultishotAcceptTests::*&)(), MultishotAcceptTests*&> (__f=@0x13d67a0: (void (MultishotAcceptTests::*)(MultishotAcceptTests * const)) 0x869186 <MultishotAcceptTests::testBasicMultishotAccept()>, __t=@0x13d67b0: 0x13d66f0) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/invoke.h:74",
+                    "#17 0x0000000000876566 in std::__invoke<void (MultishotAcceptTests::*&)(), MultishotAcceptTests*&> (__fn=@0x13d67a0: (void (MultishotAcceptTests::*)(MultishotAcceptTests * const)) 0x869186 <MultishotAcceptTests::testBasicMultishotAccept()>) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/invoke.h:96",
+                    "#18 0x000000000087629f in std::_Bind<void (MultishotAcceptTests::*(MultishotAcceptTests*))()>::__call<void, , 0ul>(std::tuple<>&&, std::_Index_tuple<0ul>) (this=0x13d67a0, __args=...) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/functional:495",
+                    "#19 0x0000000000875f1d in std::_Bind<void (MultishotAcceptTests::*(MultishotAcceptTests*))()>::operator()<, void>() (this=0x13d67a0) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/functional:580",
+                    "#20 0x00000000008757f5 in std::__invoke_impl<void, std::_Bind<void (MultishotAcceptTests::*(MultishotAcceptTests*))()>&>(std::__invoke_other, std::_Bind<void (MultishotAcceptTests::*(MultishotAcceptTests*))()>&) (__f=...) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/invoke.h:61",
+                    "#21 0x0000000000874fd5 in std::__invoke_r<void, std::_Bind<void (MultishotAcceptTests::*(MultishotAcceptTests*))()>&>(std::_Bind<void (MultishotAcceptTests::*(MultishotAcceptTests*))()>&) (__fn=...) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/invoke.h:111",
+                    "#22 0x0000000000874429 in std::_Function_handler<void (), std::_Bind<void (MultishotAcceptTests::*(MultishotAcceptTests*))()> >::_M_invoke(std::_Any_data const&) (__functor=...) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/std_function.h:290",
+                    "#23 0x000000000052ba21 in std::function<void ()>::operator()() const (this=0x13d6770) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/std_function.h:591",
+                    "#24 0x0000000000877062 in CppUnit::TestCaller<MultishotAcceptTests>::runTest (this=0x13d6730) at /home/rocky/build/CE/platform/build/vcpkg_installed/x64-linux-dynamic/include/cppunit/TestCaller.h:175",
+                    "#25 0x00007feac2f52fa2 in CppUnit::TestCaseMethodFunctor::operator()() const () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#26 0x00007feac2f48f0e in CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#27 0x00007feac2f50110 in CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#28 0x00007feac2f5a794 in CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#29 0x00007feac2f52c59 in CppUnit::TestCase::run(CppUnit::TestResult*) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#30 0x00007feac2f53233 in CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#31 0x00007feac2f532b7 in CppUnit::TestComposite::run(CppUnit::TestResult*) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#32 0x00007feac2f5a6f2 in CppUnit::TestResult::runTest(CppUnit::Test*) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#33 0x00007feac2f5cf9d in CppUnit::TestRunner::run(CppUnit::TestResult&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#34 0x00007feac2f5eff2 in CppUnit::TextTestRunner::run(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#35 0x0000000000521064 in main (argc=4, argv=0x7ffe78e17358) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/unittests.cpp:302",
+                    "Registers:",
+                    "==========================",
+                    "rax            0x0                 0",
+                    "rbx            0x6                 6",
+                    "rcx            0x7feab7e495af      140646084285871",
+                    "rdx            0x0                 0",
+                    "rsi            0x7ffe78e161c0      140730926457280",
+                    "rdi            0x2                 2",
+                    "rbp            0x7feab7f95300      0x7feab7f95300",
+                    "rsp            0x7ffe78e161c0      0x7ffe78e161c0",
+                    "r8             0x0                 0",
+                    "r9             0x7ffe78e161c0      140730926457280",
+                    "r10            0x8                 8",
+                    "r11            0x246               582",
+                    "r12            0x9c4030            10240048",
+                    "r13            0x9c40f4            10240244",
+                    "r14            0x14e               334",
+                    "r15            0xffffffffffffffff  -1",
+                    "rip            0x7feab7e495af      0x7feab7e495af <raise+271>",
+                    "eflags         0x246               [ PF ZF IF ]",
+                    "cs             0x33                51",
+                    "ss             0x2b                43",
+                    "ds             0x0                 0",
+                    "es             0x0                 0",
+                    "fs             0x0                 0",
+                    "gs             0x0                 0",
+                    "k0             0xfefff800          4278188032",
+                    "k1             0xfefff800          4278188032",
+                    "k2             0x3                 3",
+                    "k3             0x0                 0",
+                    "k4             0x0                 0",
+                    "k5             0x0                 0",
+                    "k6             0x0                 0",
+                    "k7             0x0                 0",
+                    "Disas:",
+                    "==========================",
+                    "Dump of assembler code for function raise:",
+                    "0x00007feab7e494a0 <+0>:\tendbr64",
+                    "0x00007feab7e494a4 <+4>:\tpush   %rbx",
+                    "0x00007feab7e494a5 <+5>:\tmov    $0xffffffffffffffff,%r8",
+                    "0x00007feab7e494ac <+12>:\tmov    %edi,%ebx",
+                    "0x00007feab7e494ae <+14>:\tmov    $0x8,%r10d",
+                    "0x00007feab7e494b4 <+20>:\txor    %edi,%edi",
+                    "0x00007feab7e494b6 <+22>:\tsub    $0x110,%rsp",
+                    "0x00007feab7e494bd <+29>:\tmov    %fs:0x28,%rax",
+                    "0x00007feab7e494c6 <+38>:\tmov    %rax,0x108(%rsp)",
+                    "0x00007feab7e494ce <+46>:\txor    %eax,%eax",
+                    "0x00007feab7e494d0 <+48>:\tmov    %rsp,%r9",
+                    "0x00007feab7e494d3 <+51>:\tmovabs $0xfffffffe7fffffff,%rax",
+                    "0x00007feab7e494dd <+61>:\tmov    %r8,0x88(%rsp)",
+                    "0x00007feab7e494e5 <+69>:\tmov    %rax,0x80(%rsp)",
+                    "0x00007feab7e494ed <+77>:\tmov    %r9,%rdx",
+                    "0x00007feab7e494f0 <+80>:\tlea    0x80(%rsp),%rsi",
+                    "0x00007feab7e494f8 <+88>:\tmov    $0xe,%eax",
+                    "0x00007feab7e494fd <+93>:\tmov    %r8,0x90(%rsp)",
+                    "0x00007feab7e49505 <+101>:\tmov    %r8,0x98(%rsp)",
+                    "0x00007feab7e4950d <+109>:\tmov    %r8,0xa0(%rsp)",
+                    "0x00007feab7e49515 <+117>:\tmov    %r8,0xa8(%rsp)",
+                    "0x00007feab7e4951d <+125>:\tmov    %r8,0xb0(%rsp)",
+                    "0x00007feab7e49525 <+133>:\tmov    %r8,0xb8(%rsp)",
+                    "0x00007feab7e4952d <+141>:\tmov    %r8,0xc0(%rsp)",
+                    "0x00007feab7e49535 <+149>:\tmov    %r8,0xc8(%rsp)",
+                    "0x00007feab7e4953d <+157>:\tmov    %r8,0xd0(%rsp)",
+                    "0x00007feab7e49545 <+165>:\tmov    %r8,0xd8(%rsp)",
+                    "0x00007feab7e4954d <+173>:\tmov    %r8,0xe0(%rsp)",
+                    "0x00007feab7e49555 <+181>:\tmov    %r8,0xe8(%rsp)",
+                    "0x00007feab7e4955d <+189>:\tmov    %r8,0xf0(%rsp)",
+                    "0x00007feab7e49565 <+197>:\tmov    %r8,0xf8(%rsp)",
+                    "0x00007feab7e4956d <+205>:\tsyscall",
+                    "0x00007feab7e4956f <+207>:\tmov    $0x27,%ecx",
+                    "0x00007feab7e49574 <+212>:\tmov    %ecx,%eax",
+                    "0x00007feab7e49576 <+214>:\tsyscall",
+                    "0x00007feab7e49578 <+216>:\tmov    %rax,%rdi",
+                    "0x00007feab7e4957b <+219>:\tmov    $0xba,%eax",
+                    "0x00007feab7e49580 <+224>:\tsyscall",
+                    "0x00007feab7e49582 <+226>:\tmov    %eax,%esi",
+                    "0x00007feab7e49584 <+228>:\tmov    %ebx,%edx",
+                    "0x00007feab7e49586 <+230>:\tmov    $0xea,%eax",
+                    "0x00007feab7e4958b <+235>:\tsyscall",
+                    "0x00007feab7e4958d <+237>:\tcmp    $0xfffffffffffff000,%rax",
+                    "0x00007feab7e49593 <+243>:\tja     0x7feab7e495d0 <raise+304>",
+                    "0x00007feab7e49595 <+245>:\tmov    %eax,%r8d",
+                    "0x00007feab7e49598 <+248>:\tmov    $0x8,%r10d",
+                    "0x00007feab7e4959e <+254>:\txor    %edx,%edx",
+                    "0x00007feab7e495a0 <+256>:\tmov    %r9,%rsi",
+                    "0x00007feab7e495a3 <+259>:\tmov    $0x2,%edi",
+                    "0x00007feab7e495a8 <+264>:\tmov    $0xe,%eax",
+                    "0x00007feab7e495ad <+269>:\tsyscall",
+                    "=> 0x00007feab7e495af <+271>:\tmov    0x108(%rsp),%rcx",
+                    "0x00007feab7e495b7 <+279>:\txor    %fs:0x28,%rcx",
+                    "0x00007feab7e495c0 <+288>:\tmov    %r8d,%eax",
+                    "0x00007feab7e495c3 <+291>:\tjne    0x7feab7e495de <raise+318>",
+                    "0x00007feab7e495c5 <+293>:\tadd    $0x110,%rsp",
+                    "0x00007feab7e495cc <+300>:\tpop    %rbx",
+                    "0x00007feab7e495cd <+301>:\tretq",
+                    "0x00007feab7e495ce <+302>:\txchg   %ax,%ax",
+                    "0x00007feab7e495d0 <+304>:\tmov    0x381891(%rip),%rdx        # 0x7feab81cae68",
+                    "0x00007feab7e495d7 <+311>:\tneg    %eax",
+                    "0x00007feab7e495d9 <+313>:\tmov    %eax,%fs:(%rdx)",
+                    "0x00007feab7e495dc <+316>:\tjmp    0x7feab7e49598 <raise+248>",
+                    "0x00007feab7e495de <+318>:\tcallq  0x7feab7f49c30 <__stack_chk_fail>",
+                    "End of assembler dump."
+                ]
+            },
+            {
+                "thor": {
+                    "teststdlibrary(tmod='DataPatterns')": {
+                        "TestId": 882,
+                        "Wuid": "W20260816-201152",
+                        "Problem": "Other problem(s)",
+                        "Code": "0",
+                        "Msg": "Result doesn't match to key file"
+                    }
+                }
+            }
+        ]
+    }
+}

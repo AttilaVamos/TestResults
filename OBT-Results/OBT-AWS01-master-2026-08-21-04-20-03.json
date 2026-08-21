@@ -1,0 +1,122 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Ubuntu_22_04_5_LTS",
+            "Hardware": "CPU/Cores: 16, RAM: 30 GB",
+            "IPAddress": "10.20.0.190 (OBT-AWS01)"
+        },
+        "BuildSet": {
+            "Branch": "master",
+            "BranchDate": "Tue Aug 18 09:06:13 2026 +0100",
+            "BranchSHA": "7ABB2366",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {},
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "SUCCEED",
+                    "CMake": {
+                        "Formatted": "25 sec (00:00:25)",
+                        "RawSec": "25"
+                    },
+                    "Build": {
+                        "Formatted": "454 sec (00:07:34)",
+                        "RawSec": "454"
+                    },
+                    "Package": {
+                        "Formatted": "88 sec (00:01:28)",
+                        "RawSec": "88"
+                    },
+                    "Altogether": {
+                        "Formatted": "658 sec (00:10:58)",
+                        "RawSec": "658"
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "Thor": {
+                        "Total": "3",
+                        "Pass": "3",
+                        "Fail": "0",
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "347 sec (00:05:47)",
+                            "RawSec": "347"
+                        }
+                    },
+                    "Roxie": {
+                        "Total": "5",
+                        "Pass": "5",
+                        "Fail": "0",
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "76 sec (00:01:16)",
+                            "RawSec": "76"
+                        }
+                    }
+                },
+                "Performance": {
+                    "Result": "FAILED",
+                    "Hthor": {
+                        "Total": "1169",
+                        "Pass": "1167",
+                        "Fail": "2",
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "2006 sec (00:33:26)",
+                            "RawSec": "2006"
+                        }
+                    },
+                    "Thor": {
+                        "Total": "323",
+                        "Pass": "323",
+                        "Fail": "0",
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "7120 sec (01:58:40)",
+                            "RawSec": "7120"
+                        }
+                    },
+                    "Roxie": {
+                        "Total": "350",
+                        "Pass": "350",
+                        "Fail": "0",
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "6166 sec (01:42:46)",
+                            "RawSec": "6166"
+                        }
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "hthor": {
+                    "external": {
+                        "TestId": 271,
+                        "Wuid": "W20260820-090720",
+                        "Problem": "Exception",
+                        "Code": "1301",
+                        "Msg": "System error: 1301: Pool memory exhausted: pool id 4194306{@5} exhausted, requested 6209 heap(1/4294967295) global(1/1216) WM(0::38) (in Disk Read G4 E5)"
+                    },
+                    "externalplane": {
+                        "TestId": 273,
+                        "Wuid": "W20260820-090722",
+                        "Problem": "Exception",
+                        "Code": "1301",
+                        "Msg": "System error: 1301: Pool memory exhausted: pool id 4194306{@5} exhausted, requested 6209 heap(1/4294967295) global(1/1216) WM(0::38) (in Disk Read G4 E5)"
+                    }
+                }
+            }
+        ]
+    }
+}

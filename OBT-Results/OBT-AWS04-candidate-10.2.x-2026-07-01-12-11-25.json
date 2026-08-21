@@ -1,0 +1,54 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Rocky_Linux_8_10",
+            "Hardware": "CPU/Cores: 8, RAM: 15 GB",
+            "IPAddress": "10.22.254.98 (OBT-AWS04)"
+        },
+        "BuildSet": {
+            "Branch": "candidate-10.2.x",
+            "BranchDate": "Tue Jun 30 11:46:06 2026 +0100",
+            "BranchSHA": "0ae65bf818f786fc7a68a64c1ffeca453d740e9a",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS, WASMEMBED",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "FAILED",
+                    "CMake": {
+                        "Formatted": "9 sec (00:00:09)",
+                        "RawSec": "9"
+                    },
+                    "Build": {
+                        "Formatted": "886 sec (00:14:46)",
+                        "RawSec": "886"
+                    },
+                    "Package": {
+                        "Formatted": "1 sec (00:00:01)",
+                        "RawSec": "1"
+                    },
+                    "Altogether": {
+                        "Formatted": "897 sec (00:14:57)",
+                        "RawSec": "897"
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "Build": "/home/rocky/build/CE/platform/HPCC-Platform/plugins/Rembed/Rembed.cpp:54:10: fatal error: RInside.h: No such file or directory   54 | #include \"RInside.h\"      |          ^~~~~~~~~~~compilation terminated.make[2]: *** [plugins/Rembed/CMakeFiles/Rembed.dir/build.make:76: plugins/Rembed/CMakeFiles/Rembed.dir/Rembed.cpp.o] Error 1make[1]: *** [CMakeFiles/Makefile2:14997: plugins/Rembed/CMakeFiles/Rembed.dir/all] Error 2make[1]: *** Waiting for unfinished jobs....[ 36%] Built target soapplus[ 39%] Built target hqlmake: *** [Makefile:166: all] Error 2Build failed: build has errorsCMake:9 sec (00:00:09)Build:886 sec (00:14:46)Package:1 sec (00:00:01)Elaps:897 sec (00:14:57)Build end at 2026-07-01 12:31:58"
+            }
+        ]
+    }
+}

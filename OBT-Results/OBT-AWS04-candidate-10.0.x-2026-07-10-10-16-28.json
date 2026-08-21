@@ -1,0 +1,54 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Rocky_Linux_8_10",
+            "Hardware": "CPU/Cores: 8, RAM: 14 GB",
+            "IPAddress": "10.22.254.98 (OBT-AWS04)"
+        },
+        "BuildSet": {
+            "Branch": "candidate-10.0.x",
+            "BranchDate": "Fri Jul 3 15:06:44 2026 +0100",
+            "BranchSHA": "a2d4e2e5f596edbbda01f0e6b183a42f0b3772c4",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS, WASMEMBED, REMBED",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "FAILED",
+                    "CMake": {
+                        "Formatted": "0 sec (00:00:00)",
+                        "RawSec": "0"
+                    },
+                    "Build": {
+                        "Formatted": "0 sec (00:00:00)",
+                        "RawSec": "0"
+                    },
+                    "Package": {
+                        "Formatted": "0 sec (00:00:00)",
+                        "RawSec": "0"
+                    },
+                    "Altogether": {
+                        "Formatted": "0 sec (00:00:00)",
+                        "RawSec": "0"
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "Build": "CMake Error at cmake_modules/vcpkg.cmake:171 (file):  file SHA256 failed to read file  \"/home/rocky/build/CE/platform/HPCC-Platform/vcpkg/scripts/vcpkg-tool-metadata.txt\":  No such file or directoryCall Stack (most recent call first):  CMakeLists.txt:80 (include)CMake Error at /usr/share/cmake/Modules/CMakeDetermineSystem.cmake:154 (message):  Could not find toolchain file:  /home/rocky/build/CE/platform/HPCC-Platform/vcpkg/scripts/buildsystems/vcpkg.cmakeCall Stack (most recent call first):  CMakeLists.txt:82 (project)CMake Error: CMake was unable to find a build program corresponding to \"Unix Makefiles\".  CMAKE_MAKE_PROGRAM is not set.  You probably need to select a different build tool.CMake Error: CMAKE_C_COMPILER not set, after EnableLanguageCMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage-- Configuring incomplete, errors occurred!make: *** No targets specified and no makefile found.  Stop.make: *** No rule to make target 'package'.  Stop.Build failed: build has errorsCMake:0 sec (00:00:00)Build:0 sec (00:00:00)Package:0 sec (00:00:00)Elaps:0 sec (00:00:00)Build end at 2026-07-10 10:25:21"
+            }
+        ]
+    }
+}
