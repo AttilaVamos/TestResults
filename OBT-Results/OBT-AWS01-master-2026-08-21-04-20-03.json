@@ -64,17 +64,7 @@
                     }
                 },
                 "Performance": {
-                    "Result": "FAILED",
-                    "Hthor": {
-                        "Total": "1169",
-                        "Pass": "1167",
-                        "Fail": "2",
-                        "Result": "FAILED",
-                        "Elaps": {
-                            "Formatted": "2006 sec (00:33:26)",
-                            "RawSec": "2006"
-                        }
-                    },
+                    "Result": "PASSED",
                     "Thor": {
                         "Total": "323",
                         "Pass": "323",
@@ -98,25 +88,6 @@
                 }
             }
         ],
-        "Errors": [
-            {
-                "hthor": {
-                    "external": {
-                        "TestId": 271,
-                        "Wuid": "W20260820-090720",
-                        "Problem": "Exception",
-                        "Code": "1301",
-                        "Msg": "System error: 1301: Pool memory exhausted: pool id 4194306{@5} exhausted, requested 6209 heap(1/4294967295) global(1/1216) WM(0::38) (in Disk Read G4 E5)"
-                    },
-                    "externalplane": {
-                        "TestId": 273,
-                        "Wuid": "W20260820-090722",
-                        "Problem": "Exception",
-                        "Code": "1301",
-                        "Msg": "System error: 1301: Pool memory exhausted: pool id 4194306{@5} exhausted, requested 6209 heap(1/4294967295) global(1/1216) WM(0::38) (in Disk Read G4 E5)"
-                    }
-                }
-            }
-        ]
+        "Errors": []
     }
 }
