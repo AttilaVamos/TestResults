@@ -1,0 +1,459 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Rocky_Linux_8_10",
+            "Hardware": "CPU/Cores: 8, RAM: 14 GB",
+            "IPAddress": "10.22.254.98 (OBT-AWS04)"
+        },
+        "BuildSet": {
+            "Branch": "candidate-2.0.x",
+            "BranchDate": "Fri Feb 27 07:53:38 2026",
+            "BranchSHA": "9900eb25b6444b894b3c57b6a9e2431f706a7064",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS, WASMEMBED, REMBED",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl",
+            "Regression": "embedded, 3rdparty, python2, wasmembed*"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "PASSED",
+                    "CMake": {
+                        "Formatted": "10 sec (00:00:10)",
+                        "RawSec": "10"
+                    },
+                    "Build": {
+                        "Formatted": "1002 sec (00:16:42)",
+                        "RawSec": "1002"
+                    },
+                    "Package": {
+                        "Formatted": "279 sec (00:04:39)",
+                        "RawSec": "279"
+                    },
+                    "Altogether": {
+                        "Formatted": "1291 sec (00:21:31)",
+                        "RawSec": "1291"
+                    }
+                }
+            },
+            {
+                "Install": {
+                    "Elaps": "No data"
+                }
+            },
+            {
+                "Unittests": {
+                    "Result": "FAILED",
+                    "Elaps": {
+                        "Formatted": "4019 sec (01:06:59)",
+                        "RawSec": "4019"
+                    },
+                    "Total": 694,
+                    "Pass": 693,
+                    "Fail": 0,
+                    "Error": 0,
+                    "Timeout": 1
+                }
+            },
+            {
+                "Wutooltests": {
+                    "Result": "PASSED",
+                    "Elaps": {
+                        "Formatted": "1 sec (00:00:01)",
+                        "RawSec": "1"
+                    },
+                    "Total": 19,
+                    "Pass": 19,
+                    "Fail": 0,
+                    "Error": 0,
+                    "Timeout": 0
+                }
+            },
+            {
+                "MLtests": {
+                    "Result": "PASSED",
+                    "DBSCAN": {
+                        "Elaps": {
+                            "Formatted": "10 sec  (00:00:10)",
+                            "RawSec": "10"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GLM": {
+                        "Elaps": {
+                            "Formatted": "52 sec  (00:00:52)",
+                            "RawSec": "52"
+                        },
+                        "Total": 7,
+                        "Pass": 7,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GNN": {
+                        "Elaps": {
+                            "Formatted": "70 sec  (00:01:10)",
+                            "RawSec": "70"
+                        },
+                        "Total": 4,
+                        "Pass": 4,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "KMeans": {
+                        "Elaps": {
+                            "Formatted": "4 sec  (00:00:04)",
+                            "RawSec": "4"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "LearningTrees": {
+                        "Elaps": {
+                            "Formatted": "180 sec  (00:03:00)",
+                            "RawSec": "180"
+                        },
+                        "Total": 3,
+                        "Pass": 3,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "PBblas": {
+                        "Elaps": {
+                            "Formatted": "12 sec  (00:00:12)",
+                            "RawSec": "12"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "SupportVectorMachines": {
+                        "Elaps": {
+                            "Formatted": "15 sec  (00:00:15)",
+                            "RawSec": "15"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "TextVectors": {
+                        "Elaps": {
+                            "Formatted": "11 sec  (00:00:11)",
+                            "RawSec": "11"
+                        },
+                        "Total": 5,
+                        "Pass": 5,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "Hthor": {
+                        "Elaps": {
+                            "Formatted": "93 sec  (00:01:33)",
+                            "RawSec": "93"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "Thor": {
+                        "Elaps": {
+                            "Formatted": "36 sec  (00:00:36)",
+                            "RawSec": "36"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "Roxie": {
+                        "Elaps": {
+                            "Formatted": "78 sec  (00:01:18)",
+                            "RawSec": "78"
+                        },
+                        "Total": 24,
+                        "Pass": 24,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Regress": {
+                    "Result": "PASSED",
+                    "Hthor": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "749 sec  (00:12:29)",
+                            "RawSec": "749"
+                        },
+                        "Total": 1129,
+                        "Pass": 1129,
+                        "Fail": 0
+                    },
+                    "Thor": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "1136 sec  (00:18:56)",
+                            "RawSec": "1136"
+                        },
+                        "Total": 995,
+                        "Pass": 995,
+                        "Fail": 0
+                    },
+                    "Roxie": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "1016 sec  (00:16:56)",
+                            "RawSec": "1016"
+                        },
+                        "Total": 1214,
+                        "Pass": 1214,
+                        "Fail": 0
+                    }
+                }
+            },
+            {
+                "Uninstall": {
+                    "Elaps": "No data"
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "Unittests": [
+                    "..Exception in cleanupTestFiles: Super File testfileupdate::supersuperfile doesn't exist in the file system",
+                    "terminate called without an active exception",
+                    "Run: 1 Failures: 0 Errors: 0 Timeout: 1",
+                    "InfoCacheReaderRaceTests run timeout and killed",
+                    "Backtrace of ./core_unittests.3509036",
+                    "[New LWP 3509102]",
+                    "[New LWP 3509040]",
+                    "[New LWP 3509036]",
+                    "[New LWP 3509039]",
+                    "[New LWP 3509041]",
+                    "[New LWP 3509038]",
+                    "[New LWP 3509042]",
+                    "[New LWP 3509037]",
+                    "[New LWP 3509043]",
+                    "BFD: warning: /opt/HPCCSystems/lib/libicudata.so.78: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0010001",
+                    "BFD: warning: /opt/HPCCSystems/lib/libicudata.so.78: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0010002",
+                    "BFD: warning: /opt/HPCCSystems/lib/liburing.so.2: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0010001",
+                    "BFD: warning: /opt/HPCCSystems/lib/liburing.so.2: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0010002",
+                    "[Thread debugging using libthread_db enabled]",
+                    "Using host libthread_db library \"/lib64/libthread_db.so.1\".",
+                    "Core was generated by `/opt/HPCCSystems/bin/unittests -a -e InfoCacheReaderRaceTests'.",
+                    "Program terminated with signal SIGABRT, Aborted.",
+                    "#0  0x00007f8fbce115af in raise () from /lib64/libc.so.6",
+                    "[Current thread is 1 (Thread 0x7f8f4f40b700 (LWP 3509102))]",
+                    "warning: File \"/opt/HPCCSystems/lib/libjlib.so-gdb.py\" auto-loading has been declined by your `auto-load safe-path' set to \"$debugdir:$datadir/auto-load\".",
+                    "To enable execution of this file add",
+                    "add-auto-load-safe-path /opt/HPCCSystems/lib/libjlib.so-gdb.py",
+                    "line to your configuration file \"/home/rocky/.gdbinit\".",
+                    "To completely disable this security protection add",
+                    "set auto-load safe-path /",
+                    "line to your configuration file \"/home/rocky/.gdbinit\".",
+                    "For more information about this security protection see the",
+                    "\"Auto-loading safe path\" section in the GDB manual.  E.g., run from the shell:",
+                    "info \"(gdb)Auto-loading safe path\"",
+                    "Backtrace for all threads",
+                    "==========================",
+                    "Thread 9 (Thread 0x7f8f59811700 (LWP 3509043)):",
+                    "#0  0x00007f8fbdbef371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007f8fb7ae879b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007f8fbdbe91ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007f8fbcdfc953 in clone () from /lib64/libc.so.6",
+                    "Thread 8 (Thread 0x7f8f77817700 (LWP 3509037)):",
+                    "#0  0x00007f8fbdbef371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007f8fb7ae879b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007f8fbdbe91ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007f8fbcdfc953 in clone () from /lib64/libc.so.6",
+                    "Thread 7 (Thread 0x7f8f5e812700 (LWP 3509042)):",
+                    "#0  0x00007f8fbdbef371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007f8fb7ae879b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007f8fbdbe91ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007f8fbcdfc953 in clone () from /lib64/libc.so.6",
+                    "Thread 6 (Thread 0x7f8f72816700 (LWP 3509038)):",
+                    "#0  0x00007f8fbdbef371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007f8fb7ae879b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007f8fbdbe91ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007f8fbcdfc953 in clone () from /lib64/libc.so.6",
+                    "Thread 5 (Thread 0x7f8f63813700 (LWP 3509041)):",
+                    "#0  0x00007f8fbdbef371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007f8fb7ae879b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007f8fbdbe91ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007f8fbcdfc953 in clone () from /lib64/libc.so.6",
+                    "Thread 4 (Thread 0x7f8f6d815700 (LWP 3509039)):",
+                    "#0  0x00007f8fbdbef371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007f8fb7ae879b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007f8fbdbe91ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007f8fbcdfc953 in clone () from /lib64/libc.so.6",
+                    "Thread 3 (Thread 0x7f8fb9dff540 (LWP 3509036)):",
+                    "#0  0x00007f8fbdbf1a46 in do_futex_wait.constprop () from /lib64/libpthread.so.0",
+                    "#1  0x00007f8fbdbf1b38 in __new_sem_wait_slow.constprop.0 () from /lib64/libpthread.so.0",
+                    "#2  0x00007f8fbf39d7e5 in Semaphore::wait (this=this@entry=0x18ae890, timeout=<optimized out>) at /home/rocky/build/CE/platform/HPCC-Platform/system/jlib/jsem.cpp:75",
+                    "#3  0x00007f8fbf3e1683 in Thread::join (this=0x18ae7f0, timeout=<optimized out>) at /home/rocky/build/CE/platform/HPCC-Platform/system/jlib/jthread.cpp:509",
+                    "#4  0x0000000000637b8a in non-virtual thunk to CTestInfoCacheReader::~CTestInfoCacheReader() () at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/infocachereadertests.cpp:55",
+                    "#5  0x00007f8fbf2e3b10 in CInterfaceOf<CEmptyClass>::Release (this=0x18455f8, this@entry=0x1845509) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/atomic_base.h:462",
+                    "#6  CInterface::Release (this=this@entry=0x18455f8) at /home/rocky/build/CE/platform/HPCC-Platform/system/jlib/jiface.cpp:33",
+                    "#7  0x000000000063b356 in CInfoCacheReader::Release (this=0x18455f0) at /home/rocky/build/CE/platform/HPCC-Platform/esp/smc/SMCLib/InfoCacheReader.hpp:141",
+                    "#8  Release<CTestInfoCacheReader> (ptr=0x18455f0) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/./../../system/jlib/jscm.hpp:48",
+                    "#9  Shared<CTestInfoCacheReader>::~Shared (this=<synthetic pointer>, __in_chrg=<optimized out>) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/./../../system/jlib/jscm.hpp:65",
+                    "#10 Owned<CTestInfoCacheReader>::~Owned (this=<synthetic pointer>, __in_chrg=<optimized out>) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/./../../system/jlib/jscm.hpp:115",
+                    "#11 InfoCacheReaderRaceTests::testActiveFlagDuringConcurrentAccess (this=<optimized out>) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/infocachereadertests.cpp:780",
+                    "#12 0x00007f8fc5ab7fa2 in CppUnit::TestCaseMethodFunctor::operator()() const () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#13 0x00007f8fc5aadf0e in CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#14 0x00007f8fc5ab5110 in CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#15 0x00007f8fc5abf794 in CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#16 0x00007f8fc5ab7c59 in CppUnit::TestCase::run(CppUnit::TestResult*) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#17 0x00007f8fc5ab8233 in CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#18 0x00007f8fc5ab82b7 in CppUnit::TestComposite::run(CppUnit::TestResult*) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#19 0x00007f8fc5abf6f2 in CppUnit::TestResult::runTest(CppUnit::Test*) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#20 0x00007f8fc5ac1f9d in CppUnit::TestRunner::run(CppUnit::TestResult&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#21 0x00007f8fc5ac3ff2 in CppUnit::TextTestRunner::run(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#22 0x0000000000462bbd in main (argc=<optimized out>, argv=<optimized out>) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/new_allocator.h:80",
+                    "Thread 2 (Thread 0x7f8f68814700 (LWP 3509040)):",
+                    "#0  0x00007f8fbdbef371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007f8fb7ae879b in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007f8fbdbe91ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007f8fbcdfc953 in clone () from /lib64/libc.so.6",
+                    "Thread 1 (Thread 0x7f8f4f40b700 (LWP 3509102)):",
+                    "#0  0x00007f8fbce115af in raise () from /lib64/libc.so.6",
+                    "#1  0x00007f8fbcde4ee5 in abort () from /lib64/libc.so.6",
+                    "#2  0x00007f8fbd7c509b in __gnu_cxx::__verbose_terminate_handler() [clone .cold.1] () from /lib64/libstdc++.so.6",
+                    "#3  0x00007f8fbd7cb54c in __cxxabiv1::__terminate(void (*)()) () from /lib64/libstdc++.so.6",
+                    "#4  0x00007f8fbd7cb5a7 in std::terminate() () from /lib64/libstdc++.so.6",
+                    "#5  0x00007f8fbd7cc405 in __cxa_pure_virtual () from /lib64/libstdc++.so.6",
+                    "#6  0x00007f8fc574e9a5 in CInfoCacheReaderThread::threadmain (this=0x18ae750) at /home/rocky/build/CE/platform/HPCC-Platform/esp/smc/SMCLib/InfoCacheReader.cpp:51",
+                    "#7  0x0000000000469cdd in non-virtual thunk to CThreaded::run() () at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/./../../system/jlib/jthread.hpp:185",
+                    "#8  0x00007f8fbf3e3513 in Thread::begin (this=0x18ae7f0) at /home/rocky/build/CE/platform/HPCC-Platform/system/jlib/jthread.cpp:316",
+                    "#9  0x00007f8fbf3e2528 in Thread::_threadmain (v=0x18ae7f0) at /home/rocky/build/CE/platform/HPCC-Platform/system/jlib/jthread.cpp:182",
+                    "#10 0x00007f8fbdbe91ca in start_thread () from /lib64/libpthread.so.0",
+                    "#11 0x00007f8fbcdfc953 in clone () from /lib64/libc.so.6",
+                    "Registers:",
+                    "==========================",
+                    "rax            0x0                 0",
+                    "rbx            0x6                 6",
+                    "rcx            0x7f8fbce115af      140255325918639",
+                    "rdx            0x0                 0",
+                    "rsi            0x7f8f4f409d30      140253486685488",
+                    "rdi            0x2                 2",
+                    "rbp            0x18ae7c8           0x18ae7c8",
+                    "rsp            0x7f8f4f409d30      0x7f8f4f409d30",
+                    "r8             0x0                 0",
+                    "r9             0x7f8f4f409d30      140253486685488",
+                    "r10            0x8                 8",
+                    "r11            0x246               582",
+                    "r12            0xffffffff          4294967295",
+                    "r13            0x7f8f4f409ff0      140253486686192",
+                    "r14            0x18ae8b8           25880760",
+                    "r15            0x7f8f4f40a1c0      140253486686656",
+                    "rip            0x7f8fbce115af      0x7f8fbce115af <raise+271>",
+                    "eflags         0x246               [ PF ZF IF ]",
+                    "cs             0x33                51",
+                    "ss             0x2b                43",
+                    "ds             0x0                 0",
+                    "es             0x0                 0",
+                    "fs             0x0                 0",
+                    "gs             0x0                 0",
+                    "k0             0xfcfefe00          4244569600",
+                    "k1             0xffff              65535",
+                    "k2             0x1ff               511",
+                    "k3             0x0                 0",
+                    "k4             0x0                 0",
+                    "k5             0x200               512",
+                    "k6             0x0                 0",
+                    "k7             0x0                 0",
+                    "Disas:",
+                    "==========================",
+                    "Dump of assembler code for function raise:",
+                    "0x00007f8fbce114a0 <+0>:\tendbr64",
+                    "0x00007f8fbce114a4 <+4>:\tpush   %rbx",
+                    "0x00007f8fbce114a5 <+5>:\tmov    $0xffffffffffffffff,%r8",
+                    "0x00007f8fbce114ac <+12>:\tmov    %edi,%ebx",
+                    "0x00007f8fbce114ae <+14>:\tmov    $0x8,%r10d",
+                    "0x00007f8fbce114b4 <+20>:\txor    %edi,%edi",
+                    "0x00007f8fbce114b6 <+22>:\tsub    $0x110,%rsp",
+                    "0x00007f8fbce114bd <+29>:\tmov    %fs:0x28,%rax",
+                    "0x00007f8fbce114c6 <+38>:\tmov    %rax,0x108(%rsp)",
+                    "0x00007f8fbce114ce <+46>:\txor    %eax,%eax",
+                    "0x00007f8fbce114d0 <+48>:\tmov    %rsp,%r9",
+                    "0x00007f8fbce114d3 <+51>:\tmovabs $0xfffffffe7fffffff,%rax",
+                    "0x00007f8fbce114dd <+61>:\tmov    %r8,0x88(%rsp)",
+                    "0x00007f8fbce114e5 <+69>:\tmov    %rax,0x80(%rsp)",
+                    "0x00007f8fbce114ed <+77>:\tmov    %r9,%rdx",
+                    "0x00007f8fbce114f0 <+80>:\tlea    0x80(%rsp),%rsi",
+                    "0x00007f8fbce114f8 <+88>:\tmov    $0xe,%eax",
+                    "0x00007f8fbce114fd <+93>:\tmov    %r8,0x90(%rsp)",
+                    "0x00007f8fbce11505 <+101>:\tmov    %r8,0x98(%rsp)",
+                    "0x00007f8fbce1150d <+109>:\tmov    %r8,0xa0(%rsp)",
+                    "0x00007f8fbce11515 <+117>:\tmov    %r8,0xa8(%rsp)",
+                    "0x00007f8fbce1151d <+125>:\tmov    %r8,0xb0(%rsp)",
+                    "0x00007f8fbce11525 <+133>:\tmov    %r8,0xb8(%rsp)",
+                    "0x00007f8fbce1152d <+141>:\tmov    %r8,0xc0(%rsp)",
+                    "0x00007f8fbce11535 <+149>:\tmov    %r8,0xc8(%rsp)",
+                    "0x00007f8fbce1153d <+157>:\tmov    %r8,0xd0(%rsp)",
+                    "0x00007f8fbce11545 <+165>:\tmov    %r8,0xd8(%rsp)",
+                    "0x00007f8fbce1154d <+173>:\tmov    %r8,0xe0(%rsp)",
+                    "0x00007f8fbce11555 <+181>:\tmov    %r8,0xe8(%rsp)",
+                    "0x00007f8fbce1155d <+189>:\tmov    %r8,0xf0(%rsp)",
+                    "0x00007f8fbce11565 <+197>:\tmov    %r8,0xf8(%rsp)",
+                    "0x00007f8fbce1156d <+205>:\tsyscall",
+                    "0x00007f8fbce1156f <+207>:\tmov    $0x27,%ecx",
+                    "0x00007f8fbce11574 <+212>:\tmov    %ecx,%eax",
+                    "0x00007f8fbce11576 <+214>:\tsyscall",
+                    "0x00007f8fbce11578 <+216>:\tmov    %rax,%rdi",
+                    "0x00007f8fbce1157b <+219>:\tmov    $0xba,%eax",
+                    "0x00007f8fbce11580 <+224>:\tsyscall",
+                    "0x00007f8fbce11582 <+226>:\tmov    %eax,%esi",
+                    "0x00007f8fbce11584 <+228>:\tmov    %ebx,%edx",
+                    "0x00007f8fbce11586 <+230>:\tmov    $0xea,%eax",
+                    "0x00007f8fbce1158b <+235>:\tsyscall",
+                    "0x00007f8fbce1158d <+237>:\tcmp    $0xfffffffffffff000,%rax",
+                    "0x00007f8fbce11593 <+243>:\tja     0x7f8fbce115d0 <raise+304>",
+                    "0x00007f8fbce11595 <+245>:\tmov    %eax,%r8d",
+                    "0x00007f8fbce11598 <+248>:\tmov    $0x8,%r10d",
+                    "0x00007f8fbce1159e <+254>:\txor    %edx,%edx",
+                    "0x00007f8fbce115a0 <+256>:\tmov    %r9,%rsi",
+                    "0x00007f8fbce115a3 <+259>:\tmov    $0x2,%edi",
+                    "0x00007f8fbce115a8 <+264>:\tmov    $0xe,%eax",
+                    "0x00007f8fbce115ad <+269>:\tsyscall",
+                    "=> 0x00007f8fbce115af <+271>:\tmov    0x108(%rsp),%rcx",
+                    "0x00007f8fbce115b7 <+279>:\txor    %fs:0x28,%rcx",
+                    "0x00007f8fbce115c0 <+288>:\tmov    %r8d,%eax",
+                    "0x00007f8fbce115c3 <+291>:\tjne    0x7f8fbce115de <raise+318>",
+                    "0x00007f8fbce115c5 <+293>:\tadd    $0x110,%rsp",
+                    "0x00007f8fbce115cc <+300>:\tpop    %rbx",
+                    "0x00007f8fbce115cd <+301>:\tretq",
+                    "0x00007f8fbce115ce <+302>:\txchg   %ax,%ax",
+                    "0x00007f8fbce115d0 <+304>:\tmov    0x381891(%rip),%rdx        # 0x7f8fbd192e68",
+                    "0x00007f8fbce115d7 <+311>:\tneg    %eax",
+                    "0x00007f8fbce115d9 <+313>:\tmov    %eax,%fs:(%rdx)",
+                    "0x00007f8fbce115dc <+316>:\tjmp    0x7f8fbce11598 <raise+248>",
+                    "0x00007f8fbce115de <+318>:\tcallq  0x7f8fbcf11c30 <__stack_chk_fail>",
+                    "End of assembler dump."
+                ]
+            }
+        ]
+    }
+}
