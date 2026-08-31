@@ -1,0 +1,307 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Rocky_Linux_8_10",
+            "Hardware": "CPU/Cores: 8, RAM: 14 GB",
+            "IPAddress": "10.22.254.98 (OBT-AWS04)"
+        },
+        "BuildSet": {
+            "Branch": "candidate-10.2.x",
+            "BranchDate": "Fri Aug 28 14:10:40 2026 +0100",
+            "BranchSHA": "eed4923e02f579b14abd9167edf21126f2949a92",
+            "BuildType": "Debug",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS, WASMEMBED, REMBED",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl",
+            "Regression": "embedded, 3rdparty, python2, wasmembed*"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "PASSED",
+                    "CMake": {
+                        "Formatted": "12 sec (00:00:12)",
+                        "RawSec": "12"
+                    },
+                    "Build": {
+                        "Formatted": "649 sec (00:10:49)",
+                        "RawSec": "649"
+                    },
+                    "Package": {
+                        "Formatted": "257 sec (00:04:17)",
+                        "RawSec": "257"
+                    },
+                    "Altogether": {
+                        "Formatted": "918 sec (00:15:18)",
+                        "RawSec": "918"
+                    }
+                }
+            },
+            {
+                "Install": {
+                    "Elaps": "No data"
+                }
+            },
+            {
+                "Unittests": {
+                    "Result": "FAILED",
+                    "Elaps": {
+                        "Formatted": "9383 sec (02:36:23)",
+                        "RawSec": "9383"
+                    },
+                    "Total": 697,
+                    "Pass": 693,
+                    "Fail": 4,
+                    "Error": 0,
+                    "Timeout": 0
+                }
+            },
+            {
+                "Wutooltests": {
+                    "Result": "PASSED",
+                    "Elaps": {
+                        "Formatted": "2 sec (00:00:02)",
+                        "RawSec": "2"
+                    },
+                    "Total": 19,
+                    "Pass": 19,
+                    "Fail": 0,
+                    "Error": 0,
+                    "Timeout": 0
+                }
+            },
+            {
+                "MLtests": {
+                    "Result": "PASSED",
+                    "DBSCAN": {
+                        "Elaps": {
+                            "Formatted": "14 sec  (00:00:14)",
+                            "RawSec": "14"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GLM": {
+                        "Elaps": {
+                            "Formatted": "80 sec  (00:01:20)",
+                            "RawSec": "80"
+                        },
+                        "Total": 7,
+                        "Pass": 7,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GNN": {
+                        "Elaps": {
+                            "Formatted": "71 sec  (00:01:11)",
+                            "RawSec": "71"
+                        },
+                        "Total": 4,
+                        "Pass": 4,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "KMeans": {
+                        "Elaps": {
+                            "Formatted": "5 sec  (00:00:05)",
+                            "RawSec": "5"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "LearningTrees": {
+                        "Elaps": {
+                            "Formatted": "770 sec  (00:12:50)",
+                            "RawSec": "770"
+                        },
+                        "Total": 3,
+                        "Pass": 3,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "PBblas": {
+                        "Elaps": {
+                            "Formatted": "18 sec  (00:00:18)",
+                            "RawSec": "18"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "SupportVectorMachines": {
+                        "Elaps": {
+                            "Formatted": "17 sec  (00:00:17)",
+                            "RawSec": "17"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "TextVectors": {
+                        "Elaps": {
+                            "Formatted": "13 sec  (00:00:13)",
+                            "RawSec": "13"
+                        },
+                        "Total": 5,
+                        "Pass": 5,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "Hthor": {
+                        "Elaps": {
+                            "Formatted": "337 sec  (00:05:37)",
+                            "RawSec": "337"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "Thor": {
+                        "Elaps": {
+                            "Formatted": "120 sec  (00:02:00)",
+                            "RawSec": "120"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "Roxie": {
+                        "Elaps": {
+                            "Formatted": "233 sec  (00:03:53)",
+                            "RawSec": "233"
+                        },
+                        "Total": 24,
+                        "Pass": 24,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Regress": {
+                    "Result": "FAILED",
+                    "Hthor": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "1443 sec  (00:24:03)",
+                            "RawSec": "1443"
+                        },
+                        "Total": 1131,
+                        "Pass": 1131,
+                        "Fail": 0
+                    },
+                    "Thor": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "2816 sec  (00:46:56)",
+                            "RawSec": "2816"
+                        },
+                        "Total": 997,
+                        "Pass": 991,
+                        "Fail": 6
+                    },
+                    "Roxie": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "1888 sec  (00:31:28)",
+                            "RawSec": "1888"
+                        },
+                        "Total": 1215,
+                        "Pass": 1215,
+                        "Fail": 0
+                    }
+                }
+            },
+            {
+                "Uninstall": {
+                    "Elaps": "No data"
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "Unittests": [
+                    "..Exception in cleanupTestFiles: Super File testfileupdate::supersuperfile doesn't exist in the file system",
+                    "Run:  7   Failures: 2   Errors: 0",
+                    "1) test: JlibCompressionStandardTest::testSingle (F) line: 129 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jlibtestcompress.cpp",
+                    "- Unexpected exception from second call to compressor->close()",
+                    "2) test: JlibCompressionStandardTest::testStandardCompression (F) line: 129 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jlibtestcompress.cpp",
+                    "- Unexpected exception from second call to compressor->close()",
+                    "Run:  2   Failures: 1   Errors: 0",
+                    "1) test: JlibCompressionTestsStress::test (F) line: 129 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jlibtestcompress.cpp",
+                    "- Unexpected exception from second call to compressor->close()",
+                    "Run:  4   Failures: 1   Errors: 0",
+                    "1) test: JlibCompressionTimingTest::testStandardCompression (F) line: 129 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jlibtestcompress.cpp",
+                    "- Unexpected exception from second call to compressor->close()"
+                ]
+            },
+            {
+                "thor": {
+                    "distmerge": {
+                        "TestId": 223,
+                        "Wuid": "W20260831-010236-2",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "System error: 6327: WORKER #4 [10:22:254:98:20160]: Internal Error &apos;Unknown mapping kind: 4&apos; in queryStatistic() at jstats:h(603)"
+                    },
+                    "full_test": {
+                        "TestId": 278,
+                        "Wuid": "W20260831-010324",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "System error: 6327: WORKER #4 [10:22:254:98:20160]: Internal Error &apos;Unknown mapping kind: 4&apos; in queryStatistic() at jstats:h(603)"
+                    },
+                    "joinpartition": {
+                        "TestId": 482,
+                        "Wuid": "W20260831-010834",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "System error: 6327: WORKER #4 [10:22:254:98:20160]: Internal Error &apos;Unknown mapping kind: 4&apos; in queryStatistic() at jstats:h(603)"
+                    },
+                    "loopvar": {
+                        "TestId": 558,
+                        "Wuid": "W20260831-011257-9",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "System error: 6327: WORKER #1 [10:22:254:98:20100]: Internal Error &apos;Unknown mapping kind: 4&apos; in queryStatistic() at jstats:h(603)"
+                    },
+                    "stepping7g(multiPart=true)": {
+                        "TestId": 825,
+                        "Wuid": "W20260831-011655-3",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "System error: 6327: WORKER #4 [10:22:254:98:20160]: Internal Error &apos;Unknown mapping kind: 4&apos; in queryStatistic() at jstats:h(603)"
+                    },
+                    "teststdlibrary(tmod='DataPatterns')": {
+                        "TestId": 882,
+                        "Wuid": "W20260831-013906-5",
+                        "Problem": "Other problem(s)",
+                        "Code": "0",
+                        "Msg": "Result doesn't match to key file"
+                    }
+                }
+            }
+        ]
+    }
+}
