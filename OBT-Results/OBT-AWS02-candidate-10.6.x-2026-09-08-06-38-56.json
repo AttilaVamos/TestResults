@@ -1,0 +1,54 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Ubuntu_22_04_5_LTS",
+            "Hardware": "CPU/Cores: 16, RAM: 30 GB",
+            "IPAddress": "10.20.0.189 (OBT-AWS02)"
+        },
+        "BuildSet": {
+            "Branch": "candidate-10.6.x",
+            "BranchDate": "Mon Sep 7 13:08:10 2026 +0100",
+            "BranchSHA": "69312d0d8899b79a731bd3791d59a26672b93f30",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest, RWLockStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "FAILED",
+                    "CMake": {
+                        "Formatted": "5 sec (00:00:05)",
+                        "RawSec": "5"
+                    },
+                    "Build": {
+                        "Formatted": "0 sec (00:00:00)",
+                        "RawSec": "0"
+                    },
+                    "Package": {
+                        "Formatted": "0 sec (00:00:00)",
+                        "RawSec": "0"
+                    },
+                    "Altogether": {
+                        "Formatted": "5 sec (00:00:05)",
+                        "RawSec": "5"
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "Build": "error: curl operation failed with error code 35 (SSL connect error).error: Not a transient network error, won't retry download from https://dist.nuget.org/win-x86-commandline/v7.3.1/nuget.exenote: If you are using a proxy, please ensure your proxy settings are correct.Possible causes are:1. You are actually using an HTTP proxy, but setting HTTPS_PROXY variable to `https://address:port`.This is not correct, because `https://` prefix claims the proxy is an HTTPS proxy, while your proxy (v2ray, shadowsocksr, etc...) is an HTTP proxy.Try setting `http://address:port` to both HTTP_PROXY and HTTPS_PROXY instead.2. If you are using Windows, vcpkg will automatically use your Windows IE Proxy Settings set by your proxy software. See: https://github.com/microsoft/vcpkg-tool/pull/77The value set by your proxy might be wrong, or have same `https://` prefix issue.3. Your proxy's remote server is out of service.If you believe this is not a temporary download server failure and vcpkg needs to be changed to download this file from a different location, please submit an issue to https://github.com/Microsoft/vcpkg/issues-- Running vcpkg install - failedCMake Error at vcpkg/scripts/buildsystems/vcpkg.cmake:955 (message):  vcpkg install failed.  See logs for more information:  /home/ubuntu/build/CE/platform/build/vcpkg-manifest-install.logCall Stack (most recent call first):  /usr/local/share/cmake-3.22/Modules/CMakeDetermineSystem.cmake:124 (include)  CMakeLists.txt:82 (project)CMake Error: CMake was unable to find a build program corresponding to \"Unix Makefiles\".  CMAKE_MAKE_PROGRAM is not set.  You probably need to select a different build tool.CMake Error: CMAKE_C_COMPILER not set, after EnableLanguageCMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage-- Configuring incomplete, errors occurred!make: *** No targets specified and no makefile found.  Stop.make: *** No rule to make target 'package'.  Stop.Build failed: build has errorsCMake:5 sec (00:00:05)Build:0 sec (00:00:00)Package:0 sec (00:00:00)Elaps:5 sec (00:00:05)Build end at 2026-09-08 06:41:01"
+            }
+        ]
+    }
+}
