@@ -1,0 +1,112 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Ubuntu_22_04_5_LTS",
+            "Hardware": "CPU/Cores: 8, RAM: 23 GB",
+            "IPAddress": "127.0.1.1 (OBT-BM01)"
+        },
+        "BuildSet": {
+            "Branch": "master",
+            "BranchDate": "Mon Sep 7 12:47:54 2026 +0100",
+            "BranchSHA": "28EDFCC8",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {},
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "SUCCEED",
+                    "CMake": {
+                        "Formatted": "140 sec (00:02:20)",
+                        "RawSec": "140"
+                    },
+                    "Build": {
+                        "Formatted": "1475 sec (00:24:35)",
+                        "RawSec": "1475"
+                    },
+                    "Package": {
+                        "Formatted": "121 sec (00:02:01)",
+                        "RawSec": "121"
+                    },
+                    "Altogether": {
+                        "Formatted": "1851 sec (00:30:51)",
+                        "RawSec": "1851"
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "Thor": {
+                        "Total": "3",
+                        "Pass": "3",
+                        "Fail": "0",
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "620 sec (00:10:20)",
+                            "RawSec": "620"
+                        }
+                    },
+                    "Roxie": {
+                        "Total": "5",
+                        "Pass": "5",
+                        "Fail": "0",
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "120 sec (00:02:00)",
+                            "RawSec": "120"
+                        }
+                    }
+                },
+                "Performance": {
+                    "Result": "FAILED",
+                    "Thor": {
+                        "Total": "323",
+                        "Pass": "323",
+                        "Fail": "0",
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "16827 sec (04:40:27)",
+                            "RawSec": "16827"
+                        }
+                    },
+                    "Roxie": {
+                        "Total": "350",
+                        "Pass": "348",
+                        "Fail": "2",
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "11560 sec (03:12:40)",
+                            "RawSec": "11560"
+                        }
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "roxie": {
+                    "15bb_parallelsoapcallidx(persistConnection=false,tls=true)": {
+                        "TestId": 343,
+                        "Wuid": "W20260910-171758",
+                        "Problem": "Exception",
+                        "Code": "1303",
+                        "Msg": "Invalid pointer"
+                    },
+                    "15bb_parallelsoapcallidx(persistConnection=true,tls=true)": {
+                        "TestId": 344,
+                        "Wuid": "W20260910-171815",
+                        "Problem": "Aborted ",
+                        "Code": "-2",
+                        "Msg": " reason: Timeout and retry count exhausted! "
+                    }
+                }
+            }
+        ]
+    }
+}
