@@ -1,0 +1,54 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Ubuntu_22_04_5_LTS",
+            "Hardware": "CPU/Cores: 16, RAM: 30 GB",
+            "IPAddress": "10.20.0.189 (OBT-AWS02)"
+        },
+        "BuildSet": {
+            "Branch": "candidate-10.0.x",
+            "BranchDate": "Mon Sep 21 10:35:35 2026 +0100",
+            "BranchSHA": "1ed048d256843f8d6e75573117fadbcfda325c0b",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest, RWLockStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "FAILED",
+                    "CMake": {
+                        "Formatted": "5 sec (00:00:05)",
+                        "RawSec": "5"
+                    },
+                    "Build": {
+                        "Formatted": "0 sec (00:00:00)",
+                        "RawSec": "0"
+                    },
+                    "Package": {
+                        "Formatted": "0 sec (00:00:00)",
+                        "RawSec": "0"
+                    },
+                    "Altogether": {
+                        "Formatted": "5 sec (00:00:05)",
+                        "RawSec": "5"
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "Build": "CMake Error at docs/portal-js/CMakeLists.txt:45 (message):  Unable to locate node/npm, please install NodeJS as per  https://github.com/hpcc-systems/HPCC-Platform/wiki/Building-HPCC#prerequisites"
+            }
+        ]
+    }
+}
