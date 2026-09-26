@@ -1,4 +1,2 @@
-  Updated on: Sat Sep 26 06:42:28 AM UTC 2026.
-  -new file: OBT-Results/OBT-AWS02-master-2026-09-26-04-12-09.json
- 
-14 result files (older than 60 days) archived.
+  Updated on: Sat Sep 26 09:11:27 AM UTC 2026.
+  -new file: OBT-Results/OBT-AWS02-candidate-10.8.x-2026-09-26-06-42-38.json
