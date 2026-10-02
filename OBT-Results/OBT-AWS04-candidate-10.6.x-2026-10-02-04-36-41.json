@@ -1,0 +1,244 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Rocky_Linux_8_10",
+            "Hardware": "CPU/Cores: 8, RAM: 15 GB",
+            "IPAddress": "10.22.254.98 (OBT-AWS04)"
+        },
+        "BuildSet": {
+            "Branch": "candidate-10.6.x",
+            "BranchDate": "Wed Sep 30 07:48:35 2026 +0100",
+            "BranchSHA": "60c934b71e6b343b9e7bbf8230dda5618de77feb",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS, WASMEMBED, REMBED",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl",
+            "Regression": "embedded, 3rdparty, python2, wasmembed*"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "PASSED",
+                    "CMake": {
+                        "Formatted": "10 sec (00:00:10)",
+                        "RawSec": "10"
+                    },
+                    "Build": {
+                        "Formatted": "969 sec (00:16:09)",
+                        "RawSec": "969"
+                    },
+                    "Package": {
+                        "Formatted": "228 sec (00:03:48)",
+                        "RawSec": "228"
+                    },
+                    "Altogether": {
+                        "Formatted": "1207 sec (00:20:07)",
+                        "RawSec": "1207"
+                    }
+                }
+            },
+            {
+                "Install": {
+                    "Elaps": "No data"
+                }
+            },
+            {
+                "Unittests": {
+                    "Result": "PASSED",
+                    "Elaps": {
+                        "Formatted": "4263 sec (01:11:03)",
+                        "RawSec": "4263"
+                    },
+                    "Total": 887,
+                    "Pass": 887,
+                    "Fail": 0,
+                    "Error": 0,
+                    "Timeout": 0
+                }
+            },
+            {
+                "Wutooltests": {
+                    "Result": "PASSED",
+                    "Elaps": {
+                        "Formatted": "1 sec (00:00:01)",
+                        "RawSec": "1"
+                    },
+                    "Total": 19,
+                    "Pass": 19,
+                    "Fail": 0,
+                    "Error": 0,
+                    "Timeout": 0
+                }
+            },
+            {
+                "MLtests": {
+                    "Result": "PASSED",
+                    "DBSCAN": {
+                        "Elaps": {
+                            "Formatted": "11 sec  (00:00:11)",
+                            "RawSec": "11"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GLM": {
+                        "Elaps": {
+                            "Formatted": "54 sec  (00:00:54)",
+                            "RawSec": "54"
+                        },
+                        "Total": 7,
+                        "Pass": 7,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GNN": {
+                        "Elaps": {
+                            "Formatted": "70 sec  (00:01:10)",
+                            "RawSec": "70"
+                        },
+                        "Total": 4,
+                        "Pass": 4,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "KMeans": {
+                        "Elaps": {
+                            "Formatted": "4 sec  (00:00:04)",
+                            "RawSec": "4"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "LearningTrees": {
+                        "Elaps": {
+                            "Formatted": "172 sec  (00:02:52)",
+                            "RawSec": "172"
+                        },
+                        "Total": 3,
+                        "Pass": 3,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "PBblas": {
+                        "Elaps": {
+                            "Formatted": "13 sec  (00:00:13)",
+                            "RawSec": "13"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "SupportVectorMachines": {
+                        "Elaps": {
+                            "Formatted": "14 sec  (00:00:14)",
+                            "RawSec": "14"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "TextVectors": {
+                        "Elaps": {
+                            "Formatted": "11 sec  (00:00:11)",
+                            "RawSec": "11"
+                        },
+                        "Total": 5,
+                        "Pass": 5,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "Hthor": {
+                        "Elaps": {
+                            "Formatted": "117 sec  (00:01:57)",
+                            "RawSec": "117"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "Thor": {
+                        "Elaps": {
+                            "Formatted": "48 sec  (00:00:48)",
+                            "RawSec": "48"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "Roxie": {
+                        "Elaps": {
+                            "Formatted": "94 sec  (00:01:34)",
+                            "RawSec": "94"
+                        },
+                        "Total": 24,
+                        "Pass": 24,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Regress": {
+                    "Result": "PASSED",
+                    "Hthor": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "742 sec  (00:12:22)",
+                            "RawSec": "742"
+                        },
+                        "Total": 1135,
+                        "Pass": 1135,
+                        "Fail": 0
+                    },
+                    "Thor": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "1143 sec  (00:19:03)",
+                            "RawSec": "1143"
+                        },
+                        "Total": 1003,
+                        "Pass": 1003,
+                        "Fail": 0
+                    },
+                    "Roxie": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "1068 sec  (00:17:48)",
+                            "RawSec": "1068"
+                        },
+                        "Total": 1218,
+                        "Pass": 1218,
+                        "Fail": 0
+                    }
+                }
+            },
+            {
+                "Uninstall": {
+                    "Elaps": "No data"
+                }
+            }
+        ],
+        "Errors": []
+    }
+}
