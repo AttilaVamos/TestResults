@@ -1,0 +1,272 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Ubuntu_22_04_5_LTS",
+            "Hardware": "CPU/Cores: 16, RAM: 30 GB",
+            "IPAddress": "10.20.0.189 (OBT-AWS02)"
+        },
+        "BuildSet": {
+            "Branch": "candidate-10.2.x",
+            "BranchDate": "Fri Aug 28 14:10:40 2026 +0100",
+            "BranchSHA": "eed4923e02f579b14abd9167edf21126f2949a92",
+            "BuildType": "Debug",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest, RWLockStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl",
+            "Regression": "embedded-r, embedded-js, 3rdpartyservice, mongodb, python2 compileOptions.ecl, cppembed.ecl"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "PASSED",
+                    "CMake": {
+                        "Formatted": "10 sec (00:00:10)",
+                        "RawSec": "10"
+                    },
+                    "Build": {
+                        "Formatted": "302 sec (00:05:02)",
+                        "RawSec": "302"
+                    },
+                    "Package": {
+                        "Formatted": "115 sec (00:01:55)",
+                        "RawSec": "115"
+                    },
+                    "Altogether": {
+                        "Formatted": "427 sec (00:07:07)",
+                        "RawSec": "427"
+                    }
+                }
+            },
+            {
+                "Install": {
+                    "Elaps": "No data"
+                }
+            },
+            {
+                "Unittests": {
+                    "Result": "FAILED",
+                    "Elaps": {
+                        "Formatted": "8838 sec (02:27:18)",
+                        "RawSec": "8838"
+                    },
+                    "Total": 696,
+                    "Pass": 692,
+                    "Fail": 4,
+                    "Error": 0,
+                    "Timeout": 0
+                }
+            },
+            {
+                "Wutooltests": {
+                    "Result": "PASSED",
+                    "Elaps": {
+                        "Formatted": "2 sec (00:00:02)",
+                        "RawSec": "2"
+                    },
+                    "Total": 19,
+                    "Pass": 19,
+                    "Fail": 0,
+                    "Error": 0,
+                    "Timeout": 0
+                }
+            },
+            {
+                "MLtests": {
+                    "Result": "PASSED",
+                    "DBSCAN": {
+                        "Elaps": {
+                            "Formatted": "14 sec  (00:00:14)",
+                            "RawSec": "14"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GLM": {
+                        "Elaps": {
+                            "Formatted": "82 sec  (00:01:22)",
+                            "RawSec": "82"
+                        },
+                        "Total": 7,
+                        "Pass": 7,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GNN": {
+                        "Elaps": {
+                            "Formatted": "72 sec  (00:01:12)",
+                            "RawSec": "72"
+                        },
+                        "Total": 4,
+                        "Pass": 4,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "KMeans": {
+                        "Elaps": {
+                            "Formatted": "6 sec  (00:00:06)",
+                            "RawSec": "6"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "LearningTrees": {
+                        "Elaps": {
+                            "Formatted": "508 sec  (00:08:28)",
+                            "RawSec": "508"
+                        },
+                        "Total": 3,
+                        "Pass": 3,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "PBblas": {
+                        "Elaps": {
+                            "Formatted": "18 sec  (00:00:18)",
+                            "RawSec": "18"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "SupportVectorMachines": {
+                        "Elaps": {
+                            "Formatted": "15 sec  (00:00:15)",
+                            "RawSec": "15"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "TextVectors": {
+                        "Elaps": {
+                            "Formatted": "16 sec  (00:00:16)",
+                            "RawSec": "16"
+                        },
+                        "Total": 5,
+                        "Pass": 5,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "Hthor": {
+                        "Elaps": {
+                            "Formatted": "319 sec  (00:05:19)",
+                            "RawSec": "319"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "Thor": {
+                        "Elaps": {
+                            "Formatted": "107 sec  (00:01:47)",
+                            "RawSec": "107"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "Roxie": {
+                        "Elaps": {
+                            "Formatted": "216 sec  (00:03:36)",
+                            "RawSec": "216"
+                        },
+                        "Total": 24,
+                        "Pass": 24,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Regress": {
+                    "Result": "FAILED",
+                    "Hthor": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "936 sec  (00:15:36)",
+                            "RawSec": "936"
+                        },
+                        "Total": 1170,
+                        "Pass": 1170,
+                        "Fail": 0
+                    },
+                    "Thor": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "2350 sec  (00:39:10)",
+                            "RawSec": "2350"
+                        },
+                        "Total": 1032,
+                        "Pass": 1031,
+                        "Fail": 1
+                    },
+                    "Roxie": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "1188 sec  (00:19:48)",
+                            "RawSec": "1188"
+                        },
+                        "Total": 1256,
+                        "Pass": 1256,
+                        "Fail": 0
+                    }
+                }
+            },
+            {
+                "Uninstall": {
+                    "Elaps": "No data"
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "Unittests": [
+                    "..Exception in cleanupTestFiles: Super File testfileupdate::supersuperfile doesn't exist in the file system",
+                    "Run:  7   Failures: 2   Errors: 0",
+                    "1) test: JlibCompressionStandardTest::testSingle (F) line: 129 /home/ubuntu/build/CE/platform/HPCC-Platform/testing/unittests/jlibtestcompress.cpp",
+                    "- Unexpected exception from second call to compressor->close()",
+                    "2) test: JlibCompressionStandardTest::testStandardCompression (F) line: 129 /home/ubuntu/build/CE/platform/HPCC-Platform/testing/unittests/jlibtestcompress.cpp",
+                    "- Unexpected exception from second call to compressor->close()",
+                    "Run:  2   Failures: 1   Errors: 0",
+                    "1) test: JlibCompressionTestsStress::test (F) line: 129 /home/ubuntu/build/CE/platform/HPCC-Platform/testing/unittests/jlibtestcompress.cpp",
+                    "- Unexpected exception from second call to compressor->close()",
+                    "Run:  4   Failures: 1   Errors: 0",
+                    "1) test: JlibCompressionTimingTest::testStandardCompression (F) line: 129 /home/ubuntu/build/CE/platform/HPCC-Platform/testing/unittests/jlibtestcompress.cpp",
+                    "- Unexpected exception from second call to compressor->close()"
+                ]
+            },
+            {
+                "thor": {
+                    "teststdlibrary(tmod='DataPatterns')": {
+                        "TestId": 916,
+                        "Wuid": "W20260830-232527-4",
+                        "Problem": "Other problem(s)",
+                        "Code": "0",
+                        "Msg": "Result doesn't match to key file"
+                    }
+                }
+            }
+        ]
+    }
+}

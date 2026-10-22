@@ -1,0 +1,647 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Rocky_Linux_8_10",
+            "Hardware": "CPU/Cores: 8, RAM: 14 GB",
+            "IPAddress": "10.22.254.98 (OBT-AWS04)"
+        },
+        "BuildSet": {
+            "Branch": "candidate-10.6.x",
+            "BranchDate": "Mon Aug 31 16:27:37 2026 +0100",
+            "BranchSHA": "1ee046edf3f8b43c419e8bd4c52168cbae86ed0b",
+            "BuildType": "Debug",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS, WASMEMBED, REMBED",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl",
+            "Regression": "embedded, 3rdparty, python2, wasmembed*"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "PASSED",
+                    "CMake": {
+                        "Formatted": "10 sec (00:00:10)",
+                        "RawSec": "10"
+                    },
+                    "Build": {
+                        "Formatted": "656 sec (00:10:56)",
+                        "RawSec": "656"
+                    },
+                    "Package": {
+                        "Formatted": "234 sec (00:03:54)",
+                        "RawSec": "234"
+                    },
+                    "Altogether": {
+                        "Formatted": "900 sec (00:15:00)",
+                        "RawSec": "900"
+                    }
+                }
+            },
+            {
+                "Install": {
+                    "Elaps": "No data"
+                }
+            },
+            {
+                "Unittests": {
+                    "Result": "FAILED",
+                    "Elaps": {
+                        "Formatted": "11225 sec (03:07:05)",
+                        "RawSec": "11225"
+                    },
+                    "Total": 868,
+                    "Pass": 863,
+                    "Fail": 4,
+                    "Error": 0,
+                    "Timeout": 1
+                }
+            },
+            {
+                "Wutooltests": {
+                    "Result": "PASSED",
+                    "Elaps": {
+                        "Formatted": "2 sec (00:00:02)",
+                        "RawSec": "2"
+                    },
+                    "Total": 19,
+                    "Pass": 19,
+                    "Fail": 0,
+                    "Error": 0,
+                    "Timeout": 0
+                }
+            },
+            {
+                "MLtests": {
+                    "Result": "PASSED",
+                    "DBSCAN": {
+                        "Elaps": {
+                            "Formatted": "14 sec  (00:00:14)",
+                            "RawSec": "14"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GLM": {
+                        "Elaps": {
+                            "Formatted": "79 sec  (00:01:19)",
+                            "RawSec": "79"
+                        },
+                        "Total": 7,
+                        "Pass": 7,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GNN": {
+                        "Elaps": {
+                            "Formatted": "71 sec  (00:01:11)",
+                            "RawSec": "71"
+                        },
+                        "Total": 4,
+                        "Pass": 4,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "KMeans": {
+                        "Elaps": {
+                            "Formatted": "5 sec  (00:00:05)",
+                            "RawSec": "5"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "LearningTrees": {
+                        "Elaps": {
+                            "Formatted": "727 sec  (00:12:07)",
+                            "RawSec": "727"
+                        },
+                        "Total": 3,
+                        "Pass": 3,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "PBblas": {
+                        "Elaps": {
+                            "Formatted": "17 sec  (00:00:17)",
+                            "RawSec": "17"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "SupportVectorMachines": {
+                        "Elaps": {
+                            "Formatted": "16 sec  (00:00:16)",
+                            "RawSec": "16"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "TextVectors": {
+                        "Elaps": {
+                            "Formatted": "14 sec  (00:00:14)",
+                            "RawSec": "14"
+                        },
+                        "Total": 5,
+                        "Pass": 5,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "Hthor": {
+                        "Elaps": {
+                            "Formatted": "339 sec  (00:05:39)",
+                            "RawSec": "339"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "Thor": {
+                        "Elaps": {
+                            "Formatted": "120 sec  (00:02:00)",
+                            "RawSec": "120"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "Roxie": {
+                        "Elaps": {
+                            "Formatted": "239 sec  (00:03:59)",
+                            "RawSec": "239"
+                        },
+                        "Total": 24,
+                        "Pass": 24,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Regress": {
+                    "Result": "FAILED",
+                    "Hthor": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "1681 sec  (00:28:01)",
+                            "RawSec": "1681"
+                        },
+                        "Total": 1132,
+                        "Pass": 1132,
+                        "Fail": 0
+                    },
+                    "Thor": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "2866 sec  (00:47:46)",
+                            "RawSec": "2866"
+                        },
+                        "Total": 999,
+                        "Pass": 997,
+                        "Fail": 2
+                    },
+                    "Roxie": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "2034 sec  (00:33:54)",
+                            "RawSec": "2034"
+                        },
+                        "Total": 1215,
+                        "Pass": 1194,
+                        "Fail": 21
+                    }
+                }
+            },
+            {
+                "Uninstall": {
+                    "Elaps": "No data"
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "Unittests": [
+                    "..Exception in cleanupTestFiles: Super File testfileupdate::supersuperfile doesn't exist in the file system",
+                    "Run:  7   Failures: 2   Errors: 0",
+                    "1) test: JlibCompressionStandardTest::testSingle (F) line: 129 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jlibtestcompress.cpp",
+                    "- Unexpected exception from second call to compressor->close()",
+                    "2) test: JlibCompressionStandardTest::testStandardCompression (F) line: 129 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jlibtestcompress.cpp",
+                    "- Unexpected exception from second call to compressor->close()",
+                    "Run:  2   Failures: 1   Errors: 0",
+                    "1) test: JlibCompressionTestsStress::test (F) line: 129 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jlibtestcompress.cpp",
+                    "- Unexpected exception from second call to compressor->close()",
+                    "Run:  4   Failures: 1   Errors: 0",
+                    "1) test: JlibCompressionTimingTest::testStandardCompression (F) line: 129 /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/jlibtestcompress.cpp",
+                    "- Unexpected exception from second call to compressor->close()",
+                    "Run: 1 Failures: 0 Errors: 0 Timeout: 1",
+                    "MultishotAcceptTests run timeout and killed",
+                    "Backtrace of ./core_unittests.1996309",
+                    "[New LWP 1996309]",
+                    "[New LWP 1996332]",
+                    "[New LWP 1996352]",
+                    "[New LWP 1996329]",
+                    "[New LWP 1996327]",
+                    "[New LWP 1996328]",
+                    "[New LWP 1996331]",
+                    "[New LWP 1996330]",
+                    "[New LWP 1996333]",
+                    "BFD: warning: /opt/HPCCSystems/lib/libicudata.so.78: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0010001",
+                    "BFD: warning: /opt/HPCCSystems/lib/libicudata.so.78: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0010002",
+                    "BFD: warning: /opt/HPCCSystems/lib/liburing.so.2: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0010001",
+                    "BFD: warning: /opt/HPCCSystems/lib/liburing.so.2: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0010002",
+                    "[Thread debugging using libthread_db enabled]",
+                    "Using host libthread_db library \"/lib64/libthread_db.so.1\".",
+                    "Core was generated by `/opt/HPCCSystems/bin/unittests -a -e MultishotAcceptTests'.",
+                    "Program terminated with signal SIGABRT, Aborted.",
+                    "#0  0x00007fd84f8555af in raise () from /lib64/libc.so.6",
+                    "[Current thread is 1 (Thread 0x7fd845fe8540 (LWP 1996309))]",
+                    "warning: File \"/opt/HPCCSystems/lib/libjlib.so-gdb.py\" auto-loading has been declined by your `auto-load safe-path' set to \"$debugdir:$datadir/auto-load\".",
+                    "To enable execution of this file add",
+                    "add-auto-load-safe-path /opt/HPCCSystems/lib/libjlib.so-gdb.py",
+                    "line to your configuration file \"/home/rocky/.gdbinit\".",
+                    "To completely disable this security protection add",
+                    "set auto-load safe-path /",
+                    "line to your configuration file \"/home/rocky/.gdbinit\".",
+                    "For more information about this security protection see the",
+                    "\"Auto-loading safe path\" section in the GDB manual.  E.g., run from the shell:",
+                    "info \"(gdb)Auto-loading safe path\"",
+                    "Backtrace for all threads",
+                    "==========================",
+                    "Thread 9 (Thread 0x7fd7e4a1f700 (LWP 1996333)):",
+                    "#0  0x00007fd84fbeb371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007fd842cff6bb in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007fd84fbe51ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007fd84f840953 in clone () from /lib64/libc.so.6",
+                    "Thread 8 (Thread 0x7fd7f3a22700 (LWP 1996330)):",
+                    "#0  0x00007fd84fbeb371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007fd842cff6bb in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007fd84fbe51ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007fd84f840953 in clone () from /lib64/libc.so.6",
+                    "Thread 7 (Thread 0x7fd7eea21700 (LWP 1996331)):",
+                    "#0  0x00007fd84fbeb371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007fd842cff6bb in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007fd84fbe51ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007fd84f840953 in clone () from /lib64/libc.so.6",
+                    "Thread 6 (Thread 0x7fd7fda24700 (LWP 1996328)):",
+                    "#0  0x00007fd84fbeb371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007fd842cff6bb in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007fd84fbe51ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007fd84f840953 in clone () from /lib64/libc.so.6",
+                    "Thread 5 (Thread 0x7fd802a25700 (LWP 1996327)):",
+                    "#0  0x00007fd84fbeb371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007fd842cff6bb in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007fd84fbe51ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007fd84f840953 in clone () from /lib64/libc.so.6",
+                    "Thread 4 (Thread 0x7fd7f8a23700 (LWP 1996329)):",
+                    "#0  0x00007fd84fbeb371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007fd842cff6bb in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007fd84fbe51ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007fd84f840953 in clone () from /lib64/libc.so.6",
+                    "Thread 3 (Thread 0x7fd7cbfff700 (LWP 1996352)):",
+                    "#0  0x00007fd84fbedc62 in do_futex_wait () from /lib64/libpthread.so.0",
+                    "#1  0x00007fd84fbedd73 in __new_sem_wait_slow () from /lib64/libpthread.so.0",
+                    "#2  0x00007fd851bef52c in Semaphore::wait (this=0x7fd7cc001270, timeout=1000) at /home/rocky/build/CE/platform/HPCC-Platform/system/jlib/jsem.cpp:88",
+                    "#3  0x00007fd851c16428 in CSocketEpollThread::run (this=0x7fd7cc001170) at /home/rocky/build/CE/platform/HPCC-Platform/system/jlib/jsocket.cpp:5792",
+                    "#4  0x00007fd851c77e52 in Thread::begin (this=0x7fd7cc001170) at /home/rocky/build/CE/platform/HPCC-Platform/system/jlib/jthread.cpp:319",
+                    "#5  0x00007fd851c777a3 in Thread::_threadmain (v=0x7fd7cc001170) at /home/rocky/build/CE/platform/HPCC-Platform/system/jlib/jthread.cpp:183",
+                    "#6  0x00007fd84fbe51ca in start_thread () from /lib64/libpthread.so.0",
+                    "#7  0x00007fd84f840953 in clone () from /lib64/libc.so.6",
+                    "Thread 2 (Thread 0x7fd7e9a20700 (LWP 1996332)):",
+                    "#0  0x00007fd84fbeb371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0",
+                    "#1  0x00007fd842cff6bb in blas_thread_server () from /opt/HPCCSystems/lib/libopenblas.so.0",
+                    "#2  0x00007fd84fbe51ca in start_thread () from /lib64/libpthread.so.0",
+                    "#3  0x00007fd84f840953 in clone () from /lib64/libc.so.6",
+                    "Thread 1 (Thread 0x7fd845fe8540 (LWP 1996309)):",
+                    "#0  0x00007fd84f8555af in raise () from /lib64/libc.so.6",
+                    "#1  0x00007fd84f828ee5 in abort () from /lib64/libc.so.6",
+                    "#2  0x00007fd84f828db9 in __assert_fail_base.cold.0 () from /lib64/libc.so.6",
+                    "#3  0x00007fd84f84df06 in __assert_fail () from /lib64/libc.so.6",
+                    "#4  0x0000000000568188 in CriticalSection::~CriticalSection (this=0x20d4dc0, __in_chrg=<optimized out>) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/./../../system/jlib/jmutex.hpp:343",
+                    "#5  0x00007fd8521d185e in CReadSelectHandler::~CReadSelectHandler (this=0x20d4d90, __in_chrg=<optimized out>) at /home/rocky/build/CE/platform/HPCC-Platform/system/security/securesocket/socketutils.cpp:339",
+                    "#6  0x00007fd8521d2e3a in CSocketConnectionListener::~CSocketConnectionListener (this=0x20d4d90, __in_chrg=<optimized out>) at /home/rocky/build/CE/platform/HPCC-Platform/system/security/securesocket/socketutils.cpp:481",
+                    "#7  0x00000000008e06e6 in TestConnectionListener::~TestConnectionListener (this=0x20d4d90, __in_chrg=<optimized out>) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/multishotaccepttests.cpp:45",
+                    "#8  0x00000000008e0716 in TestConnectionListener::~TestConnectionListener (this=0x20d4d90, __in_chrg=<optimized out>) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/multishotaccepttests.cpp:45",
+                    "#9  0x00007fd8519f5a75 in CInterfaceOf<CEmptyClass>::Release (this=0x20d4e30) at /home/rocky/build/CE/platform/HPCC-Platform/system/jlib/jiface.hpp:156",
+                    "#10 0x00007fd8519f58cf in CInterface::Release (this=0x20d4e30) at /home/rocky/build/CE/platform/HPCC-Platform/system/jlib/jiface.cpp:33",
+                    "#11 0x0000000000568a1d in Thread::Release (this=0x20d4e30) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/./../../system/jlib/jthread.hpp:133",
+                    "#12 0x00000000008dcb01 in Release<TestConnectionListener> (ptr=0x20d4d90) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/./../../system/jlib/jscm.hpp:48",
+                    "#13 0x00000000008dba24 in Shared<TestConnectionListener>::~Shared (this=0x7ffd348345e0, __in_chrg=<optimized out>) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/./../../system/jlib/jscm.hpp:65",
+                    "#14 0x00000000008d2594 in Owned<TestConnectionListener>::~Owned (this=0x7ffd348345e0, __in_chrg=<optimized out>) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/./../../system/jlib/jscm.hpp:115",
+                    "#15 0x00000000008d2b1f in MultishotAcceptTests::testBasicMultishotAccept (this=0x2148850) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/multishotaccepttests.cpp:283",
+                    "#16 0x00000000008e0214 in std::__invoke_impl<void, void (MultishotAcceptTests::*&)(), MultishotAcceptTests*&> (__f=@0x2148900: (void (MultishotAcceptTests::*)(MultishotAcceptTests * const)) 0x8d25f0 <MultishotAcceptTests::testBasicMultishotAccept()>, __t=@0x2148910: 0x2148850) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/invoke.h:74",
+                    "#17 0x00000000008dffa2 in std::__invoke<void (MultishotAcceptTests::*&)(), MultishotAcceptTests*&> (__fn=@0x2148900: (void (MultishotAcceptTests::*)(MultishotAcceptTests * const)) 0x8d25f0 <MultishotAcceptTests::testBasicMultishotAccept()>) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/invoke.h:96",
+                    "#18 0x00000000008dfd0d in std::_Bind<void (MultishotAcceptTests::*(MultishotAcceptTests*))()>::__call<void, , 0ul>(std::tuple<>&&, std::_Index_tuple<0ul>) (this=0x2148900, __args=...) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/functional:495",
+                    "#19 0x00000000008df8a1 in std::_Bind<void (MultishotAcceptTests::*(MultishotAcceptTests*))()>::operator()<, void>() (this=0x2148900) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/functional:580",
+                    "#20 0x00000000008df20f in std::__invoke_impl<void, std::_Bind<void (MultishotAcceptTests::*(MultishotAcceptTests*))()>&>(std::__invoke_other, std::_Bind<void (MultishotAcceptTests::*(MultishotAcceptTests*))()>&) (__f=...) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/invoke.h:61",
+                    "#21 0x00000000008de889 in std::__invoke_r<void, std::_Bind<void (MultishotAcceptTests::*(MultishotAcceptTests*))()>&>(std::_Bind<void (MultishotAcceptTests::*(MultishotAcceptTests*))()>&) (__fn=...) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/invoke.h:111",
+                    "#22 0x00000000008ddec7 in std::_Function_handler<void (), std::_Bind<void (MultishotAcceptTests::*(MultishotAcceptTests*))()> >::_M_invoke(std::_Any_data const&) (__functor=...) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/std_function.h:290",
+                    "#23 0x0000000000570e5f in std::function<void ()>::operator()() const (this=0x21488d0) at /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/std_function.h:591",
+                    "#24 0x00000000008e0aae in CppUnit::TestCaller<MultishotAcceptTests>::runTest (this=0x2148890) at /home/rocky/build/CE/platform/build/vcpkg_installed/x64-linux-dynamic/include/cppunit/TestCaller.h:175",
+                    "#25 0x00007fd854272fa2 in CppUnit::TestCaseMethodFunctor::operator()() const () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#26 0x00007fd854268f0e in CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#27 0x00007fd854270110 in CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#28 0x00007fd85427a794 in CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#29 0x00007fd854272c59 in CppUnit::TestCase::run(CppUnit::TestResult*) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#30 0x00007fd854273233 in CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#31 0x00007fd8542732b7 in CppUnit::TestComposite::run(CppUnit::TestResult*) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#32 0x00007fd85427a6f2 in CppUnit::TestResult::runTest(CppUnit::Test*) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#33 0x00007fd85427cf9d in CppUnit::TestRunner::run(CppUnit::TestResult&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#34 0x00007fd85427eff2 in CppUnit::TextTestRunner::run(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) () from /opt/HPCCSystems/lib/libcppunit-1.15.so.1",
+                    "#35 0x0000000000566764 in main (argc=4, argv=0x7ffd34835248) at /home/rocky/build/CE/platform/HPCC-Platform/testing/unittests/unittests.cpp:302",
+                    "Registers:",
+                    "==========================",
+                    "rax            0x0                 0",
+                    "rbx            0x6                 6",
+                    "rcx            0x7fd84f8555af      140567023801775",
+                    "rdx            0x0                 0",
+                    "rsi            0x7ffd348340b0      140725484470448",
+                    "rdi            0x2                 2",
+                    "rbp            0x7fd84f9a1300      0x7fd84f9a1300",
+                    "rsp            0x7ffd348340b0      0x7ffd348340b0",
+                    "r8             0x0                 0",
+                    "r9             0x7ffd348340b0      140725484470448",
+                    "r10            0x8                 8",
+                    "r11            0x246               582",
+                    "r12            0xa28020            10649632",
+                    "r13            0xa280e4            10649828",
+                    "r14            0x157               343",
+                    "r15            0xffffffffffffffff  -1",
+                    "rip            0x7fd84f8555af      0x7fd84f8555af <raise+271>",
+                    "eflags         0x246               [ PF ZF IF ]",
+                    "cs             0x33                51",
+                    "ss             0x2b                43",
+                    "ds             0x0                 0",
+                    "es             0x0                 0",
+                    "fs             0x0                 0",
+                    "gs             0x0                 0",
+                    "k0             0xfefff800          4278188032",
+                    "k1             0xfffff8f0          4294965488",
+                    "k2             0x3                 3",
+                    "k3             0x0                 0",
+                    "k4             0x0                 0",
+                    "k5             0x0                 0",
+                    "k6             0x0                 0",
+                    "k7             0x0                 0",
+                    "Disas:",
+                    "==========================",
+                    "Dump of assembler code for function raise:",
+                    "0x00007fd84f8554a0 <+0>:\tendbr64",
+                    "0x00007fd84f8554a4 <+4>:\tpush   %rbx",
+                    "0x00007fd84f8554a5 <+5>:\tmov    $0xffffffffffffffff,%r8",
+                    "0x00007fd84f8554ac <+12>:\tmov    %edi,%ebx",
+                    "0x00007fd84f8554ae <+14>:\tmov    $0x8,%r10d",
+                    "0x00007fd84f8554b4 <+20>:\txor    %edi,%edi",
+                    "0x00007fd84f8554b6 <+22>:\tsub    $0x110,%rsp",
+                    "0x00007fd84f8554bd <+29>:\tmov    %fs:0x28,%rax",
+                    "0x00007fd84f8554c6 <+38>:\tmov    %rax,0x108(%rsp)",
+                    "0x00007fd84f8554ce <+46>:\txor    %eax,%eax",
+                    "0x00007fd84f8554d0 <+48>:\tmov    %rsp,%r9",
+                    "0x00007fd84f8554d3 <+51>:\tmovabs $0xfffffffe7fffffff,%rax",
+                    "0x00007fd84f8554dd <+61>:\tmov    %r8,0x88(%rsp)",
+                    "0x00007fd84f8554e5 <+69>:\tmov    %rax,0x80(%rsp)",
+                    "0x00007fd84f8554ed <+77>:\tmov    %r9,%rdx",
+                    "0x00007fd84f8554f0 <+80>:\tlea    0x80(%rsp),%rsi",
+                    "0x00007fd84f8554f8 <+88>:\tmov    $0xe,%eax",
+                    "0x00007fd84f8554fd <+93>:\tmov    %r8,0x90(%rsp)",
+                    "0x00007fd84f855505 <+101>:\tmov    %r8,0x98(%rsp)",
+                    "0x00007fd84f85550d <+109>:\tmov    %r8,0xa0(%rsp)",
+                    "0x00007fd84f855515 <+117>:\tmov    %r8,0xa8(%rsp)",
+                    "0x00007fd84f85551d <+125>:\tmov    %r8,0xb0(%rsp)",
+                    "0x00007fd84f855525 <+133>:\tmov    %r8,0xb8(%rsp)",
+                    "0x00007fd84f85552d <+141>:\tmov    %r8,0xc0(%rsp)",
+                    "0x00007fd84f855535 <+149>:\tmov    %r8,0xc8(%rsp)",
+                    "0x00007fd84f85553d <+157>:\tmov    %r8,0xd0(%rsp)",
+                    "0x00007fd84f855545 <+165>:\tmov    %r8,0xd8(%rsp)",
+                    "0x00007fd84f85554d <+173>:\tmov    %r8,0xe0(%rsp)",
+                    "0x00007fd84f855555 <+181>:\tmov    %r8,0xe8(%rsp)",
+                    "0x00007fd84f85555d <+189>:\tmov    %r8,0xf0(%rsp)",
+                    "0x00007fd84f855565 <+197>:\tmov    %r8,0xf8(%rsp)",
+                    "0x00007fd84f85556d <+205>:\tsyscall",
+                    "0x00007fd84f85556f <+207>:\tmov    $0x27,%ecx",
+                    "0x00007fd84f855574 <+212>:\tmov    %ecx,%eax",
+                    "0x00007fd84f855576 <+214>:\tsyscall",
+                    "0x00007fd84f855578 <+216>:\tmov    %rax,%rdi",
+                    "0x00007fd84f85557b <+219>:\tmov    $0xba,%eax",
+                    "0x00007fd84f855580 <+224>:\tsyscall",
+                    "0x00007fd84f855582 <+226>:\tmov    %eax,%esi",
+                    "0x00007fd84f855584 <+228>:\tmov    %ebx,%edx",
+                    "0x00007fd84f855586 <+230>:\tmov    $0xea,%eax",
+                    "0x00007fd84f85558b <+235>:\tsyscall",
+                    "0x00007fd84f85558d <+237>:\tcmp    $0xfffffffffffff000,%rax",
+                    "0x00007fd84f855593 <+243>:\tja     0x7fd84f8555d0 <raise+304>",
+                    "0x00007fd84f855595 <+245>:\tmov    %eax,%r8d",
+                    "0x00007fd84f855598 <+248>:\tmov    $0x8,%r10d",
+                    "0x00007fd84f85559e <+254>:\txor    %edx,%edx",
+                    "0x00007fd84f8555a0 <+256>:\tmov    %r9,%rsi",
+                    "0x00007fd84f8555a3 <+259>:\tmov    $0x2,%edi",
+                    "0x00007fd84f8555a8 <+264>:\tmov    $0xe,%eax",
+                    "0x00007fd84f8555ad <+269>:\tsyscall",
+                    "=> 0x00007fd84f8555af <+271>:\tmov    0x108(%rsp),%rcx",
+                    "0x00007fd84f8555b7 <+279>:\txor    %fs:0x28,%rcx",
+                    "0x00007fd84f8555c0 <+288>:\tmov    %r8d,%eax",
+                    "0x00007fd84f8555c3 <+291>:\tjne    0x7fd84f8555de <raise+318>",
+                    "0x00007fd84f8555c5 <+293>:\tadd    $0x110,%rsp",
+                    "0x00007fd84f8555cc <+300>:\tpop    %rbx",
+                    "0x00007fd84f8555cd <+301>:\tretq",
+                    "0x00007fd84f8555ce <+302>:\txchg   %ax,%ax",
+                    "0x00007fd84f8555d0 <+304>:\tmov    0x381891(%rip),%rdx        # 0x7fd84fbd6e68",
+                    "0x00007fd84f8555d7 <+311>:\tneg    %eax",
+                    "0x00007fd84f8555d9 <+313>:\tmov    %eax,%fs:(%rdx)",
+                    "0x00007fd84f8555dc <+316>:\tjmp    0x7fd84f855598 <raise+248>",
+                    "0x00007fd84f8555de <+318>:\tcallq  0x7fd84f955c30 <__stack_chk_fail>",
+                    "End of assembler dump."
+                ]
+            },
+            {
+                "thor": {
+                    "csv_header_superfile_read": {
+                        "TestId": 139,
+                        "Wuid": "W20260906-131300",
+                        "Problem": "Other problem(s)",
+                        "Code": "0",
+                        "Msg": "Result doesn't match to key file"
+                    },
+                    "teststdlibrary(tmod='DataPatterns')": {
+                        "TestId": 884,
+                        "Wuid": "W20260906-135102-1",
+                        "Problem": "Other problem(s)",
+                        "Code": "0",
+                        "Msg": "Result doesn't match to key file"
+                    }
+                }
+            },
+            {
+                "roxie": {
+                    "csvfetch(multiPart=false)": {
+                        "TestId": 153,
+                        "Wuid": "W20260906-140043",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "csvfetch(multiPart=true)": {
+                        "TestId": 154,
+                        "Wuid": "W20260906-140045",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "fetch(multiPart=false)": {
+                        "TestId": 279,
+                        "Wuid": "W20260906-140207",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "fetch(multiPart=true)": {
+                        "TestId": 280,
+                        "Wuid": "W20260906-140208",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "fetch(multiPart=true,useLocal=true)": {
+                        "TestId": 281,
+                        "Wuid": "W20260906-140208-3",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "fetch(multiPart=true,useTranslation=true)": {
+                        "TestId": 282,
+                        "Wuid": "W20260906-140209",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "fetch2(multiPart=false)": {
+                        "TestId": 283,
+                        "Wuid": "W20260906-140209-2",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "jsonfetch": {
+                        "TestId": 512,
+                        "Wuid": "W20260906-140529-2",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "keyed_fetch(multiPart=false)": {
+                        "TestId": 522,
+                        "Wuid": "W20260906-140543",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "keyed_fetch(multiPart=true)": {
+                        "TestId": 523,
+                        "Wuid": "W20260906-140546",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "keyed_fetch(multiPart=true,useLocal=true)": {
+                        "TestId": 524,
+                        "Wuid": "W20260906-140547",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "keyed_fetch(multiPart=false,useLocal=true,forceRemoteKeyedLookup=true,forceRemoteKeyedFetch=true)": {
+                        "TestId": 525,
+                        "Wuid": "W20260906-140549",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "keyed_fetch(multiPart=true,useLocal=true,forceRemoteKeyedLookup=true,forceRemoteKeyedFetch=true)": {
+                        "TestId": 526,
+                        "Wuid": "W20260906-140549-1",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "payload(multiPart=false)": {
+                        "TestId": 672,
+                        "Wuid": "W20260906-140725-2",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "superkey1": {
+                        "TestId": 1029,
+                        "Wuid": "W20260906-142640",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "translatedisk(multiPart=false)": {
+                        "TestId": 1105,
+                        "Wuid": "W20260906-143118",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "translatedisk(multiPart=true)": {
+                        "TestId": 1106,
+                        "Wuid": "W20260906-143120",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "translatedisk(multiPart=true,optRemoteRead=true)": {
+                        "TestId": 1107,
+                        "Wuid": "W20260906-143121",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "xmlfetch(multiPart=false)": {
+                        "TestId": 1202,
+                        "Wuid": "W20260906-143247-3",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "xmlfetch(multiPart=true)": {
+                        "TestId": 1203,
+                        "Wuid": "W20260906-143248",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "xmlfetch2": {
+                        "TestId": 1204,
+                        "Wuid": "W20260906-143249",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    }
+                }
+            }
+        ]
+    }
+}

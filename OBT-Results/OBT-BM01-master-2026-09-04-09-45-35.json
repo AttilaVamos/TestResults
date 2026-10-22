@@ -1,0 +1,105 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Ubuntu_22_04_5_LTS",
+            "Hardware": "CPU/Cores: 8, RAM: 23 GB",
+            "IPAddress": "127.0.1.1 (OBT-BM01)"
+        },
+        "BuildSet": {
+            "Branch": "master",
+            "BranchDate": "Tue Sep 1 15:57:44 2026 +0100",
+            "BranchSHA": "2B634106",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {},
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "SUCCEED",
+                    "CMake": {
+                        "Formatted": "137 sec (00:02:17)",
+                        "RawSec": "137"
+                    },
+                    "Build": {
+                        "Formatted": "1481 sec (00:24:41)",
+                        "RawSec": "1481"
+                    },
+                    "Package": {
+                        "Formatted": "118 sec (00:01:58)",
+                        "RawSec": "118"
+                    },
+                    "Altogether": {
+                        "Formatted": "1872 sec (00:31:12)",
+                        "RawSec": "1872"
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "Thor": {
+                        "Total": "3",
+                        "Pass": "3",
+                        "Fail": "0",
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "615 sec (00:10:15)",
+                            "RawSec": "615"
+                        }
+                    },
+                    "Roxie": {
+                        "Total": "5",
+                        "Pass": "5",
+                        "Fail": "0",
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "118 sec (00:01:58)",
+                            "RawSec": "118"
+                        }
+                    }
+                },
+                "Performance": {
+                    "Result": "FAILED",
+                    "Thor": {
+                        "Total": "323",
+                        "Pass": "323",
+                        "Fail": "0",
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "17424 sec (04:50:24)",
+                            "RawSec": "17424"
+                        }
+                    },
+                    "Roxie": {
+                        "Total": "350",
+                        "Pass": "349",
+                        "Fail": "1",
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "8567 sec (02:22:47)",
+                            "RawSec": "8567"
+                        }
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "roxie": {
+                    "15bb_parallelsoapcallidx(persistConnection=false,tls=true)": {
+                        "TestId": 343,
+                        "Wuid": "W20260904-173833",
+                        "Problem": "Exception",
+                        "Code": "1303",
+                        "Msg": "Invalid pointer"
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,93 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Ubuntu_22_04_5_LTS",
+            "Hardware": "CPU/Cores: 16, RAM: 30 GB",
+            "IPAddress": "10.20.0.190 (OBT-AWS01)"
+        },
+        "BuildSet": {
+            "Branch": "master",
+            "BranchDate": "Tue Oct 20 14:16:34 2026 +0100",
+            "BranchSHA": "8624E465",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {},
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "SUCCEED",
+                    "CMake": {
+                        "Formatted": "26 sec (00:00:26)",
+                        "RawSec": "26"
+                    },
+                    "Build": {
+                        "Formatted": "494 sec (00:08:14)",
+                        "RawSec": "494"
+                    },
+                    "Package": {
+                        "Formatted": "93 sec (00:01:33)",
+                        "RawSec": "93"
+                    },
+                    "Altogether": {
+                        "Formatted": "737 sec (00:12:17)",
+                        "RawSec": "737"
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "Thor": {
+                        "Total": "3",
+                        "Pass": "3",
+                        "Fail": "0",
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "373 sec (00:06:13)",
+                            "RawSec": "373"
+                        }
+                    },
+                    "Roxie": {
+                        "Total": "5",
+                        "Pass": "5",
+                        "Fail": "0",
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "81 sec (00:01:21)",
+                            "RawSec": "81"
+                        }
+                    }
+                },
+                "Performance": {
+                    "Result": "PASSED",
+                    "Thor": {
+                        "Total": "323",
+                        "Pass": "323",
+                        "Fail": "0",
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "7633 sec (02:07:13)",
+                            "RawSec": "7633"
+                        }
+                    },
+                    "Roxie": {
+                        "Total": "350",
+                        "Pass": "350",
+                        "Fail": "0",
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "6613 sec (01:50:13)",
+                            "RawSec": "6613"
+                        }
+                    }
+                }
+            }
+        ],
+        "Errors": []
+    }
+}

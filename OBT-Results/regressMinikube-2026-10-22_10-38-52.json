@@ -1,0 +1,242 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Ubuntu_22_04_5_LTS",
+            "Hardware": "CPU/Cores: 16, RAM: 30 GB",
+            "IPAddress": "10.20.0.190",
+            "HostPlatform" : "10.9.0-trunk0"
+        },
+        "Remote": {
+            "System": "Minikube",
+            "Hardware": "CPU/Cores: 8, RAM: 15 GB",
+            "HthorConfig": {
+                "Replicas": "3",
+                "MaxActive": "4",
+                "UseChildProcesses": "true",
+                "AllowedPipePrograms": "*"
+            },
+            "ThorConfig": {
+                "NumWorkers": "2",
+                "MaxJobs": "4",
+                "MaxGraph": "2",
+                "MultiJobLinger": "true",
+                "LingerPeriod": "200",
+                "AllowedPipePrograms": "*"
+            },
+            "RoxieWorkunitConfig": {
+                "Replicas": "1",
+                "MaxActive": "20",
+                "UseChildProcesses": "true",
+                "AllowedPipePrograms": "*"
+            }
+        },
+        "BuildSet": {
+            "Branch": "community_10.8.6-1 Gold",
+            "BranchDate": "N/A",
+            "BranchSHA": "N/A",
+            "BuildType": "Release",
+            "Target": "K8s"
+        },
+        "Exclusion": {
+            "Build": "N/A",
+            "Documentation": "N/A",
+            "Unittest": "N/A",
+            "MLtest": "N/A",
+            "Regression": "--ef pipefail.ecl -e embedded-r,embedded-js,3rdpartyservice,mongodb,spray,proxy"
+        },
+        "Tasks": [
+            {
+                "Preparation" : {
+                    "UpdateHelmRepo": {
+                        "Result": "Done",
+                        "Elaps": {
+                            "Formatted": "1 sec 1 sec (00:00:01)",
+                            "RawSec": "1"
+                        }
+                    },
+                    "CheckLocalPlatform": {
+                        "Result": "Done",
+                        "Version": "10.9.0-trunk0",
+                        "Elaps": {
+                            "Formatted": "0 sec 0 sec (00:00:00)",
+                            "RawSec": "0"
+                        }
+                    },
+                    "StartMinikube":{
+                        "Result": "Done",
+                        "Elaps": {
+                            "Formatted": "42 sec 42 sec (00:00:42)",
+                            "RawSec": "42"
+                        }
+                    },
+                    "DeployHPCC": {
+                        "Result": "Done",
+                        "Elaps": {
+                            "Formatted": "1 sec 1 sec (00:00:01)",
+                            "RawSec": "1"
+                        }
+                    },
+                    "WaitForPODs": {
+                        "Result": "Done",
+                        "NumberOfPODs": 55,
+                        "Elaps": {
+                            "Formatted": "71 sec 71 sec (00:01:11)",
+                            "RawSec": "71"
+                        }
+                    },
+                    "ECLWatchAnnotation": {
+                        "Result": "Done",
+                        "Elaps": {
+                            "Formatted": "39 sec 39 sec (00:00:39)",
+                            "RawSec": "39"
+                        }
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "hthor": {
+                        "Elaps": {
+                            "Formatted": "0 sec (00:00:00)",
+                            "RawSec": "0"
+                        },
+                        "Total": 0,
+                        "Pass": 0,
+                        "Fail": 0,
+                        "Result": "N/A"
+                    },
+                    "thor": {
+                        "Elaps": {
+                            "Formatted": "102 sec (00:01:42)",
+                            "RawSec": "102"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "roxie": {
+                        "Elaps": {
+                            "Formatted": "113 sec (00:01:53)",
+                            "RawSec": "113"
+                        },
+                        "Total": 24,
+                        "Pass": 24,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "PublishQueries": {
+                    "Result": "Done",
+                    "Total": 0,
+                    "Elaps": {
+                        "Formatted": "0 sec 0 sec (00:00:00)",
+                        "RawSec": "0"
+                    }
+                }
+            },
+            {
+                "Regress": {
+                    "Result": "FAILED",
+                    "Hthor": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "1604 sec (00:26:44)",
+                            "RawSec": "1604"
+                        },
+                        "Total": 1181,
+                        "Pass": 1179,
+                        "Fail": 2
+                    },
+                    "Thor": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "1292 sec (00:21:32)",
+                            "RawSec": "1292"
+                        },
+                        "Total": 1044,
+                        "Pass": 1041,
+                        "Fail": 3
+                    },
+                    "Roxie": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "2438 sec (00:40:38)",
+                            "RawSec": "2438"
+                        },
+                        "Total": 1244,
+                        "Pass": 1241,
+                        "Fail": 3
+                    }
+                }
+            },
+            {
+                "Clean-up" : {
+                    "CollectTimings": {
+                        "Result": "Done",
+                        "Elaps": {
+                            "Formatted": "24 sec 24 sec (00:00:24).",
+                            "RawSec": "24"
+                        }
+                    },
+                    "CollectPODLogs": {
+                        "Result": "Done",
+                        "Elaps": {
+                            "Formatted": "6 sec 6 sec (00:00:06).",
+                            "RawSec": "6"
+                        }
+                    },
+                    "UninstallPODs": {
+                        "Result": "Done",
+                        "Elaps": {
+                            "Formatted": "606 sec 606 sec (00:10:06)",
+                            "RawSec": "606"
+                        }
+                    },
+                    "StopMinikube": {
+                        "Result": "Done",
+                        "Elaps": {
+                            "Formatted": "7 sec 7 sec (00:00:07).",
+                            "RawSec": "7"
+                        }
+                    },
+                    "RunLogProcessor": {
+                        "Result": "Done",
+                        "Elaps": {
+                            "Formatted": "0 sec 0 sec (00:00:00).",
+                            "RawSec": "0"
+                        }
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            
+            
+            
+            {
+            "HthorRegress" : [
+                "[Failure] 273. Fail external.ecl - W20261022-090451 (1 sec)",
+                "[Failure] 275. Fail externalplane.ecl - W20261022-090453 (1 sec)"
+                ]
+            },
+            {
+            "ThorRegress" : [
+                "[Failure] 141. Fail csv_header_superfile_read.ecl - W20261022-092811 (2 sec)",
+                "[Failure] 260. Fail external.ecl - W20261022-093012 (2 sec)",
+                "[Failure] 639. Fail parquetPartition.ecl - W20261022-093907 (2 sec)"
+            ]
+        },
+            {
+            "RoxieRegress" : [
+                "[Failure] 154. Fail csv_header_non_first_part.ecl - W20261022-095302 (6 sec)",
+                "[Failure] 285. Fail external.ecl - W20261022-095618 (2 sec)",
+                "[Failure] 287. Fail externalplane.ecl - W20261022-095621 (2 sec)"
+            ]
+        }
+        ]
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Rocky_Linux_8_10",
+            "Hardware": "CPU/Cores: 8, RAM: 15 GB",
+            "IPAddress": "10.22.254.98 (OBT-AWS04)"
+        },
+        "BuildSet": {
+            "Branch": "candidate-10.0.x",
+            "BranchDate": "Mon Sep 7 12:49:45 2026 +0100",
+            "BranchSHA": "8c4a14ba42b3c5f87378175e37e90dd8916e60f6",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS, WASMEMBED, REMBED",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "FAILED",
+                    "CMake": {
+                        "Formatted": "7 sec (00:00:07)",
+                        "RawSec": "7"
+                    },
+                    "Build": {
+                        "Formatted": "0 sec (00:00:00)",
+                        "RawSec": "0"
+                    },
+                    "Package": {
+                        "Formatted": "0 sec (00:00:00)",
+                        "RawSec": "0"
+                    },
+                    "Altogether": {
+                        "Formatted": "7 sec (00:00:07)",
+                        "RawSec": "7"
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "Build": "CMake Error at esp/src/CMakeLists.txt:423 (message):  Unable to locate node/npm, please install NodeJS as per  https://github.com/hpcc-systems/HPCC-Platform/wiki/Building-HPCC#prerequisites"
+            }
+        ]
+    }
+}
