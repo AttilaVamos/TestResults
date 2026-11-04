@@ -1,0 +1,54 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Rocky_Linux_8_10",
+            "Hardware": "CPU/Cores: 8, RAM: 15 GB",
+            "IPAddress": "10.22.254.98 (OBT-AWS04)"
+        },
+        "BuildSet": {
+            "Branch": "candidate-10.2.x",
+            "BranchDate": "Mon Nov 2 14:48:37 2026",
+            "BranchSHA": "72bf830b35c2a936eb5654b58e271b9572648e5c",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS, WASMEMBED, REMBED",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "FAILED",
+                    "CMake": {
+                        "Formatted": "15 sec (00:00:15)",
+                        "RawSec": "15"
+                    },
+                    "Build": {
+                        "Formatted": "871 sec (00:14:31)",
+                        "RawSec": "871"
+                    },
+                    "Package": {
+                        "Formatted": "27 sec (00:00:27)",
+                        "RawSec": "27"
+                    },
+                    "Altogether": {
+                        "Formatted": "913 sec (00:15:13)",
+                        "RawSec": "913"
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "Build": "CPackRPM:Debug: *** error: line 46: Unknown tag:  do /usr/lib/rpm/rpmdeps -%{1}  | /usr/bin/grep -Ev 'libantlr3c.so|libjemalloc.so' ***CPackRPM:Debug:    - /home/rocky/build/CE/platform/build/_CPack_Packages/Linux-x86_64/RPM/rpmbuildhpccsystems-platform.outCPackRPM:Debug: *** Building target platforms: x86_64Building for target x86_64 ***CMake Error at /usr/local/share/cmake-4.4/Modules/Internal/CPack/CPackRPM.cmake:1975 (message):  RPM package was not generated!  /home/rocky/build/CE/platform/build/_CPack_Packages/Linux-x86_64/RPMCall Stack (most recent call first):  /usr/local/share/cmake-4.4/Modules/Internal/CPack/CPackRPM.cmake:2046 (cpack_rpm_generate_package)CPack Error: Error while execution CPackRPM.cmakeCPack Error: Problem compressing the directoryCPack Error: Error when generating package: hpccsystems-platformmake: *** [Makefile:71: package] Error 1Build failed: build has errorsCMake:15 sec (00:00:15)Build:871 sec (00:14:31)Package:27 sec (00:00:27)Elaps:913 sec (00:15:13)Build end at 2026-11-03 18:09:42"
+            }
+        ]
+    }
+}
