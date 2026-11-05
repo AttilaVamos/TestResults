@@ -1,0 +1,54 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Rocky_Linux_8_10",
+            "Hardware": "CPU/Cores: 8, RAM: 15 GB",
+            "IPAddress": "10.22.254.98 (OBT-AWS04)"
+        },
+        "BuildSet": {
+            "Branch": "candidate-10.4.x",
+            "BranchDate": "Mon Nov 2 17:12:00 2026",
+            "BranchSHA": "47dce1a0577a2a7971173974baeede63bbbf5ad0",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS, WASMEMBED, REMBED",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "FAILED",
+                    "CMake": {
+                        "Formatted": "16 sec (00:00:16)",
+                        "RawSec": "16"
+                    },
+                    "Build": {
+                        "Formatted": "948 sec (00:15:48)",
+                        "RawSec": "948"
+                    },
+                    "Package": {
+                        "Formatted": "29 sec (00:00:29)",
+                        "RawSec": "29"
+                    },
+                    "Altogether": {
+                        "Formatted": "993 sec (00:16:33)",
+                        "RawSec": "993"
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "Build": "warning: /usr/bin/mono /home/rocky/build/CE/platform/build/vcpkg_downloads/tools/nuget-7.3.0-linux/nuget.exe install -ForceEnglishOutput -Verbosity detailed -NonInteractive /home/rocky/build/CE/platform/build/vcpkg_buildtrees/packages.config -OutputDirectory /home/rocky/build/CE/platform/build/vcpkg_packages -ExcludeVersion -PreRelease -PackageSaveMode nupkg -DirectDownload -NoCache -Source GitHub failed with exit code 1NoCache is deprecated and has been renamed to NoHttpCache. Please use NoHttpCache instead.NuGet Version: 7.3.0.70The specified source 'GitHub' is invalid. Please provide a valid source.NuGet.Commands.CommandException: The specified source 'GitHub' is invalid. Please provide a valid source.  at NuGet.CommandLine.CommandLineUtility.ValidateSource (System.String source) [0x00024] in <cb3208dd735a4541955a929976aa333e>:0  at NuGet.Common.PackageSourceProviderExtensions.ResolveSource (System.Collections.Generic.IEnumerable`1[T] availableSources, System.String source) [0x00023] in <cb3208dd735a4541955a929976aa333e>:0  at NuGet.CommandLine.DownloadCommandBase.GetPackageSources (NuGet.Configuration.ISettings settings) [0x00088] in <cb3208dd735a4541955a929976aa333e>:0  at NuGet.CommandLine.InstallCommand.PerformV2RestoreAsync (System.String packagesConfigFilePath, System.String installPath) [0x0008b] in <cb3208dd735a4541955a929976aa333e>:0  at NuGet.CommandLine.Command.Execute () [0x00135] in <cb3208dd735a4541955a929976aa333e>:0  at NuGet.CommandLine.Program.MainCore (System.String workingDirectory, System.String[] args, NuGet.Common.IEnvironmentVariableReader environmentVariableReader) [0x001c8] in <cb3208dd735a4541955a929976aa333e>:0error: /usr/bin/mono /home/rocky/build/CE/platform/build/vcpkg_downloads/tools/nuget-7.3.0-linux/nuget.exe push -ForceEnglishOutput -Verbosity detailed -NonInteractive /home/rocky/build/CE/platform/build/vcpkg_buildtrees/liburing_x64-linux-dynamic.2.12.0-vcpkgace1b9d7175937f426077c373ee3b76156a1d4dc3a9ee2e2f282b3cff6bf046a.nupkg -Timeout 100 -Source GitHub failed with exit code 1NuGet Version: 7.3.0.70The specified source 'GitHub' is invalid. Provide a valid source.System.ArgumentException: The specified source 'GitHub' is invalid. Provide a valid source.  at NuGet.Commands.PackageSourceProviderExtensions.ValidateSource (System.String source) [0x0001f] in <cb3208dd735a4541955a929976aa333e>:0  at NuGet.Commands.PackageSourceProviderExtensions.ResolveSource (System.Collections.Generic.IEnumerable`1[T] availableSources, System.String source) [0x00023] in <cb3208dd735a4541955a929976aa333e>:0  at NuGet.Commands.PackageSourceProviderExtensions.ResolveAndValidateSource (NuGet.Configuration.IPackageSourceProvider sourceProvider, System.String source) [0x00034] in <cb3208dd735a4541955a929976aa333e>:0  at NuGet.Commands.CommandRunnerUtility.ResolveSource (NuGet.Configuration.IPackageSourceProvider sourceProvider, System.String source) [0x00018] in <cb3208dd735a4541955a929976aa333e>:0  at NuGet.Commands.PushRunner.Run (NuGet.Configuration.ISettings settings, NuGet.Configuration.IPackageSourceProvider sourceProvider, System.Collections.Generic.IList`1[T] packagePaths, System.String source, System.String apiKey, System.String symbolSource, System.String symbolApiKey, System.Int32 timeoutSeconds, System.Boolean disableBuffering, System.Boolean noSymbols, System.Boolean noServiceEndpoint, System.Boolean skipDuplicate, System.Boolean allowInsecureConnections, NuGet.Common.ILogger logger) [0x0004a] in <cb3208dd735a4541955a929976aa333e>:0  at NuGet.CommandLine.PushCommand.ExecuteCommandAsync () [0x00167] in <cb3208dd735a4541955a929976aa333e>:0  at NuGet.CommandLine.Command.Execute () [0x00135] in <cb3208dd735a4541955a929976aa333e>:0  at NuGet.CommandLine.Program.MainCore (System.String workingDirectory, System.String[] args, NuGet.Common.IEnvironmentVariableReader environmentVariableReader) [0x001c8] in <cb3208dd735a4541955a929976aa333e>:0CPackRPM:Debug: *** error: line 46: Unknown tag:  do /usr/lib/rpm/rpmdeps -%{1}  | /usr/bin/grep -Ev 'libantlr3c.so|libjemalloc.so' ***CPackRPM:Debug:    - /home/rocky/build/CE/platform/build/_CPack_Packages/Linux-x86_64/RPM/rpmbuildhpccsystems-platform.outCPackRPM:Debug: *** Building target platforms: x86_64Building for target x86_64 ***CMake Error at /usr/local/share/cmake-4.4/Modules/Internal/CPack/CPackRPM.cmake:1975 (message):  RPM package was not generated!  /home/rocky/build/CE/platform/build/_CPack_Packages/Linux-x86_64/RPMCall Stack (most recent call first):  /usr/local/share/cmake-4.4/Modules/Internal/CPack/CPackRPM.cmake:2046 (cpack_rpm_generate_package)CPack Error: Error while execution CPackRPM.cmakeCPack Error: Problem compressing the directoryCPack Error: Error when generating package: hpccsystems-platformmake: *** [Makefile:71: package] Error 1Build failed: build has errorsCMake:16 sec (00:00:16)Build:948 sec (00:15:48)Package:29 sec (00:00:29)Elaps:993 sec (00:16:33)Build end at 2026-11-04 10:22:26"
+            }
+        ]
+    }
+}
