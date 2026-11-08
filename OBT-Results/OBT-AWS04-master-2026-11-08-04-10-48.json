@@ -1,0 +1,421 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Rocky_Linux_8_10",
+            "Hardware": "CPU/Cores: 8, RAM: 15 GB",
+            "IPAddress": "10.22.254.98 (OBT-AWS04)"
+        },
+        "BuildSet": {
+            "Branch": "master",
+            "BranchDate": "Fri Nov 6 17:47:17 2026",
+            "BranchSHA": "515580b29b23bab1f7936811e366cd97198dcbb2",
+            "BuildType": "Debug",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS, WASMEMBED, REMBED",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl",
+            "Regression": "embedded, 3rdparty, python2, wasmembed*"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "PASSED",
+                    "CMake": {
+                        "Formatted": "8 sec (00:00:08)",
+                        "RawSec": "8"
+                    },
+                    "Build": {
+                        "Formatted": "629 sec (00:10:29)",
+                        "RawSec": "629"
+                    },
+                    "Package": {
+                        "Formatted": "493 sec (00:08:13)",
+                        "RawSec": "493"
+                    },
+                    "Altogether": {
+                        "Formatted": "1130 sec (00:18:50)",
+                        "RawSec": "1130"
+                    }
+                }
+            },
+            {
+                "Install": {
+                    "Elaps": "No data"
+                }
+            },
+            {
+                "Unittests": {
+                    "Result": "PASSED",
+                    "Elaps": {
+                        "Formatted": "11149 sec (03:05:49)",
+                        "RawSec": "11149"
+                    },
+                    "Total": 1078,
+                    "Pass": 1078,
+                    "Fail": 0,
+                    "Error": 0,
+                    "Timeout": 0
+                }
+            },
+            {
+                "Wutooltests": {
+                    "Result": "PASSED",
+                    "Elaps": {
+                        "Formatted": "2 sec (00:00:02)",
+                        "RawSec": "2"
+                    },
+                    "Total": 19,
+                    "Pass": 19,
+                    "Fail": 0,
+                    "Error": 0,
+                    "Timeout": 0
+                }
+            },
+            {
+                "MLtests": {
+                    "Result": "PASSED",
+                    "DBSCAN": {
+                        "Elaps": {
+                            "Formatted": "13 sec  (00:00:13)",
+                            "RawSec": "13"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GLM": {
+                        "Elaps": {
+                            "Formatted": "74 sec  (00:01:14)",
+                            "RawSec": "74"
+                        },
+                        "Total": 7,
+                        "Pass": 7,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GNN": {
+                        "Elaps": {
+                            "Formatted": "71 sec  (00:01:11)",
+                            "RawSec": "71"
+                        },
+                        "Total": 4,
+                        "Pass": 4,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "KMeans": {
+                        "Elaps": {
+                            "Formatted": "5 sec  (00:00:05)",
+                            "RawSec": "5"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "LearningTrees": {
+                        "Elaps": {
+                            "Formatted": "711 sec  (00:11:51)",
+                            "RawSec": "711"
+                        },
+                        "Total": 3,
+                        "Pass": 3,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "PBblas": {
+                        "Elaps": {
+                            "Formatted": "17 sec  (00:00:17)",
+                            "RawSec": "17"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "SupportVectorMachines": {
+                        "Elaps": {
+                            "Formatted": "16 sec  (00:00:16)",
+                            "RawSec": "16"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "TextVectors": {
+                        "Elaps": {
+                            "Formatted": "13 sec  (00:00:13)",
+                            "RawSec": "13"
+                        },
+                        "Total": 5,
+                        "Pass": 5,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "Hthor": {
+                        "Elaps": {
+                            "Formatted": "389 sec  (00:06:29)",
+                            "RawSec": "389"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "Thor": {
+                        "Elaps": {
+                            "Formatted": "171 sec  (00:02:51)",
+                            "RawSec": "171"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "Roxie": {
+                        "Elaps": {
+                            "Formatted": "419 sec  (00:06:59)",
+                            "RawSec": "419"
+                        },
+                        "Total": 24,
+                        "Pass": 24,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Regress": {
+                    "Result": "FAILED",
+                    "Hthor": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "978 sec  (00:16:18)",
+                            "RawSec": "978"
+                        },
+                        "Total": 1145,
+                        "Pass": 1145,
+                        "Fail": 0
+                    },
+                    "Thor": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "1541 sec  (00:25:41)",
+                            "RawSec": "1541"
+                        },
+                        "Total": 1013,
+                        "Pass": 1012,
+                        "Fail": 1
+                    },
+                    "Roxie": {
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "1383 sec  (00:23:03)",
+                            "RawSec": "1383"
+                        },
+                        "Total": 1229,
+                        "Pass": 1207,
+                        "Fail": 22
+                    }
+                }
+            },
+            {
+                "Uninstall": {
+                    "Elaps": "No data"
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "thor": {
+                    "teststdlibrary(tmod='DataPatterns')": {
+                        "TestId": 898,
+                        "Wuid": "W20261108-090410",
+                        "Problem": "Other problem(s)",
+                        "Code": "0",
+                        "Msg": "Result doesn't match to key file"
+                    }
+                }
+            },
+            {
+                "roxie": {
+                    "csvfetch(multiPart=false)": {
+                        "TestId": 155,
+                        "Wuid": "W20261108-091239",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "csvfetch(multiPart=true)": {
+                        "TestId": 156,
+                        "Wuid": "W20261108-091241",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "fetch(multiPart=false)": {
+                        "TestId": 281,
+                        "Wuid": "W20261108-091403",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "fetch(multiPart=true)": {
+                        "TestId": 282,
+                        "Wuid": "W20261108-091403-3",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "fetch(multiPart=true,useLocal=true)": {
+                        "TestId": 283,
+                        "Wuid": "W20261108-091403-1",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "fetch(multiPart=true,useTranslation=true)": {
+                        "TestId": 284,
+                        "Wuid": "W20261108-091404",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "fetch(multiPart=false,readaheadMode='pooled')": {
+                        "TestId": 285,
+                        "Wuid": "W20261108-091404-4",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "fetch2(multiPart=false)": {
+                        "TestId": 286,
+                        "Wuid": "W20261108-091407",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "jsonfetch": {
+                        "TestId": 516,
+                        "Wuid": "W20261108-091723-3",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "keyed_fetch(multiPart=false)": {
+                        "TestId": 526,
+                        "Wuid": "W20261108-091736-3",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "keyed_fetch(multiPart=true)": {
+                        "TestId": 527,
+                        "Wuid": "W20261108-091740",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "keyed_fetch(multiPart=true,useLocal=true)": {
+                        "TestId": 528,
+                        "Wuid": "W20261108-091741",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "keyed_fetch(multiPart=false,useLocal=true,forceRemoteKeyedLookup=true,forceRemoteKeyedFetch=true)": {
+                        "TestId": 529,
+                        "Wuid": "W20261108-091742",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "keyed_fetch(multiPart=true,useLocal=true,forceRemoteKeyedLookup=true,forceRemoteKeyedFetch=true)": {
+                        "TestId": 530,
+                        "Wuid": "W20261108-091743",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "payload(multiPart=false)": {
+                        "TestId": 682,
+                        "Wuid": "W20261108-091948",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "superkey1": {
+                        "TestId": 1043,
+                        "Wuid": "W20261108-092711-5",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "translatedisk(multiPart=false)": {
+                        "TestId": 1119,
+                        "Wuid": "W20261108-093251",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "translatedisk(multiPart=true)": {
+                        "TestId": 1120,
+                        "Wuid": "W20261108-093251-2",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "translatedisk(multiPart=true,optRemoteRead=true)": {
+                        "TestId": 1121,
+                        "Wuid": "W20261108-093251-3",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "xmlfetch(multiPart=false)": {
+                        "TestId": 1216,
+                        "Wuid": "W20261108-093401",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "xmlfetch(multiPart=true)": {
+                        "TestId": 1217,
+                        "Wuid": "W20261108-093401-5",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "xmlfetch2": {
+                        "TestId": 1218,
+                        "Wuid": "W20261108-093402",
+                        "Problem": "Exception",
+                        "Code": "6327",
+                        "Msg": "Internal Error &apos;Unknown mapping kind: 239&apos; in queryStatistic() at jstats:h(584)"
+                    },
+                    "dropzone_query_test": {
+                        "TestId": 259,
+                        "Wuid": "W20261108-091352",
+                        "Problem": "Eclcc problem",
+                        "Code": "1",
+                        "Msg": ""
+                    }
+                }
+            }
+        ]
+    }
+}
