@@ -1,0 +1,54 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Rocky_Linux_8_10",
+            "Hardware": "CPU/Cores: 8, RAM: 15 GB",
+            "IPAddress": "10.22.254.98 (OBT-AWS04)"
+        },
+        "BuildSet": {
+            "Branch": "candidate-10.8.x",
+            "BranchDate": "Mon Nov 9 12:42:24 2026",
+            "BranchSHA": "f05994b3012ad319937a65f84ba8379b44478888",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS, WASMEMBED, REMBED",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "FAILED",
+                    "CMake": {
+                        "Formatted": "5 sec (00:00:05)",
+                        "RawSec": "5"
+                    },
+                    "Build": {
+                        "Formatted": "0 sec (00:00:00)",
+                        "RawSec": "0"
+                    },
+                    "Package": {
+                        "Formatted": "0 sec (00:00:00)",
+                        "RawSec": "0"
+                    },
+                    "Altogether": {
+                        "Formatted": "5 sec (00:00:05)",
+                        "RawSec": "5"
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "Build": "node: error while loading shared libraries: libatomic.so.1: cannot open shared object file: No such file or directoryCMake Error at esp/src/CMakeLists.txt:420 (message):  Unable to locate node/npm, please install NodeJS as per  https://github.com/hpcc-systems/HPCC-Platform/wiki/Building-HPCC#prerequisites"
+            }
+        ]
+    }
+}
