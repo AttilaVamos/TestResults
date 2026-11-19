@@ -1,0 +1,112 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Ubuntu_22_04_5_LTS",
+            "Hardware": "CPU/Cores: 8, RAM: 23 GB",
+            "IPAddress": "127.0.1.1 (OBT-BM01)"
+        },
+        "BuildSet": {
+            "Branch": "master",
+            "BranchDate": "Wed Nov 18 23:34:30 2026",
+            "BranchSHA": "7CBC64BB",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {},
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "SUCCEED",
+                    "CMake": {
+                        "Formatted": "930 sec (00:15:30)",
+                        "RawSec": "930"
+                    },
+                    "Build": {
+                        "Formatted": "1580 sec (00:26:20)",
+                        "RawSec": "1580"
+                    },
+                    "Package": {
+                        "Formatted": "130 sec (00:02:10)",
+                        "RawSec": "130"
+                    },
+                    "Altogether": {
+                        "Formatted": "2735 sec (00:45:35)",
+                        "RawSec": "2735"
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "Thor": {
+                        "Total": "3",
+                        "Pass": "3",
+                        "Fail": "0",
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "602 sec (00:10:02)",
+                            "RawSec": "602"
+                        }
+                    },
+                    "Roxie": {
+                        "Total": "5",
+                        "Pass": "5",
+                        "Fail": "0",
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "116 sec (00:01:56)",
+                            "RawSec": "116"
+                        }
+                    }
+                },
+                "Performance": {
+                    "Result": "FAILED",
+                    "Thor": {
+                        "Total": "326",
+                        "Pass": "326",
+                        "Fail": "0",
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "17564 sec (04:52:44)",
+                            "RawSec": "17564"
+                        }
+                    },
+                    "Roxie": {
+                        "Total": "353",
+                        "Pass": "351",
+                        "Fail": "2",
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "9560 sec (02:39:20)",
+                            "RawSec": "9560"
+                        }
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "roxie": {
+                    "16ab_manysubfiles_create": {
+                        "TestId": 346,
+                        "Wuid": "W20261119-194055",
+                        "Problem": "Exception",
+                        "Code": "1421",
+                        "Msg": "Executed LOOP with empty input and output 1001 times"
+                    },
+                    "16ac_manysubfiles_read": {
+                        "TestId": 347,
+                        "Wuid": "W20261119-194108",
+                        "Problem": "Other problem(s)",
+                        "Code": "0",
+                        "Msg": "Result doesn't match to key file"
+                    }
+                }
+            }
+        ]
+    }
+}
