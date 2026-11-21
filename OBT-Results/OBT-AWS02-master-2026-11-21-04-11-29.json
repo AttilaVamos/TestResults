@@ -1,0 +1,275 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Ubuntu_22_04_5_LTS",
+            "Hardware": "CPU/Cores: 16, RAM: 30 GB",
+            "IPAddress": "10.20.0.189 (OBT-AWS02)"
+        },
+        "BuildSet": {
+            "Branch": "master",
+            "BranchDate": "Thu Nov 19 23:34:18 2026",
+            "BranchSHA": "e7bf3f491fcbec430be061470f559ab6b9f6511b",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {
+            "Build": "MAKE_CASSANDRAEMBED, COUCHBASEEMBED, USE_AZURE, USE_AWS",
+            "Documentation": "not built",
+            "Unittest": "JlibReaderWriterTestTiming, AtomicTimingTest, AtomicTimingStressTest, RWLockStressTest",
+            "MLtest": "ClassicTestModified.ecl, SVCTest.ecl",
+            "Regression": "embedded-r, embedded-js, 3rdpartyservice, mongodb, python2 compileOptions.ecl, cppembed.ecl"
+        },
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "PASSED",
+                    "CMake": {
+                        "Formatted": "8 sec (00:00:08)",
+                        "RawSec": "8"
+                    },
+                    "Build": {
+                        "Formatted": "466 sec (00:07:46)",
+                        "RawSec": "466"
+                    },
+                    "Package": {
+                        "Formatted": "98 sec (00:01:38)",
+                        "RawSec": "98"
+                    },
+                    "Altogether": {
+                        "Formatted": "572 sec (00:09:32)",
+                        "RawSec": "572"
+                    }
+                }
+            },
+            {
+                "Install": {
+                    "Elaps": "No data"
+                }
+            },
+            {
+                "Unittests": {
+                    "Result": "FAILED",
+                    "Elaps": {
+                        "Formatted": "4549 sec (01:15:49)",
+                        "RawSec": "4549"
+                    },
+                    "Total": 1136,
+                    "Pass": 1130,
+                    "Fail": 6,
+                    "Error": 0,
+                    "Timeout": 0
+                }
+            },
+            {
+                "Wutooltests": {
+                    "Result": "PASSED",
+                    "Elaps": {
+                        "Formatted": "0 sec (00:00:00)",
+                        "RawSec": "0"
+                    },
+                    "Total": 19,
+                    "Pass": 19,
+                    "Fail": 0,
+                    "Error": 0,
+                    "Timeout": 0
+                }
+            },
+            {
+                "MLtests": {
+                    "Result": "PASSED",
+                    "DBSCAN": {
+                        "Elaps": {
+                            "Formatted": "10 sec  (00:00:10)",
+                            "RawSec": "10"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GLM": {
+                        "Elaps": {
+                            "Formatted": "51 sec  (00:00:51)",
+                            "RawSec": "51"
+                        },
+                        "Total": 7,
+                        "Pass": 7,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "GNN": {
+                        "Elaps": {
+                            "Formatted": "75 sec  (00:01:15)",
+                            "RawSec": "75"
+                        },
+                        "Total": 4,
+                        "Pass": 4,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "KMeans": {
+                        "Elaps": {
+                            "Formatted": "4 sec  (00:00:04)",
+                            "RawSec": "4"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "LearningTrees": {
+                        "Elaps": {
+                            "Formatted": "124 sec  (00:02:04)",
+                            "RawSec": "124"
+                        },
+                        "Total": 3,
+                        "Pass": 3,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "PBblas": {
+                        "Elaps": {
+                            "Formatted": "12 sec  (00:00:12)",
+                            "RawSec": "12"
+                        },
+                        "Total": 2,
+                        "Pass": 2,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "SupportVectorMachines": {
+                        "Elaps": {
+                            "Formatted": "13 sec  (00:00:13)",
+                            "RawSec": "13"
+                        },
+                        "Total": 1,
+                        "Pass": 1,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "TextVectors": {
+                        "Elaps": {
+                            "Formatted": "13 sec  (00:00:13)",
+                            "RawSec": "13"
+                        },
+                        "Total": 5,
+                        "Pass": 5,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "Hthor": {
+                        "Elaps": {
+                            "Formatted": "112 sec  (00:01:52)",
+                            "RawSec": "112"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "Thor": {
+                        "Elaps": {
+                            "Formatted": "39 sec  (00:00:39)",
+                            "RawSec": "39"
+                        },
+                        "Total": 9,
+                        "Pass": 9,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    },
+                    "Roxie": {
+                        "Elaps": {
+                            "Formatted": "84 sec  (00:01:24)",
+                            "RawSec": "84"
+                        },
+                        "Total": 24,
+                        "Pass": 24,
+                        "Fail": 0,
+                        "Result": "PASSED"
+                    }
+                }
+            },
+            {
+                "Regress": {
+                    "Result": "PASSED",
+                    "Hthor": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "443 sec  (00:07:23)",
+                            "RawSec": "443"
+                        },
+                        "Total": 1184,
+                        "Pass": 1184,
+                        "Fail": 0
+                    },
+                    "Thor": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "531 sec  (00:08:51)",
+                            "RawSec": "531"
+                        },
+                        "Total": 1048,
+                        "Pass": 1048,
+                        "Fail": 0
+                    },
+                    "Roxie": {
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "594 sec  (00:09:54)",
+                            "RawSec": "594"
+                        },
+                        "Total": 1270,
+                        "Pass": 1270,
+                        "Fail": 0
+                    }
+                }
+            },
+            {
+                "Uninstall": {
+                    "Elaps": "No data"
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "Unittests": [
+                    "..Exception in cleanupTestFiles: Super File testfileupdate::supersuperfile doesn't exist in the file system",
+                    "Run:  6   Failures: 6   Errors: 0",
+                    "1) test: DaliQuerySetDeletionTests::testClientVersion (F) line: 3369 /home/ubuntu/build/CE/platform/HPCC-Platform/esp/services/ws_workunits/ws_workunitsQuerySets.cpp",
+                    "- assertion failed",
+                    "- Expression: !isEmptyString(endpoint)",
+                    "- Explicit DaliQuerySetDeletionTests.dali endpoint required",
+                    "2) test: DaliQuerySetDeletionTests::testRequiresFullAccessToBothFeatures (F) line: 3369 /home/ubuntu/build/CE/platform/HPCC-Platform/esp/services/ws_workunits/ws_workunitsQuerySets.cpp",
+                    "- assertion failed",
+                    "- Expression: !isEmptyString(endpoint)",
+                    "- Explicit DaliQuerySetDeletionTests.dali endpoint required",
+                    "3) test: DaliQuerySetDeletionTests::testEmptyAndMissingQuerySets (F) line: 3369 /home/ubuntu/build/CE/platform/HPCC-Platform/esp/services/ws_workunits/ws_workunitsQuerySets.cpp",
+                    "- assertion failed",
+                    "- Expression: !isEmptyString(endpoint)",
+                    "- Explicit DaliQuerySetDeletionTests.dali endpoint required",
+                    "4) test: DaliQuerySetDeletionTests::testRejectsChildrenWithoutDeleteChildren (F) line: 3369 /home/ubuntu/build/CE/platform/HPCC-Platform/esp/services/ws_workunits/ws_workunitsQuerySets.cpp",
+                    "- assertion failed",
+                    "- Expression: !isEmptyString(endpoint)",
+                    "- Explicit DaliQuerySetDeletionTests.dali endpoint required",
+                    "5) test: DaliQuerySetDeletionTests::testDeleteChildren (F) line: 3369 /home/ubuntu/build/CE/platform/HPCC-Platform/esp/services/ws_workunits/ws_workunitsQuerySets.cpp",
+                    "- assertion failed",
+                    "- Expression: !isEmptyString(endpoint)",
+                    "- Explicit DaliQuerySetDeletionTests.dali endpoint required",
+                    "6) test: DaliQuerySetDeletionTests::testRegisteredRoxieTarget (F) line: 3369 /home/ubuntu/build/CE/platform/HPCC-Platform/esp/services/ws_workunits/ws_workunitsQuerySets.cpp",
+                    "- assertion failed",
+                    "- Expression: !isEmptyString(endpoint)",
+                    "- Explicit DaliQuerySetDeletionTests.dali endpoint required"
+                ]
+            }
+        ]
+    }
+}
