@@ -1,0 +1,119 @@
+{
+    "OBTResult": {
+        "Env": {
+            "BuildSystem": "Ubuntu_22_04_5_LTS",
+            "Hardware": "CPU/Cores: 8, RAM: 23 GB",
+            "IPAddress": "127.0.1.1 (OBT-BM01)"
+        },
+        "BuildSet": {
+            "Branch": "master",
+            "BranchDate": "Thu Nov 19 23:34:18 2026",
+            "BranchSHA": "E7BF3F49",
+            "BuildType": "RelWithDebInfo",
+            "Target": "BM/VM"
+        },
+        "Exclusion": {},
+        "ThorConfig": {
+            "Slaves": "4",
+            "Channels": "1"
+        },
+        "Tasks": [
+            {
+                "Build": {
+                    "Result": "SUCCEED",
+                    "CMake": {
+                        "Formatted": "96 sec (00:01:36)",
+                        "RawSec": "96"
+                    },
+                    "Build": {
+                        "Formatted": "1586 sec (00:26:26)",
+                        "RawSec": "1586"
+                    },
+                    "Package": {
+                        "Formatted": "127 sec (00:02:07)",
+                        "RawSec": "127"
+                    },
+                    "Altogether": {
+                        "Formatted": "1890 sec (00:31:30)",
+                        "RawSec": "1890"
+                    }
+                }
+            },
+            {
+                "Setup": {
+                    "Result": "PASSED",
+                    "Thor": {
+                        "Total": "3",
+                        "Pass": "3",
+                        "Fail": "0",
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "608 sec (00:10:08)",
+                            "RawSec": "608"
+                        }
+                    },
+                    "Roxie": {
+                        "Total": "5",
+                        "Pass": "5",
+                        "Fail": "0",
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "121 sec (00:02:01)",
+                            "RawSec": "121"
+                        }
+                    }
+                },
+                "Performance": {
+                    "Result": "FAILED",
+                    "Thor": {
+                        "Total": "326",
+                        "Pass": "326",
+                        "Fail": "0",
+                        "Result": "PASSED",
+                        "Elaps": {
+                            "Formatted": "17135 sec (04:45:35)",
+                            "RawSec": "17135"
+                        }
+                    },
+                    "Roxie": {
+                        "Total": "353",
+                        "Pass": "350",
+                        "Fail": "3",
+                        "Result": "FAILED",
+                        "Elaps": {
+                            "Formatted": "9333 sec (02:35:33)",
+                            "RawSec": "9333"
+                        }
+                    }
+                }
+            }
+        ],
+        "Errors": [
+            {
+                "roxie": {
+                    "15bb_parallelsoapcallidx(persistConnection=true,tls=true)": {
+                        "TestId": 344,
+                        "Wuid": "W20261123-182235",
+                        "Problem": "Exception",
+                        "Code": "1303",
+                        "Msg": "Invalid pointer"
+                    },
+                    "16ab_manysubfiles_create": {
+                        "TestId": 346,
+                        "Wuid": "W20261123-182245",
+                        "Problem": "Exception",
+                        "Code": "1421",
+                        "Msg": "Executed LOOP with empty input and output 1001 times"
+                    },
+                    "16ac_manysubfiles_read": {
+                        "TestId": 347,
+                        "Wuid": "W20261123-182259",
+                        "Problem": "Other problem(s)",
+                        "Code": "0",
+                        "Msg": "Result doesn't match to key file"
+                    }
+                }
+            }
+        ]
+    }
+}
